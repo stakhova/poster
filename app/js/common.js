@@ -1,23 +1,4 @@
 $(document).ready(function() {
-    $('ul.poster-tabs li').click(function () {
-        var tab_id = $(this).attr('data-tab');
-
-        $('ul.poster-tabs li').removeClass('current');
-        //$('ul.sidebar-role__list li').removeClass('current');
-        $('.poster-content__tab').removeClass('current');
-        $(this).addClass('current');
-        $("#" + tab_id).addClass('current');
-    });
-
-    $('ul.sidebar-role__list li').click(function () {
-        var tab_id = $(this).attr('data-tab');
-
-        $('ul.sidebar-role__list li').removeClass('current');
-        //$('ul.poster-tabs li').removeClass('current');
-        $('.poster-content__tab').removeClass('current');
-        $(this).addClass('current');
-        $("#" + tab_id).addClass('current');
-    });
 
     $('.poster-slider').slick({
         prevArrow: '<div class="poster-slider__prev"></div>',
@@ -25,15 +6,6 @@ $(document).ready(function() {
         dots: true,
         fade: false,
         slidesToShow: 3,
-        slidesToScroll: 1,
-    });
-
-    $('.poster-adv__slider').slick({
-        prevArrow: '<div class="poster-adv__sliderPrev"></div>',
-        nextArrow: '<div class="poster-adv__sliderNext"></div>',
-        dots: false,
-        fade: false,
-        slidesToShow: 1,
         slidesToScroll: 1,
     });
 
@@ -63,6 +35,36 @@ $(document).ready(function() {
         // $(this).hide('header-mob__submenu');
         $(this).next().slideToggle(300);
         $(this).toggleClass('active');
+    });
+    $('ul.poster-tabs li').click(function () {
+        var tab_id = $(this).attr('data-tab');
+
+        $('ul.poster-tabs li').removeClass('current');
+        //$('ul.sidebar-role__list li').removeClass('current');
+        $('.poster-content__tab').removeClass('current');
+        $(this).addClass('current');
+        $('.poster-adv').removeClass('poster-adv__show');
+        $("#" + tab_id).addClass('current');
+    });
+
+    $('ul.sidebar-role__list li').click(function () {
+        var tab_id = $(this).attr('data-tab');
+        $('ul.sidebar-role__list li').removeClass('current');
+        //$('ul.poster-tabs li').removeClass('current');
+        $('.poster-content__tab').removeClass('current');
+        $(this).addClass('current');
+        $("#" + tab_id).addClass('current');
+        $('.poster-adv').addClass('poster-adv__show');
+
+        window.dispatchEvent (new Event ('resize'));
+        $('.poster-adv__slider').slick({
+            prevArrow: '<div class="poster-adv__sliderPrev"></div>',
+            nextArrow: '<div class="poster-adv__sliderNext"></div>',
+            dots: false,
+            fade: false,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+        });
     });
 
 });
