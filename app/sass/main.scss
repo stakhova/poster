@@ -180,28 +180,72 @@ a{
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    padding-right: 30px;
+    &__menu{
+      width: auto;
+    }
+    &__person{
+      position: relative;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: auto;
+    }
+    &__name{
+      font-size: 16px;
+      display: block;
+      position: relative;
+      padding-right: 32px;
+      padding-left: 12px;
+      &::after{
+        content: "\e906";
+        position: absolute;
+        color: #3a4185;
+        top: 50%;
+        right: 0px;
+        font-size: 16px;
+        transform: translateY(-50%);
+        font-family: 'icomoon';
+        z-index: 10;
+        //box-shadow: -0.1px 2px 1px 0px #b1b1b1;
+        cursor: pointer;
+      }
+      &.active{
+        &::after{
+          transform: translateY(-50%) rotate(180deg);
+        }
+        .poster-header__person{
+
+        }
+      }
+    }
+    &__list{
+      display: none;
+      width: 100%;
+      bottom: -66px;
+      right: 0;
+      border-top: 1px solid #b1b1b1;
+      background-color: #fff;
+      position: absolute;
+      box-shadow: 0px 1px 3.8px 0.2px #b1b1b1;
+      a{
+        cursor: pointer;
+        display: block;
+        padding: 6px 21px;
+      }
+    }
+
     &>*{
       position: relative;
       cursor: pointer;
+      margin: 0 9px;
       span{
-        position: relative;
-        right: -10px;
-        top: -10px;
+        position: absolute;
+        right: -6px;
+        top: -11px;
+        //transform: translate(-50%,-50%);
         color: $blue;
-        z-index: 10;
-        &:before{
-          content: "";
-          position: absolute;
-          left: 0px;
-          top: 0px;
-          width: 17px;
-          height: 17px;
-          box-shadow: 0px 2px 3.8px 0.2px #b1b1b1;
-          background-color: $green;
-          border-radius: 50%;
-          z-index: 4;
-
-        }
+        z-index: 5;
       }
     }
     &__question{
@@ -234,31 +278,66 @@ a{
       width: 18px;
       height: 18px;
       &::after{
-        content: "\e924";
+        content: "";
         position: absolute;
-        left: 50%;
+        width: 23px;
+        height: 14px;
         top: 50%;
-        transform: translate(-50%,-50%);
-        color: $blue;
-        font-size: 14px;
-        font-family: 'icomoon';
+        left: 0px;
+        transform: translateY(-50%);
+        background: url('../img/mess.svg') no-repeat left top;
+        z-index: 3;
+      }
+      &:before{
+        content: "";
+        position: absolute;
+        left: 11px;
+        top: -11px;
+        width: 17px;
+        height: 17px;
+        box-shadow: 0px 2px 3.8px 0.2px #b1b1b1;
+        background-color: $green;
+        border-radius: 50%;
         z-index: 4;
       }
     }
     &__balance{
       width: 18px;
       height: 18px;
+      margin-left:  15px;
       &::after{
-        content: "\900";
+        content: "";
         position: absolute;
-        left: 50%;
+        width: 19px;
+        height: 18px;
         top: 50%;
-        transform: translate(-50%,-50%);
-        color: $blue;
-        font-size: 18px;
-        font-family: 'icomoon';
+        left: 0px;
+        transform: translateY(-50%);
+        background: url('../img/bal.svg') no-repeat left top;
+        z-index: 3;
+      }
+      &:before{
+        content: "";
+        position: absolute;
+        left: 11px;
+        top: -11px;
+        width: 17px;
+        height: 17px;
+        box-shadow: 0px 2px 3.8px 0.2px #b1b1b1;
+        background-color: $green;
+        border-radius: 50%;
         z-index: 4;
       }
+    }
+    &__img{
+      margin: 0 5px;
+      width: 40px;
+      height: 40px;
+      box-shadow: 0px 4px 4.8px 0.3px #b1b1b1;
+      border: solid 1px #3a4185;
+      border-radius: 50%;
+      //background-color: #3a4185;
+
     }
   }
   &-wrap{
@@ -272,6 +351,10 @@ a{
     }
     & .current{
       display: inherit;
+    }
+    &__small{
+      max-width: 605px;
+      width: 100%;
     }
   }
   &-tabs{
@@ -943,6 +1026,7 @@ a{
     }
   }
   &-adv{
+    padding-top: 10px;
     display: none;
     &__show{
       max-width: 223px;
@@ -1045,6 +1129,7 @@ a{
       box-shadow: 0px 1px 3.8px 0.2px #b1b1b1;
       position: relative;
       &Prev:after{
+          cursor: pointer;
           content: "";
           position: absolute;
           width: 13px;
@@ -1058,6 +1143,7 @@ a{
           z-index: 3;
       }
       &Next:after{
+        cursor: pointer;
         content: "";
         position: absolute;
         width: 13px;
