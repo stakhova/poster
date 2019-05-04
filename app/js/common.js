@@ -11,10 +11,16 @@ $(document).ready(function() {
 
 
 
-    $('.poster-table__item').on('click', function () {
+    $('.poster-table__item' ).on('click', function () {
         $(this).next().slideToggle(200);
         $(this).toggleClass('active');
     });
+
+    // $('.poster-table__item td:first-child').click(function () {
+    //     $(this).parents(".poster-table").find('.poster-table__desc').slideToggle(100);
+    //     $(this).parents(".poster-table").find('.poster-table__item').toggleClass('active');
+    //     $(this).toggleClass('active');
+    // });
 
 
     $('.poster-select__head').on('click', function () {
