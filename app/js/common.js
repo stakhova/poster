@@ -22,6 +22,14 @@ $(document).ready(function() {
     //     $(this).toggleClass('active');
     // });
 
+    // remove elements from favorite
+    $('.poster-table__delete').click(function () {
+        $(this).parents('.poster-table__item').remove();
+        $(this).closest('.poster-table__desc').remove();
+        //$(this).next().remove('.poster-table__desc');
+    });
+
+
 
     $('.poster-select__head').on('click', function () {
         $(this).next().slideToggle(100);
