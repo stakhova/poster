@@ -855,16 +855,25 @@ a{
       border-bottom: 1px solid $blue;
       td{
         position: relative;
-          &:first-child:after{
-            content: "";
-            position: absolute;
-            width: 7px;
-            height: 4px;
-            top:50%;
-            left: 10px;
-            transform: translateY(-50%) rotate(270deg);
-            background: url('../img/down.svg') no-repeat left top;
-            z-index: 10;
+          &:first-child {
+            span{
+              display: block;
+              //max-width:158px;
+              height: 20px;
+              overflow:hidden;
+
+            }
+            &:after {
+              content: "";
+              position: absolute;
+              width: 7px;
+              height: 4px;
+              top: 50%;
+              left: 10px;
+              transform: translateY(-50%) rotate(270deg);
+              background: url('../img/down.svg') no-repeat left top;
+              z-index: 10;
+            }
           }
       }
       &.active{
@@ -1300,7 +1309,6 @@ a{
 }
 .books{
   thead tr{
-
     :nth-child(3){
       width: 60%;
     }
