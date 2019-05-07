@@ -26,7 +26,6 @@ a{
 }
 
 .wrapper{
-  background: #f3f3f3;
   min-height: 100vh;
   min-width: 320px;
   max-width: 1920px;
@@ -34,13 +33,14 @@ a{
   font: $SSP;
   font-size: 14px;
   color: $blue;
+  background: #fafafa;
 }
 .container{
   width: 100%;
   max-width: 1142px;
   margin: 0 auto;
   padding: 0;
-  background: #eee;
+  background: #fafafa;
 }
 .main{
   display: flex;
@@ -260,7 +260,6 @@ a{
         padding: 6px 21px;
       }
     }
-
     &>*{
       position: relative;
       cursor: pointer;
@@ -716,7 +715,9 @@ a{
 
 
 
-  &-main{
+
+
+  &-center{
     min-height: 605px;
     justify-content: space-between;
     display: flex;
@@ -725,9 +726,20 @@ a{
     max-width: 605px;
     width: 100%;
   }
-  &-flex{
-    width: 100%;
+  &-main{
+    min-height: 605px;
+    justify-content: space-between;
     display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  //&-main{
+  //
+  //}
+  &-flex{
+    display: none;
+    width: 100%;
+    //display: flex;
     justify-content: space-between;
   }
   &-select {
@@ -916,6 +928,7 @@ a{
         border-radius: 50%;
         border: 1px solid $blue;
         position: relative;
+        box-shadow: -0.1px 2px 3.9px 0.1px #b1b1b1;
         &:after{
           position: absolute;
           top:50%;
@@ -947,7 +960,7 @@ a{
       &:after{
         content: "\e925";
         color: #3a4185;
-        font-size: 12px;
+        font-size: 9px;
         font-family: 'icomoon';
       }
     }
@@ -1049,6 +1062,10 @@ a{
   }
 
   &-recommended{
+    display: none;
+    &__show{
+      display: block;
+    }
     &:after{
       top: -15px;
       bottom: auto;
@@ -1084,7 +1101,7 @@ a{
         content: "\e902";
         position: absolute;
         right: 13px;
-        top: -2px;
+        top: -1px;
         bottom: auto;
         transform: translateY(-50%);
         color: #fff;
@@ -1148,6 +1165,9 @@ a{
   &-adv{
     padding-top: 10px;
     display: none;
+    .poster-slider__desc{
+      padding: 0 9px;
+    }
     &__show{
       max-width: 223px;
       width: 100%;
@@ -1322,5 +1342,39 @@ a{
   }
 }
 
+.modal{
+  //position: absolute;
+  padding: 0;
+  &-dialog{
+    margin-right: 30%;
+    position: relative;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 1px 3.8px 0.2px #b1b1b1;
+    border-radius: 0;
+    background-color: white;
+  }
+  &-content{
+    border: none;
+  }
+  &-small{
+    max-width: 217px;
+   // width: 100%;
+  }
+  &-header{
+    border-radius: 0;
+    width: 100%;
+    background-color: #3a4185;
+    color: #fff;
+    padding: 7px 21px;
+    font-size: 16px;
+  }
+  //&-content {
+  //  position: absolute;
+  //  top: 0;
+  //  bottom: 0;
+  //}
+
+}
 
 @import 'media';

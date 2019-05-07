@@ -5,6 +5,7 @@
     <title>Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="../../css/vendor.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../../css/app.min.css">
 </head>
 <body>
@@ -21,7 +22,7 @@
                     <span class="sidebar-role__user">Посетитель</span>
                     <ul class="sidebar-role__list">
                         <li data-tab="tab-4" class="poster-link">Мои билеты</li>
-                        <li data-tab="tab-5" class="poster-link">Мои книги </li>
+                        <li data-tab="tab-5" class="poster-link">Мои книги</li>
                         <li data-tab="tab-6" class="poster-link">Мои журналы</li>
                         <li data-tab="tab-7" class="poster-link">Избранное</li>
                     </ul>
@@ -40,12 +41,22 @@
             </div>
             <div class="poster">
                 <div class="poster-header">
-                    <div class="poster-header__question">
-                        <!--<span data-toggle="modal" data-target="#enter" ></span>-->
+                    <div class="poster-header__question" data-toggle="modal" data-target="#question">
+                        <div class="modal fade" id="question" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-small" role="document">
+                                <div class="modal-content ">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Есть вопросы? <br>Связаться с нами! </h5>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>hhhhhhhhhhhhhhhhhhhh</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="poster-header__message">
                         <span>2</span>
-
                     </div>
                     <div class="poster-header__balance">
                         <span>1</span>
@@ -60,10 +71,10 @@
                             <li><a href="#">Выйти</a></li>
                         </ul>
                     </div>
-                        <!--<ul class="poster-header__list">-->
-                            <!--<li><a href="#">Профиль</a></li>-->
-                            <!--<li><a href="#">Выйти</a></li>-->
-                        <!--</ul>-->
+                    <!--<ul class="poster-header__list">-->
+                    <!--<li><a href="#">Профиль</a></li>-->
+                    <!--<li><a href="#">Выйти</a></li>-->
+                    <!--</ul>-->
                 </div>
                 <div class="poster-wrap">
                     <ul class="poster-tabs">
@@ -79,90 +90,92 @@
                     </ul>
                     <div class="poster-content">
                         <div class="poster-content__tab current" id="tab-1">
-                            <div class="poster-block poster-line">
-                                <div class="poster-item poster-item__mail">
-                                    <div class="poster-item__title">Доступно</div>
-                                    <div class="poster-item__count"><span>+ 35 баллов</span></div>
-                                    <div class="poster-item__desc">
-                                        <span>Баллы за регистрацию в программе лояльностив</span></div>
+                            <div class="poster-main">
+                                <div class="poster-block poster-line">
+                                    <div class="poster-item poster-item__mail">
+                                        <div class="poster-item__title">Доступно</div>
+                                        <div class="poster-item__count"><span>+ 35 баллов</span></div>
+                                        <div class="poster-item__desc">
+                                            <span>Баллы за регистрацию в программе лояльностив</span></div>
+                                    </div>
+                                    <div class="poster-item poster-item__gift">
+                                        <div class="poster-item__title">В подарок</div>
+                                        <div class="poster-item__count"><span>+ 5 баллов</span></div>
+                                        <div class="poster-item__desc">
+                                            <span>Баллы за регистрацию в программе лояльностив</span></div>
+                                    </div>
+                                    <div class="poster-item poster-item__percent">
+                                        <div class="poster-item__title">%Скидки</div>
+                                        <div class="poster-item__count"><span>На покупки</span></div>
+                                        <div class="poster-item__desc">
+                                            <span>Баллы за регистрацию в программе лояльностив</span></div>
+                                    </div>
                                 </div>
-                                <div class="poster-item poster-item__gift">
-                                    <div class="poster-item__title">В подарок</div>
-                                    <div class="poster-item__count"><span>+ 5 баллов</span></div>
-                                    <div class="poster-item__desc">
-                                        <span>Баллы за регистрацию в программе лояльностив</span></div>
-                                </div>
-                                <div class="poster-item poster-item__percent">
-                                    <div class="poster-item__title">%Скидки</div>
-                                    <div class="poster-item__count"><span>На покупки</span></div>
-                                    <div class="poster-item__desc">
-                                        <span>Баллы за регистрацию в программе лояльностив</span></div>
-                                </div>
-                            </div>
-                            <div class="poster-slider">
-                                <div class="poster-slider__item">
-                                    <div class="poster-slider__img">
-                                        <img src="../img/img1.png" alt="">
-                                    </div>
-                                    <div class="poster-slider__desc">
-                                        <div class="poster-slider__title events">Мероприятие</div>
-                                        <div class="poster-slider__name">Курс современной косметологии Vesna Beauty
-                                            Breakfast
+                                <div class="poster-slider">
+                                    <div class="poster-slider__item">
+                                        <div class="poster-slider__img">
+                                            <img src="../img/img1.png" alt="">
                                         </div>
-                                        <div class="poster-slider__bold">
-                                            <p>22/04/19</p>
-                                            <p>17.00</p>
+                                        <div class="poster-slider__desc">
+                                            <div class="poster-slider__title events">Мероприятие</div>
+                                            <div class="poster-slider__name">Курс современной косметологии Vesna Beauty
+                                                Breakfast
+                                            </div>
+                                            <div class="poster-slider__bold">
+                                                <p>22/04/19</p>
+                                                <p>17.00</p>
+                                            </div>
                                         </div>
+                                        <a class="poster-slider__read" href="">Читать больше</a>
                                     </div>
-                                    <a class="poster-slider__read" href="">Читать больше</a>
-                                </div>
-                                <div class="poster-slider__item">
-                                    <div class="poster-slider__img">
-                                        <img src="../img/img2.png" alt="">
-                                    </div>
-                                    <div class="poster-slider__desc">
-                                        <div class="poster-slider__title journal">Журнал</div>
-                                        <div class="poster-slider__name">Курс современной косметологии Vesna Beauty
-                                            Breakfast
+                                    <div class="poster-slider__item">
+                                        <div class="poster-slider__img">
+                                            <img src="../img/img2.png" alt="">
                                         </div>
-                                        <div class="poster-slider__bold">
-                                            <p>22/04/19</p>
-                                            <p>17.00</p>
+                                        <div class="poster-slider__desc">
+                                            <div class="poster-slider__title journal">Журнал</div>
+                                            <div class="poster-slider__name">Курс современной косметологии Vesna Beauty
+                                                Breakfast
+                                            </div>
+                                            <div class="poster-slider__bold">
+                                                <p>22/04/19</p>
+                                                <p>17.00</p>
+                                            </div>
                                         </div>
+                                        <a class="poster-slider__read" href="">Читать больше</a>
                                     </div>
-                                    <a class="poster-slider__read" href="">Читать больше</a>
-                                </div>
-                                <div class="poster-slider__item">
-                                    <div class="poster-slider__img">
-                                        <img src="../img/img3.png" alt="">
-                                    </div>
-                                    <div class="poster-slider__desc">
-                                        <div class="poster-slider__title books">Книга</div>
-                                        <div class="poster-slider__name">Курс современной косметологии Vesna Beauty
-                                            Breakfast
+                                    <div class="poster-slider__item">
+                                        <div class="poster-slider__img">
+                                            <img src="../img/img3.png" alt="">
                                         </div>
-                                        <div class="poster-slider__bold">
-                                            <p>22/04/19</p>
-                                            <p>17.00</p>
+                                        <div class="poster-slider__desc">
+                                            <div class="poster-slider__title books">Книга</div>
+                                            <div class="poster-slider__name">Курс современной косметологии Vesna Beauty
+                                                Breakfast
+                                            </div>
+                                            <div class="poster-slider__bold">
+                                                <p>22/04/19</p>
+                                                <p>17.00</p>
+                                            </div>
                                         </div>
+                                        <a class="poster-slider__read" href="">Читать больше</a>
                                     </div>
-                                    <a class="poster-slider__read" href="">Читать больше</a>
-                                </div>
-                                <div class="poster-slider__item">
-                                    <div class="poster-slider__img">
-                                        <img src="../img/img2.png" alt="">
-                                    </div>
-                                    <div class="poster-slider__desc">
-                                        <div class="poster-slider__title events">Мероприятие</div>
-                                        <div class="poster-slider__name">Курс современной косметологии Vesna Beauty
-                                            Breakfast
+                                    <div class="poster-slider__item">
+                                        <div class="poster-slider__img">
+                                            <img src="../img/img2.png" alt="">
                                         </div>
-                                        <div class="poster-slider__bold">
-                                            <p>22/04/19</p>
-                                            <p>17.00</p>
+                                        <div class="poster-slider__desc">
+                                            <div class="poster-slider__title events">Мероприятие</div>
+                                            <div class="poster-slider__name">Курс современной косметологии Vesna Beauty
+                                                Breakfast
+                                            </div>
+                                            <div class="poster-slider__bold">
+                                                <p>22/04/19</p>
+                                                <p>17.00</p>
+                                            </div>
                                         </div>
+                                        <a class="poster-slider__read" href="">Читать больше</a>
                                     </div>
-                                    <a class="poster-slider__read" href="">Читать больше</a>
                                 </div>
                             </div>
                         </div>
@@ -173,691 +186,579 @@
                             <p>3</p>
                         </div>
                         <div class="poster-flex">
-                            <div class="poster-content__tab poster-content__small" id="tab-4">
-                                 <div class="poster-main">
-                                     <div class="poster-main__item">
-                                         <div class="poster-select">
-                                             <div class="poster-select__head">
-                                                 <input type="hidden" name="type_category" value="">
-                                                 <div class="poster-select__current input"><span>Все мероприятия</span></div>
-                                             </div>
-                                             <div class="poster-select__wrap">
-                                                 <ul class="poster-select__dropdown">
-                                                     <li>
-                                                         <span>Все мероприятия</span>
-                                                     </li>
-                                                     <li>
-                                                         <span>Мероприятия</span>
-                                                     </li>
-                                                     <li>
-                                                         <span>Другие</span>
-                                                     </li>
-                                                     <li>
-                                                         <span>Все</span>
-                                                     </li>
-                                                 </ul>
-                                             </div>
-                                         </div>
-                                         <table class="poster-table ticket-table">
-                                             <thead>
-                                                 <tr>
-                                                     <th>Название</th>
-                                                     <th>Дата </th>
-                                                     <th>Тематика</th>
-                                                     <th>Тип билета</th>
-                                                 </tr>
-                                             </thead>
-                                             <tbody>
-                                                 <tr class="poster-table__item">
-                                                     <td><span>Курс современной ... современной современной</span></td>
-                                                     <td><span>23/10/19</span></td>
-                                                     <td><span>Косметология</span></td>
-                                                     <td>
-                                                         <div class="flex-between">
-                                                             <span>Стандарт</span>
-                                                             <div class="poster-table__icon">
-                                                                 <div class="poster-table__print"></div>
-                                                                 <div class="poster-table__download"></div>
-                                                                 <div class="poster-table__go"></div>
-                                                             </div>
-                                                         </div>
-                                                     </td>
-                                                 </tr>
-                                                 <tr class="poster-table__desc">
-                                                     <td colspan="4">
-                                                         <div class="flex-start poster-table__descWrap">
-                                                             <div class="poster-table__column">
-                                                                 <p>Мероприятие</p>
-                                                                 <p class="poster-table__title">Makeup YOU Professional 2019 №1</p>
-                                                             </div>
-                                                             <div class="poster-table__column">
-                                                                 <p>Место проведения</p>
-                                                                 <p class="poster-table__title">Пространство Beauty Hub, ул. Большая Васильковская 132</p>
-                                                             </div>
-                                                             <div class="poster-table__block flex-between">
-                                                                 <div class="poster-table__column">
-                                                                     <p>Тип</p>
-                                                                     <p class="poster-table__title">Конференция</p>
-                                                                 </div>
-                                                                 <div class="poster-table__column">
-                                                                     <p>Время проведения</p>
-                                                                     <p class="poster-table__title">19:00 - 22:00</p>
-                                                                 </div>
-                                                             </div>
-                                                             <div class="poster-table__column">
-                                                                 <p>Вид</p>
-                                                                 <p class="poster-table__title">Офлайн</p>
-                                                             </div>
-                                                         </div>
-                                                     </td>
-
-                                                 </tr>
-                                                 <tr class="poster-table__item">
-                                                     <td>Курс современной ...</td>
-                                                     <td>23/10/19</td>
-                                                     <td>Косметология</td>
-                                                     <td>
-                                                         <div class="flex-between">
-                                                             <span>Вип</span>
-                                                             <div class="poster-table__icon">
-                                                                 <div class="poster-table__ticket"></div>
-                                                                 <div class="poster-table__go"></div>
-                                                             </div>
-                                                         </div>
-                                                     </td>
-                                                 </tr>
-                                                 <tr class="poster-table__desc">
-                                                     <td colspan="4">
-                                                         <div class="flex-start poster-table__descWrap">
-                                                             <div class="poster-table__column">
-                                                                 <p>Мероприятие</p>
-                                                                 <p class="poster-table__title">Makeup YOU Professional 2019 №1</p>
-                                                             </div>
-                                                             <div class="poster-table__column">
-                                                                 <p>Место проведения</p>
-                                                                 <p class="poster-table__title">Пространство Beauty Hub, ул. Большая Васильковская 132</p>
-                                                             </div>
-                                                             <div class="poster-table__column flex-between">
-                                                                 <div class="poster-table__row">
-                                                                     <p>Тип</p>
-                                                                     <p class="poster-table__title">Конференция</p>
-                                                                 </div>
-                                                                 <div class="poster-table__row">
-                                                                     <p>Время проведения</p>
-                                                                     <p class="poster-table__title">19:00 - 22:00</p>
-                                                                 </div>
-                                                             </div>
-                                                             <div class="poster-table__column flex-between">
-                                                                 <div class="poster-table__row">
-                                                                     <p>Вид</p>
-                                                                     <p class="poster-table__title">Офлайн</p>
-                                                                 </div>
-                                                                 <div class="poster-table__row">
-                                                                     <button class="poster-table__button">Купить билет</button>
-                                                                 </div>
-                                                             </div>
-                                                         </div>
-                                                     </td>
-                                                 </tr>
-                                             </tbody>
-                                         </table>
-                                     </div>
-                                     <div class="poster-recommended poster-line">
-                                         <span class="poster-recommended__name">Рекомендуемое</span>
-                                         <div class="poster-recommended__wrap">
-                                             <div class="poster-recommended__item">
-                                                 <a href="#" class="poster-recommended__title">Название ограниченное количество символовg</a>
-                                                 <div class="poster-recommended__img">
-                                                     <img src="../img/i1.png" alt="">
-                                                 </div>
-                                                 <div class="poster-recommended__price">
-                                                     <p>Цена: от 200 грн</p>
-                                                     <p>Дата: 08/09/2019</p>
-                                                 </div>
-                                                 <a class=" poster-recommended__read poster-slider__read" href="">Читать больше</a>
-                                             </div>
-                                             <div class="poster-recommended__item">
-                                                 <a href="#" class="poster-recommended__title">Название ограниченное количество символовg</a>
-                                                 <div class="poster-recommended__img">
-                                                     <img src="../img/i2.png" alt="">
-                                                 </div>
-                                                 <div class="poster-recommended__price">
-                                                     <p>Цена: 200 грн</p>
-                                                 </div>
-                                                 <a class=" poster-recommended__read poster-slider__read" href="">Читать больше</a>
-                                             </div>
-                                             <div class="poster-recommended__item">
-                                                 <a href="#" class="poster-recommended__title">Название ограниченное количество символовg</a>
-                                                 <div class="poster-recommended__img">
-                                                     <img src="../img/i3.png" alt="">
-                                                 </div>
-                                                 <div class="poster-recommended__price">
-                                                     <p>Цена: от 200 грн</p>
-                                                     <p>Дата: 08/09/2019</p>
-                                                 </div>
-                                                 <a class=" poster-recommended__read poster-slider__read" href="">Читать больше</a>
-                                             </div>
-                                         </div>
-                                     </div>
-                                 </div>
-                            </div>
-                            <div class="poster-content__tab poster-content__small" id="tab-5">
-                                <div class="poster-main books">
-                                    <div class="poster-main__item">
-                                        <div class="poster-select">
-                                            <div class="poster-select__head">
-                                                <input type="hidden" name="type_category" value="">
-                                                <div class="poster-select__current input"><span>Все книги</span></div>
+                            <div class="poster-center">
+                                <div class="poster-center__tabs">
+                                    <div class="poster-content__tab poster-content__small" id="tab-4">
+                                        <div class="poster-center__item">
+                                            <div class="poster-select">
+                                                <div class="poster-select__head">
+                                                    <input type="hidden" name="type_category" value="">
+                                                    <div class="poster-select__current input">
+                                                        <span>Все мероприятия</span></div>
+                                                </div>
+                                                <div class="poster-select__wrap">
+                                                    <ul class="poster-select__dropdown">
+                                                        <li>
+                                                            <span>Все мероприятия</span>
+                                                        </li>
+                                                        <li>
+                                                            <span>Мероприятия</span>
+                                                        </li>
+                                                        <li>
+                                                            <span>Другие</span>
+                                                        </li>
+                                                        <li>
+                                                            <span>Все</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </div>
-                                            <div class="poster-select__wrap">
-                                                <ul class="poster-select__dropdown">
-                                                    <li>
-                                                        <span>Все книги</span>
-                                                    </li>
-                                                    <li>
-                                                        <span>Книги</span>
-                                                    </li>
-                                                    <li>
-                                                        <span>Другие</span>
-                                                    </li>
-                                                    <li>
-                                                        <span>Все</span>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <table class="poster-table">
-                                            <thead>
+                                            <table class="poster-table ticket-table">
+                                                <thead>
                                                 <tr>
                                                     <th>Название</th>
-                                                    <th>Дата </th>
+                                                    <th>Дата</th>
+                                                    <th>Тематика</th>
+                                                    <th>Тип билета</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr class="poster-table__item">
+                                                    <td><span>Курс современной ... современной современной</span></td>
+                                                    <td><span>23/10/19</span></td>
+                                                    <td><span>Косметология</span></td>
+                                                    <td>
+                                                        <div class="flex-between">
+                                                            <span>Стандарт</span>
+                                                            <div class="poster-table__icon">
+                                                                <div class="poster-table__print"></div>
+                                                                <div class="poster-table__download"></div>
+                                                                <div class="poster-table__go"></div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="poster-table__desc">
+                                                    <td colspan="4">
+                                                        <div class="flex-start poster-table__descWrap">
+                                                            <div class="poster-table__column">
+                                                                <p>Мероприятие</p>
+                                                                <p class="poster-table__title">Makeup YOU Professional 2019 №1</p>
+                                                            </div>
+                                                            <div class="poster-table__column">
+                                                                <p>Место проведения</p>
+                                                                <p class="poster-table__title">Пространство Beauty Hub, ул. Большая Васильковская 132</p>
+                                                            </div>
+                                                            <div class="poster-table__block flex-between">
+                                                                <div class="poster-table__column">
+                                                                    <p>Тип</p>
+                                                                    <p class="poster-table__title">Конференция</p>
+                                                                </div>
+                                                                <div class="poster-table__column">
+                                                                    <p>Время проведения</p>
+                                                                    <p class="poster-table__title">19:00 - 22:00</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="poster-table__column">
+                                                                <p>Вид</p>
+                                                                <p class="poster-table__title">Офлайн</p>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="poster-table__item">
+                                                    <td>Курс современной ...</td>
+                                                    <td>23/10/19</td>
+                                                    <td>Косметология</td>
+                                                    <td>
+                                                        <div class="flex-between">
+                                                            <span>Вип</span>
+                                                            <div class="poster-table__icon">
+                                                                <div class="poster-table__ticket"></div>
+                                                                <div class="poster-table__go"></div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="poster-table__desc">
+                                                    <td colspan="4">
+                                                        <div class="flex-start poster-table__descWrap">
+                                                            <div class="poster-table__column">
+                                                                <p>Мероприятие</p>
+                                                                <p class="poster-table__title">Makeup YOU Professional 2019 №1</p>
+                                                            </div>
+                                                            <div class="poster-table__column">
+                                                                <p>Место проведения</p>
+                                                                <p class="poster-table__title">Пространство Beauty Hub, ул. Большая Васильковская 132</p>
+                                                            </div>
+                                                            <div class="poster-table__column flex-between">
+                                                                <div class="poster-table__row">
+                                                                    <p>Тип</p>
+                                                                    <p class="poster-table__title">Конференция</p>
+                                                                </div>
+                                                                <div class="poster-table__row">
+                                                                    <p>Время проведения</p>
+                                                                    <p class="poster-table__title">19:00 - 22:00</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="poster-table__column flex-between">
+                                                                <div class="poster-table__row">
+                                                                    <p>Вид</p>
+                                                                    <p class="poster-table__title">Офлайн</p>
+                                                                </div>
+                                                                <div class="poster-table__row">
+                                                                    <button class="poster-table__button">Купить билет
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="poster-content__tab poster-content__small" id="tab-5">
+                                        <div class="poster-center__item books">
+                                            <div class="poster-select">
+                                                <div class="poster-select__head">
+                                                    <input type="hidden" name="type_category" value="">
+                                                    <div class="poster-select__current input"><span>Все книги</span>
+                                                    </div>
+                                                </div>
+                                                <div class="poster-select__wrap">
+                                                    <ul class="poster-select__dropdown">
+                                                        <li>
+                                                            <span>Все книги</span>
+                                                        </li>
+                                                        <li>
+                                                            <span>Книги</span>
+                                                        </li>
+                                                        <li>
+                                                            <span>Другие</span>
+                                                        </li>
+                                                        <li>
+                                                            <span>Все</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <table class="poster-table">
+                                                <thead>
+                                                <tr>
+                                                    <th>Название</th>
+                                                    <th>Дата</th>
                                                     <th>Тематика</th>
                                                 </tr>
-                                            </thead>
-                                            <tbody>
-                                            <tr class="poster-table__item">
-                                                <td><span>Лазер в дерматол...</span></td>
-                                                <td><span>23/10/19</span></td>
-                                                <td>
-                                                    <div class="flex-between">
-                                                        <span>Косметология</span>
-                                                        <div class="poster-table__icon">
-                                                            <div class="poster-table__go"></div>
+                                                </thead>
+                                                <tbody>
+                                                <tr class="poster-table__item">
+                                                    <td><span>Лазер в дерматол...</span></td>
+                                                    <td><span>23/10/19</span></td>
+                                                    <td>
+                                                        <div class="flex-between">
+                                                            <span>Косметология</span>
+                                                            <div class="poster-table__icon">
+                                                                <div class="poster-table__go"></div>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr class="poster-table__desc">
-                                                <td colspan="3">
-                                                    <div class="flex-start poster-table__descWrap">
-                                                        <div class="poster-table__column">
-                                                            <p>Мероприятие</p>
-                                                            <p class="poster-table__title">Makeup YOU Professional 2019 №1</p>
-                                                        </div>
-                                                        <div class="poster-table__column">
-                                                            <p>Место проведения</p>
-                                                            <p class="poster-table__title">Пространство Beauty Hub, ул. Большая Васильковская 132</p>
-                                                        </div>
-                                                        <div class="poster-table__block flex-between">
+                                                    </td>
+                                                </tr>
+                                                <tr class="poster-table__desc">
+                                                    <td colspan="3">
+                                                        <div class="flex-start poster-table__descWrap">
                                                             <div class="poster-table__column">
-                                                                <p>Тип</p>
-                                                                <p class="poster-table__title">Конференция</p>
+                                                                <p>Мероприятие</p>
+                                                                <p class="poster-table__title">Makeup YOU Professional 2019 №1</p>
                                                             </div>
                                                             <div class="poster-table__column">
-                                                                <p>Время проведения</p>
-                                                                <p class="poster-table__title">19:00 - 22:00</p>
+                                                                <p>Место проведения</p>
+                                                                <p class="poster-table__title">Пространство Beauty Hub, ул. Большая Васильковская 132</p>
+                                                            </div>
+                                                            <div class="poster-table__block flex-between">
+                                                                <div class="poster-table__column">
+                                                                    <p>Тип</p>
+                                                                    <p class="poster-table__title">Конференция</p>
+                                                                </div>
+                                                                <div class="poster-table__column">
+                                                                    <p>Время проведения</p>
+                                                                    <p class="poster-table__title">19:00 - 22:00</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="poster-table__column">
+                                                                <p>Вид</p>
+                                                                <p class="poster-table__title">Офлайн</p>
                                                             </div>
                                                         </div>
-                                                        <div class="poster-table__column">
-                                                            <p>Вид</p>
-                                                            <p class="poster-table__title">Офлайн</p>
-                                                        </div>
-                                                    </div>
-                                                </td>
-
-                                            </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <div class="poster-recommended poster-line">
-                                        <span class="poster-recommended__name">Рекомендуемое</span>
-                                        <div class="poster-recommended__wrap">
-                                            <div class="poster-recommended__item">
-                                                <a href="#" class="poster-recommended__title">Название ограниченное количество символовg</a>
-                                                <div class="poster-recommended__img">
-                                                    <img src="" alt="">
-                                                </div>
-                                                <div class="poster-recommended__price">
-                                                    <p>Цена: от 200 грн</p>
-                                                    <p>Дата: 08/09/2019</p>
-                                                </div>
-                                                <a class=" poster-recommended__read poster-slider__read" href="">Читать больше</a>
-                                            </div>
-                                            <div class="poster-recommended__item">
-                                                <a href="#" class="poster-recommended__title">Название ограниченное количество символовg</a>
-                                                <div class="poster-recommended__img">
-                                                    <img src="" alt="">
-                                                </div>
-                                                <div class="poster-recommended__price">
-                                                    <p>Цена: 200 грн</p>
-                                                </div>
-                                                <a class=" poster-recommended__read poster-slider__read" href="">Читать больше</a>
-                                            </div>
-                                            <div class="poster-recommended__item">
-                                                <a href="#" class="poster-recommended__title">Название ограниченное количество символовg</a>
-                                                <div class="poster-recommended__img">
-                                                    <img src="" alt="">
-                                                </div>
-                                                <div class="poster-recommended__price">
-                                                    <p>Цена: от 200 грн</p>
-                                                    <p>Дата: 08/09/2019</p>
-                                                </div>
-                                                <a class=" poster-recommended__read poster-slider__read" href="">Читать больше</a>
-                                            </div>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="poster-content__tab poster-content__small" id="tab-6">
-                                <div class="poster-main journal-wrap">
-                                    <div class="poster-main__item">
-                                        <div class="poster-select">
-                                            <div class="poster-select__head">
-                                                <input type="hidden" name="type_category" value="">
-                                                <div class="poster-select__current input"><span>Все журналы</span></div>
-                                            </div>
-                                            <div class="poster-select__wrap">
-                                                <ul class="poster-select__dropdown">
-                                                    <li>
-                                                        <span>Все журналы</span>
-                                                    </li>
-                                                    <li>
-                                                        <span>Журналы</span>
-                                                    </li>
-                                                    <li>
-                                                        <span>Другие</span>
-                                                    </li>
-                                                    <li>
-                                                        <span>Все</span>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <table class="poster-table journal-table">
-                                            <thead>
-                                            <tr>
-                                                <th>Название</th>
-                                                <th>Дата начала подписки </th>
-                                                <th>Конец подписки </th>
-                                                <th>Тематика</th>
-                                            </tr>
-                                            </thead>
-                                            <tbody>
-                                            <tr class="poster-table__item">
-                                                <td><span>Makeup & YOU ...</span></td>
-                                                <td><span></span></td>
-                                                <td><span></span></td>
-                                                <td>
-                                                    <div class="flex-between">
-                                                        <span>Косметология</span>
-                                                        <div class="poster-table__icon">
-                                                            <div class="poster-table__status"></div>
-                                                            <div class="poster-table__go"></div>
-                                                        </div>
+                                    <div class="poster-content__tab poster-content__small" id="tab-6">
+                                        <div class="poster-center__item journal-wrap">
+                                            <div class="poster-select">
+                                                <div class="poster-select__head">
+                                                    <input type="hidden" name="type_category" value="">
+                                                    <div class="poster-select__current input"><span>Все журналы</span>
                                                     </div>
-                                                </td>
-                                            </tr>
-                                            <tr class="poster-table__desc">
-                                                <td colspan="4">
-                                                    <div class="flex-start poster-table__descWrap">
-                                                        <div class="poster-table__column">
-                                                            <p>Журнал</p>
-                                                            <p class="poster-table__title"> Makeup &amp; YOU Professional 2019 №1</p>
-                                                        </div>
-                                                        <div class="poster-table__column flex-between">
-                                                            <div class="poster-table__row">
-                                                                <p>Выбрать период и</p>
-                                                                <a href="#" class="journal-link">Купить подписку</a>
+                                                </div>
+                                                <div class="poster-select__wrap">
+                                                    <ul class="poster-select__dropdown">
+                                                        <li>
+                                                            <span>Все журналы</span>
+                                                        </li>
+                                                        <li>
+                                                            <span>Журналы</span>
+                                                        </li>
+                                                        <li>
+                                                            <span>Другие</span>
+                                                        </li>
+                                                        <li>
+                                                            <span>Все</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <table class="poster-table journal-table">
+                                                <thead>
+                                                <tr>
+                                                    <th>Название</th>
+                                                    <th>Дата начала подписки</th>
+                                                    <th>Конец подписки</th>
+                                                    <th>Тематика</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr class="poster-table__item">
+                                                    <td><span>Makeup & YOU ...</span></td>
+                                                    <td><span></span></td>
+                                                    <td><span></span></td>
+                                                    <td>
+                                                        <div class="flex-between">
+                                                            <span>Косметология</span>
+                                                            <div class="poster-table__icon">
+                                                                <div class="poster-table__status"></div>
+                                                                <div class="poster-table__go"></div>
                                                             </div>
-                                                            <div class="poster-table__row">
-                                                                <p>Периодичность</p>
-                                                                <p class="poster-table__title">4 раза в год</p>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="poster-table__desc">
+                                                    <td colspan="4">
+                                                        <div class="flex-start poster-table__descWrap">
+                                                            <div class="poster-table__column">
+                                                                <p>Журнал</p>
+                                                                <p class="poster-table__title"> Makeup &amp; YOU Professional 2019 №1</p>
+                                                            </div>
+                                                            <div class="poster-table__column flex-between">
+                                                                <div class="poster-table__row">
+                                                                    <p>Выбрать период и</p>
+                                                                    <a href="#" class="journal-link">Купить подписку</a>
+                                                                </div>
+                                                                <div class="poster-table__row">
+                                                                    <p>Периодичность</p>
+                                                                    <p class="poster-table__title">4 раза в год</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="poster-table__column flex-between">
+                                                                <div class="poster-table__row">
+                                                                    <p>Вид</p>
+                                                                    <p class="poster-table__title"> Электронная/ печатная версия</p>
+                                                                </div>
+                                                                <div class="poster-table__row">
+                                                                    <p>3 выпуск</p>
+                                                                    <p class="poster-table__title">журнала</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="poster-table__column flex-between">
+                                                                <div class="poster-table__row">
+                                                                    <a href="#" class="journal-link">Перейти ко всем выпускам</a>
+                                                                </div>
+                                                                <div class="flex-start">
+                                                                    <div class="poster-table__row">
+                                                                        <p>Цена</p>
+                                                                        <p class="poster-table__title"> 160 грн</p>
+                                                                    </div>
+                                                                    <div class="poster-table__row">
+                                                                        <button class="poster-table__button">Купить
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                        <div class="poster-table__column flex-between">
-                                                            <div class="poster-table__row">
+                                                    </td>
+                                                </tr>
+                                                <tr class="poster-table__item">
+                                                    <td>Makeup & YOU ...</td>
+                                                    <td>23/10/19</td>
+                                                    <td>23/10/19</td>
+                                                    <td>
+                                                        <div class="flex-between">
+                                                            <span>Косметологияя</span>
+                                                            <div class="poster-table__icon">
+                                                                <div class="poster-table__status"></div>
+                                                                <div class="poster-table__link"></div>
+                                                                <div class="poster-table__go"></div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="poster-table__desc">
+                                                    <td colspan="4">
+                                                        <div class="flex-start poster-table__descWrap">
+                                                            <div class="poster-table__column">
+                                                                <p>Журнал</p>
+                                                                <p class="poster-table__title"> Makeup &amp; YOU Professional 2019 №1</p>
+                                                            </div>
+                                                            <div class="poster-table__column flex-between">
+                                                                <div class="poster-table__row">
+                                                                    <p>Выбрать период и</p>
+                                                                    <a href="#" class="journal-link">Купить подписку</a>
+                                                                </div>
+                                                                <div class="poster-table__row">
+                                                                    <p>Периодичность</p>
+                                                                    <p class="poster-table__title">4 раза в год</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="poster-table__column">
                                                                 <p>Вид</p>
                                                                 <p class="poster-table__title"> Электронная/ печатная версия</p>
                                                             </div>
-                                                            <div class="poster-table__row">
-                                                                <p>3 выпуск</p>
-                                                                <p class="poster-table__title">журнала</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="poster-table__column flex-between">
-                                                            <div class="poster-table__row">
+                                                            <div class="poster-table__column">
                                                                 <a href="#" class="journal-link">Перейти ко всем выпускам</a>
                                                             </div>
-                                                            <div class="flex-start">
-                                                                <div class="poster-table__row">
-                                                                    <p>Цена</p>
-                                                                    <p class="poster-table__title"> 160 грн</p>
-                                                                </div>
-                                                                <div class="poster-table__row">
-                                                                    <button class="poster-table__button">Купить</button>
-                                                                </div>
-                                                            </div>
                                                         </div>
-                                                    </div>
-                                                </td>
-
-                                            </tr>
-                                            <tr class="poster-table__item">
-                                                <td>Makeup & YOU ...</td>
-                                                <td>23/10/19</td>
-                                                <td>23/10/19</td>
-                                                <td>
-                                                    <div class="flex-between">
-                                                        <span>Косметологияя</span>
-                                                        <div class="poster-table__icon">
-                                                            <div class="poster-table__status"></div>
-                                                            <div class="poster-table__link"></div>
-                                                            <div class="poster-table__go"></div>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr class="poster-table__desc">
-                                                <td colspan="4">
-                                                    <div class="flex-start poster-table__descWrap">
-                                                        <div class="poster-table__column">
-                                                            <p>Журнал</p>
-                                                            <p class="poster-table__title"> Makeup &amp; YOU Professional 2019 №1</p>
-                                                        </div>
-                                                        <div class="poster-table__column flex-between">
-                                                            <div class="poster-table__row">
-                                                                <p>Выбрать период и</p>
-                                                                <a href="#" class="journal-link">Купить подписку</a>
-                                                            </div>
-                                                            <div class="poster-table__row">
-                                                                <p>Периодичность</p>
-                                                                <p class="poster-table__title">4 раза в год</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="poster-table__column">
-                                                            <p>Вид</p>
-                                                            <p class="poster-table__title"> Электронная/ печатная версия</p>
-                                                        </div>
-                                                        <div class="poster-table__column">
-                                                            <a href="#" class="journal-link">Перейти ко всем выпускам</a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <div class="poster-recommended poster-line">
-                                        <span class="poster-recommended__name">Рекомендуемое</span>
-                                        <div class="poster-recommended__wrap">
-                                            <div class="poster-recommended__item">
-                                                <a href="#" class="poster-recommended__title">Название ограниченное количество символовg</a>
-                                                <div class="poster-recommended__img">
-                                                    <img src="" alt="">
-                                                </div>
-                                                <div class="poster-recommended__price">
-                                                    <p>Цена: от 200 грн</p>
-                                                    <p>Дата: 08/09/2019</p>
-                                                </div>
-                                                <a class=" poster-recommended__read poster-slider__read" href="">Читать больше</a>
-                                            </div>
-                                            <div class="poster-recommended__item">
-                                                <a href="#" class="poster-recommended__title">Название ограниченное количество символовg</a>
-                                                <div class="poster-recommended__img">
-                                                    <img src="" alt="">
-                                                </div>
-                                                <div class="poster-recommended__price">
-                                                    <p>Цена: 200 грн</p>
-                                                </div>
-                                                <a class=" poster-recommended__read poster-slider__read" href="">Читать больше</a>
-                                            </div>
-                                            <div class="poster-recommended__item">
-                                                <a href="#" class="poster-recommended__title">Название ограниченное количество символовg</a>
-                                                <div class="poster-recommended__img">
-                                                    <img src="" alt="">
-                                                </div>
-                                                <div class="poster-recommended__price">
-                                                    <p>Цена: от 200 грн</p>
-                                                    <p>Дата: 08/09/2019</p>
-                                                </div>
-                                                <a class=" poster-recommended__read poster-slider__read" href="">Читать больше</a>
-                                            </div>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="poster-content__tab poster-content__small" id="tab-7">
-                                <div class="poster-main favorite">
-                                    <div class="poster-main__item">
-                                        <div class="poster-select">
-                                            <div class="poster-select__head">
-                                                <input type="hidden" name="type_category" value="">
-                                                <div class="poster-select__current input"><span>Все категoрии</span></div>
-                                            </div>
-                                            <div class="poster-select__wrap">
-                                                <ul class="poster-select__dropdown">
-                                                    <li>
-                                                        <span>Все категoрии</span>
-                                                    </li>
-                                                    <li>
-                                                        <span>Категoрии</span>
-                                                    </li>
-                                                    <li>
-                                                        <span>Другие</span>
-                                                    </li>
-                                                    <li>
-                                                        <span>Все</span>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <table class="poster-table ticket-table">
-                                            <thead>
-                                            <tr>
-                                                <th>Название</th>
-                                                <th>Тематика</th>
-                                            </tr>
-                                            </thead>
-                                            <tbody>
-                                            <tr class="poster-table__item">
-                                                <td><span>Makeup & YOU ...</span></td>
-                                                <td>
-                                                    <div class="flex-between">
-                                                        <span>Косметология</span>
-                                                        <div class="poster-table__icon">
-                                                            <div class="poster-table__delete"></div>
-                                                            <div class="poster-table__go"></div>
-                                                        </div>
+                                    <div class="poster-content__tab poster-content__small" id="tab-7">
+                                        <div class="poster-center__item favorite">
+                                            <div class="poster-select">
+                                                <div class="poster-select__head">
+                                                    <input type="hidden" name="type_category" value="">
+                                                    <div class="poster-select__current input"><span>Все категoрии</span>
                                                     </div>
-                                                </td>
-                                            </tr>
-                                            <tr class="poster-table__desc">
-                                                <td colspan="2">
-                                                    <div class="flex-start poster-table__descWrap">
-                                                        <div class="poster-table__column">
-                                                            <p>Мероприятие</p>
-                                                            <p class="poster-table__title">Makeup YOU Professional 2019 №1</p>
+                                                </div>
+                                                <div class="poster-select__wrap">
+                                                    <ul class="poster-select__dropdown">
+                                                        <li>
+                                                            <span>Все категoрии</span>
+                                                        </li>
+                                                        <li>
+                                                            <span>Категoрии</span>
+                                                        </li>
+                                                        <li>
+                                                            <span>Другие</span>
+                                                        </li>
+                                                        <li>
+                                                            <span>Все</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <table class="poster-table ticket-table">
+                                                <thead>
+                                                <tr>
+                                                    <th>Название</th>
+                                                    <th>Тематика</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr class="poster-table__item">
+                                                    <td><span>Makeup & YOU ...</span></td>
+                                                    <td>
+                                                        <div class="flex-between">
+                                                            <span>Косметология</span>
+                                                            <div class="poster-table__icon">
+                                                                <div class="poster-table__delete"></div>
+                                                                <div class="poster-table__go"></div>
+                                                            </div>
                                                         </div>
-                                                        <div class="poster-table__column">
-                                                            <p>Место проведения</p>
-                                                            <p class="poster-table__title">Пространство Beauty Hub, ул. Большая Васильковская 132</p>
-                                                        </div>
-                                                        <div class="poster-table__block flex-between">
+                                                    </td>
+                                                </tr>
+                                                <tr class="poster-table__desc">
+                                                    <td colspan="2">
+                                                        <div class="flex-start poster-table__descWrap">
                                                             <div class="poster-table__column">
-                                                                <p>Тип</p>
-                                                                <p class="poster-table__title">Конференция</p>
+                                                                <p>Мероприятие</p>
+                                                                <p class="poster-table__title">Makeup YOU Professional 2019 №1</p>
                                                             </div>
                                                             <div class="poster-table__column">
-                                                                <p>Время проведения</p>
-                                                                <p class="poster-table__title">19:00 - 22:00</p>
+                                                                <p>Место проведения</p>
+                                                                <p class="poster-table__title">Пространство Beauty Hub, ул. Большая Васильковская 132</p>
                                                             </div>
-                                                        </div>
-                                                        <div class="poster-table__column">
-                                                            <p>Вид</p>
-                                                            <p class="poster-table__title">Офлайн</p>
-                                                        </div>
-                                                    </div>
-                                                </td>
-
-                                            </tr>
-                                            <tr class="poster-table__item">
-                                                <td><span>Макияж 2029...</span></td>
-                                                <td>
-                                                    <div class="flex-between">
-                                                        <span>Косметология</span>
-                                                        <div class="poster-table__icon">
-                                                            <div class="poster-table__delete"></div>
-                                                            <div class="poster-table__go"></div>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr class="poster-table__desc">
-                                                <td colspan="2">
-                                                    <div class="flex-start poster-table__descWrap">
-                                                        <div class="poster-table__column">
-                                                            <p>Журнал</p>
-                                                            <p class="poster-table__title"> Makeup &amp; YOU Professional 2019 №1</p>
-                                                        </div>
-                                                        <div class="poster-table__column flex-between">
-                                                            <div class="poster-table__row">
-                                                                <p>Выбрать период и</p>
-                                                                <a href="#" class="journal-link">Купить подписку</a>
+                                                            <div class="poster-table__block flex-between">
+                                                                <div class="poster-table__column">
+                                                                    <p>Тип</p>
+                                                                    <p class="poster-table__title">Конференция</p>
+                                                                </div>
+                                                                <div class="poster-table__column">
+                                                                    <p>Время проведения</p>
+                                                                    <p class="poster-table__title">19:00 - 22:00</p>
+                                                                </div>
                                                             </div>
-                                                            <div class="poster-table__row">
-                                                                <p>Периодичность</p>
-                                                                <p class="poster-table__title">4 раза в год</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="poster-table__column flex-between">
-                                                            <div class="poster-table__row">
+                                                            <div class="poster-table__column">
                                                                 <p>Вид</p>
-                                                                <p class="poster-table__title"> Электронная/ печатная версия</p>
-                                                            </div>
-                                                            <div class="poster-table__row">
-                                                                <p>3 выпуск</p>
-                                                                <p class="poster-table__title">журнала</p>
+                                                                <p class="poster-table__title">Офлайн</p>
                                                             </div>
                                                         </div>
-                                                        <div class="poster-table__column flex-between">
-                                                            <div class="poster-table__row">
-                                                                <a href="#" class="journal-link">Перейти ко всем выпускам</a>
+                                                    </td>
+
+                                                </tr>
+                                                <tr class="poster-table__item">
+                                                    <td><span>Макияж 2029...</span></td>
+                                                    <td>
+                                                        <div class="flex-between">
+                                                            <span>Косметология</span>
+                                                            <div class="poster-table__icon">
+                                                                <div class="poster-table__delete"></div>
+                                                                <div class="poster-table__go"></div>
                                                             </div>
-                                                            <div class="flex-start">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="poster-table__desc">
+                                                    <td colspan="2">
+                                                        <div class="flex-start poster-table__descWrap">
+                                                            <div class="poster-table__column">
+                                                                <p>Журнал</p>
+                                                                <p class="poster-table__title"> Makeup &amp; YOU Professional 2019 №1</p>
+                                                            </div>
+                                                            <div class="poster-table__column flex-between">
                                                                 <div class="poster-table__row">
-                                                                    <p>Цена</p>
-                                                                    <p class="poster-table__title"> 160 грн</p>
+                                                                    <p>Выбрать период и</p>
+                                                                    <a href="#" class="journal-link">Купить подписку</a>
                                                                 </div>
                                                                 <div class="poster-table__row">
-                                                                    <button class="poster-table__button">Купить</button>
+                                                                    <p>Периодичность</p>
+                                                                    <p class="poster-table__title">4 раза в год</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="poster-table__column flex-between">
+                                                                <div class="poster-table__row">
+                                                                    <p>Вид</p>
+                                                                    <p class="poster-table__title"> Электронная/ печатная версия</p>
+                                                                </div>
+                                                                <div class="poster-table__row">
+                                                                    <p>3 выпуск</p>
+                                                                    <p class="poster-table__title">журнала</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="poster-table__column flex-between">
+                                                                <div class="poster-table__row">
+                                                                    <a href="#" class="journal-link">Перейти ко всем выпускам</a>
+                                                                </div>
+                                                                <div class="flex-start">
+                                                                    <div class="poster-table__row">
+                                                                        <p>Цена</p>
+                                                                        <p class="poster-table__title"> 160 грн</p>
+                                                                    </div>
+                                                                    <div class="poster-table__row">
+                                                                        <button class="poster-table__button">Купить
+                                                                        </button>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </td>
+                                                    </td>
 
-                                            </tr>
-                                            <tr class="poster-table__item">
-                                                <td><span>Книга...</span></td>
-                                                <td>
-                                                    <div class="flex-between">
-                                                        <span>Косметология</span>
-                                                        <div class="poster-table__icon">
-                                                            <div class="poster-table__delete"></div>
-                                                            <div class="poster-table__go"></div>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr class="poster-table__desc">
-                                                <td colspan="2">
-                                                    <div class="flex-start poster-table__descWrap">
-                                                        <div class="poster-table__column">
-                                                            <p>Мероприятие</p>
-                                                            <p class="poster-table__title">Makeup YOU Professional 2019 №1</p>
-                                                        </div>
-                                                        <div class="poster-table__column">
-                                                            <p>Место проведения</p>
-                                                            <p class="poster-table__title">Пространство Beauty Hub, ул. Большая Васильковская 132</p>
-                                                        </div>
-                                                        <div class="poster-table__block flex-between">
-                                                            <div class="poster-table__column">
-                                                                <p>Тип</p>
-                                                                <p class="poster-table__title">Конференция</p>
-                                                            </div>
-                                                            <div class="poster-table__column">
-                                                                <p>Время проведения</p>
-                                                                <p class="poster-table__title">19:00 - 22:00</p>
+                                                </tr>
+                                                <tr class="poster-table__item">
+                                                    <td><span>Книга...</span></td>
+                                                    <td>
+                                                        <div class="flex-between">
+                                                            <span>Косметология</span>
+                                                            <div class="poster-table__icon">
+                                                                <div class="poster-table__delete"></div>
+                                                                <div class="poster-table__go"></div>
                                                             </div>
                                                         </div>
-                                                        <div class="poster-table__column">
-                                                            <p>Вид</p>
-                                                            <p class="poster-table__title">Офлайн</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="poster-table__desc">
+                                                    <td colspan="2">
+                                                        <div class="flex-start poster-table__descWrap">
+                                                            <div class="poster-table__column">
+                                                                <p>Мероприятие</p>
+                                                                <p class="poster-table__title">Makeup YOU Professional 2019 №1</p>
+                                                            </div>
+                                                            <div class="poster-table__column">
+                                                                <p>Место проведения</p>
+                                                                <p class="poster-table__title">Пространство Beauty Hub, ул. Большая Васильковская 132</p>
+                                                            </div>
+                                                            <div class="poster-table__block flex-between">
+                                                                <div class="poster-table__column">
+                                                                    <p>Тип</p>
+                                                                    <p class="poster-table__title">Конференция</p>
+                                                                </div>
+                                                                <div class="poster-table__column">
+                                                                    <p>Время проведения</p>
+                                                                    <p class="poster-table__title">19:00 - 22:00</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="poster-table__column">
+                                                                <p>Вид</p>
+                                                                <p class="poster-table__title">Офлайн</p>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                </td>
-
-                                            </tr>
-                                            </tbody>
-                                        </table>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
                                     </div>
-                                    <div class="poster-recommended poster-line">
-                                        <span class="poster-recommended__name">Рекомендуемое</span>
-                                        <div class="poster-recommended__wrap">
-                                            <div class="poster-recommended__item">
-                                                <a href="#" class="poster-recommended__title">Название ограниченное количество символовg</a>
-                                                <div class="poster-recommended__img">
-                                                    <img src="../img/i1.png" alt="">
-                                                </div>
-                                                <div class="poster-recommended__price">
-                                                    <p>Цена: от 200 грн</p>
-                                                    <p>Дата: 08/09/2019</p>
-                                                </div>
-                                                <a class=" poster-recommended__read poster-slider__read" href="">Читать больше</a>
+                                    <div class="poster-content__tab poster-content__small" id="tab-8">
+                                        <p>Events</p>
+                                    </div>
+                                    <div class="poster-content__tab poster-content__small" id="tab-9">
+                                        <p>Promocode</p>
+                                    </div>
+                                    <div class="poster-content__tab poster-content__small" id="tab-10">
+                                        <p>Saves</p>
+                                    </div>
+                                </div>
+                                <div class="poster-recommended poster-line">
+                                    <span class="poster-recommended__name">Рекомендуемое</span>
+                                    <div class="poster-recommended__wrap">
+                                        <div class="poster-recommended__item">
+                                            <a href="#" class="poster-recommended__title">Название ограниченное количество символовg</a>
+                                            <div class="poster-recommended__img">
+                                                <img src="../img/i1.png" alt="">
                                             </div>
-                                            <div class="poster-recommended__item">
-                                                <a href="#" class="poster-recommended__title">Название ограниченное количество символовg</a>
-                                                <div class="poster-recommended__img">
-                                                    <img src="../img/i2.png" alt="">
-                                                </div>
-                                                <div class="poster-recommended__price">
-                                                    <p>Цена: 200 грн</p>
-                                                </div>
-                                                <a class=" poster-recommended__read poster-slider__read" href="">Читать больше</a>
+                                            <div class="poster-recommended__price">
+                                                <p>Цена: от 200 грн</p>
+                                                <p>Дата: 08/09/2019</p>
                                             </div>
-                                            <div class="poster-recommended__item">
-                                                <a href="#" class="poster-recommended__title">Название ограниченное количество символовg</a>
-                                                <div class="poster-recommended__img">
-                                                    <img src="../img/i3.png" alt="">
-                                                </div>
-                                                <div class="poster-recommended__price">
-                                                    <p>Цена: от 200 грн</p>
-                                                    <p>Дата: 08/09/2019</p>
-                                                </div>
-                                                <a class=" poster-recommended__read poster-slider__read" href="">Читать больше</a>
+                                            <a class=" poster-recommended__read poster-slider__read" href="">Читать больше</a>
+                                        </div>
+                                        <div class="poster-recommended__item">
+                                            <a href="#" class="poster-recommended__title">Название ограниченное количество символовg</a>
+                                            <div class="poster-recommended__img">
+                                                <img src="../img/i2.png" alt="">
                                             </div>
+                                            <div class="poster-recommended__price">
+                                                <p>Цена: 200 грн</p>
+                                            </div>
+                                            <a class=" poster-recommended__read poster-slider__read" href="">Читать больше</a>
+                                        </div>
+                                        <div class="poster-recommended__item">
+                                            <a href="#" class="poster-recommended__title">Название ограниченное количество символовg</a>
+                                            <div class="poster-recommended__img">
+                                                <img src="../img/i3.png" alt="">
+                                            </div>
+                                            <div class="poster-recommended__price">
+                                                <p>Цена: от 200 грн</p>
+                                                <p>Дата: 08/09/2019</p>
+                                            </div>
+                                            <a class=" poster-recommended__read poster-slider__read" href="">Читать больше</a>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="poster-content__tab poster-content__small" id="tab-8">
-                                <p>Events</p>
-                            </div>
-                            <div class="poster-content__tab poster-content__small" id="tab-9">
-                                <p>Promocode</p>
-                            </div>
-                            <div class="poster-content__tab poster-content__small" id="tab-10">
-                                <p>Saves</p>
                             </div>
                             <div class="poster-adv">
                                 <div class="poster-adv__slider">
@@ -867,7 +768,8 @@
                                             <img src="../img/imageRight.png" alt="">
                                         </div>
                                         <div class="poster-slider__desc">
-                                            <div class="poster-slider__name">Лазер в дерматологии и косметологии . Потекаев Н. Н., Круглова Л. С.</div>
+                                            <div class="poster-slider__name">Лазер в дерматологии и косметологии . Потекаев Н. Н., Круглова Л. С.
+                                            </div>
                                             <div class="poster-slider__bold">
                                                 <p>Цена:</p>
                                                 <p>1500</p>
@@ -881,7 +783,8 @@
                                             <img src="../img/imageRight.png" alt="">
                                         </div>
                                         <div class="poster-slider__desc">
-                                            <div class="poster-slider__name">Лазер в дерматологии и косметологии . Потекаев Н. Н., Круглова Л. С.</div>
+                                            <div class="poster-slider__name">Лазер в дерматологии и косметологии . Потекаев Н. Н., Круглова Л. С.
+                                            </div>
                                             <div class="poster-slider__bold">
                                                 <p>Цена:</p>
                                                 <p>1500</p>
@@ -902,7 +805,9 @@
     </div>
 </div>
 </body>
-<!--<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>-->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script type="text/javascript" src="../../js/vendor.min.js"></script>
 <script type="text/javascript" src="../../js/app.min.js"></script>
 </html>
