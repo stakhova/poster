@@ -49,17 +49,115 @@
 <h5 class="modal-title" id="exampleModalLabel">Есть вопросы? <br>Связаться с нами! </h5>
 </div>
 <div class="modal-body">
-<p>hhhhhhhhhhhhhhhhhhhh</p>
+<div class="modal-contact">
+<div class="modal-contact__site">
+<a href="https://bhub.com.ua">https://bhub.com.ua</a>
+</div>
+<div class="modal-contact__mail">
+<a href="mailto:tickets.support">tickets.support</a>
+</div>
+<div class="modal-contact__phone">
+<a href="tel:0442000392">+38 (044) 200-03-92</a>
+<a href="tel:0442000392">+38 (044) 200-03-92</a>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="poster-header__message">
+</div>
+</div>
+<div class="poster-header__message" data-toggle="modal" data-target="#message">
+<span>2</span>
+<div class="modal fade" id="message" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-big" role="document">
+<div class="modal-content ">
+<div class="modal-header">
+<h5 class="modal-title">Ваши уведомления</h5>
+</div>
+<div class="modal-body modal-message">
+<div class="modal-message__block">
+<ul class="modal-message__list">
+<li class="modal-message__item">
+<div class="modal-message__count">
 <span>2</span>
 </div>
-<div class="poster-header__balance">
+<div class="modal-message__desc">
+<div class="modal-message__title">
+<p>Афиша</p>
+</div>
+<p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного</p>
+<p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного <a href="">ссылка на что-то</a>  </p>
+</div>
+</li>
+<li class="modal-message__item">
+<div class="modal-message__count">
 <span>1</span>
+</div>
+<div class="modal-message__desc">
+<div class="modal-message__title">
+<p>Букинг</p>
+</div>
+<p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного</p>
+</div>
+</li>
+<li class="modal-message__item">
+<div class="modal-message__count">
+<span>2</span>
+</div>
+<div class="modal-message__desc">
+<div class="modal-message__title">
+<p>Pro bhub</p>
+</div>
+<p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного</p>
+<p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного <a href="">ссылка на что-то</a>  </p>
+</div>
+</li>
+</ul>
+</div>
+<div class="modal-message__all">
+<span>Показать все</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="poster-header__balance" data-toggle="modal" data-target="#balance">
+<span>1</span>
+<div class="modal fade" id="balance" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-small" role="document">
+<div class="modal-content ">
+<div class="modal-header">
+<h5 class="modal-title">Ваш баланс</h5>
+</div>
+<div class="modal-body modal-balance">
+<span>Доступно:</span>
+<div class="modal-balance__available">100грн</div>
+<div class="modal-balance__link">
+<span class="open-history" data-toggle="modal" data-target="#history" >История транзакций</span>
+<span>Пополнить баланс</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="modal fade" id="history" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-big" role="document">
+<div class="modal-content ">
+<div class="modal-header">
+<h5 class="modal-title">История платежей и пополнений</h5>
+</div>
+<div class="modal-body">
+<div class="modal-body">
+<p>table</p>
+<div class="modal-message__all">
+<span>Показать все</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div class="poster-header__person">
 <div class="poster-header__img">
@@ -627,7 +725,7 @@
 <div class="poster-table__column flex-between">
 <div class="poster-table__row">
 <p>Выбрать период и</p>
-<a href="#" class="journal-link">Купить подписку</a>
+<a href="#" class="journal-link buy-subs" data-tab="tab-11">Купить подписку</a>
 </div>
 <div class="poster-table__row">
 <p>Периодичность</p>
@@ -707,13 +805,84 @@
 </div>
 </div>
 <div class="poster-content__tab poster-content__small" id="tab-8">
-<p>Events</p>
+<div class="poster-center__item event">
+<div class="poster-select">
+<div class="poster-select__head">
+<input type="hidden" name="type_category" value="">
+<div class="poster-select__current input"><span>Все книги</span>
+</div>
+</div>
+<div class="poster-select__wrap">
+<ul class="poster-select__dropdown">
+<li>
+<span>Все мероприятия</span>
+</li>
+<li>
+<span>Мероприятия</span>
+</li>
+<li>
+<span>Другие</span>
+</li>
+<li>
+<span>Все</span>
+</li>
+</ul>
+</div>
+</div>
+<table class="poster-table">
+<thead>
+<tr>
+<th>Название</th>
+<th>Дата</th>
+<th>Тематика</th>
+</tr>
+</thead>
+<tbody>
+<tr class="poster-table__item">
+<td><span>Курс современной ...</span></td>
+<td><span>23/10/19</span></td>
+<td>
+<div class="flex-between">
+<span>Косметология</span>
+<div class="poster-table__icon">
+<div class="poster-table__status"></div>
+<div class="poster-table__edit"></div>
+<div class="poster-table__go"></div>
+<div class="poster-table__copy"></div>
+<div class="poster-table__delete"></div>
+</div>
+</div>
+</td>
+</tr>
+<tr class="poster-table__desc">
+<td colspan="3">
+<div class="flex-start poster-table__descWrap">
+<div class="poster-table__column">
+<p>Место проведения</p>
+<p class="poster-table__title">INVERIA flow space, Киев, ул. Владимирская, 49а</p>
+</div>
+<div class="poster-table__column">
+<p>Тип</p>
+<p class="poster-table__title">Конференция</p>
+</div>
+<div class="poster-table__column poster-table__columnTicket">
+<p>Проданных билетов</p>
+<p class="poster-table__title">0</p>
+</div>
+<div class="poster-table__column poster-table__columnSumm">
+<p>Сумма оплат</p>
+<p class="poster-table__title">0</p>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 <div class="poster-content__tab poster-content__small" id="tab-9">
-<p>Promocode</p>
 </div>
 <div class="poster-content__tab poster-content__small" id="tab-10">
-<p>Saves</p>
 </div>
 </div>
 <div class="poster-recommended poster-line">

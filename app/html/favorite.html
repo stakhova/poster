@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../../css/vendor.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/app.min.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="container">
+        <div class="main">
+            <div class="sidebar">
+                <!--<img src="../img/backgr.png" alt="">-->
+                <a href="index.html" class="sidebar-logo"></a>
+                <div class="sidebar-search">
+                    <input type="text" placeholder="Поиск">
+                </div>
+                <div class="sidebar-role">
+                    <span class="sidebar-role__user">Посетитель</span>
+                    <ul class="sidebar-role__list">
+                        <li data-tab="tab-4" class="poster-link">Мои билеты</li>
+                        <li data-tab="tab-5" class="poster-link">Мои книги</li>
+                        <li data-tab="tab-6" class="poster-link">Мои журналы</li>
+                        <li data-tab="tab-7" class="poster-link">Избранное</li>
+                    </ul>
+                </div>
+                <div class="sidebar-role">
+                    <span class="sidebar-role__organizer">Организатор</span>
+                    <ul class="sidebar-role__list">
+                        <li data-tab="tab-8" class="poster-link">Мои мероприятия</li>
+                        <li data-tab="tab-9" class="poster-link">Все промокоды</li>
+                        <li data-tab="tab-10" class="poster-link">Все скидки</li>
+                    </ul>
+                </div>
+                <div class="sidebar-button">
+                    <a href="#">Стать организатором</a>
+                </div>
+            </div>
+            <div class="poster">
+                <div class="poster-header">
+                    <div class="poster-header__question" data-toggle="modal" data-target="#question">
+                        <div class="modal fade" id="question" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-small" role="document">
+                                <div class="modal-content ">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Есть вопросы? <br>Связаться с нами! </h5>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>hhhhhhhhhhhhhhhhhhhh</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="poster-header__message">
+                        <span>2</span>
+                    </div>
+                    <div class="poster-header__balance">
+                        <span>1</span>
+                    </div>
+                    <div class="poster-header__person">
+                        <div class="poster-header__img">
+                            <img src="../img/avatar.png" alt="">
+                        </div>
+                        <div class="poster-header__name">Иван</div>
+                        <ul class="poster-header__list">
+                            <li><a href="#">Профиль</a></li>
+                            <li><a href="#">Выйти</a></li>
+                        </ul>
+                    </div>
+                    <!--<ul class="poster-header__list">-->
+                    <!--<li><a href="#">Профиль</a></li>-->
+                    <!--<li><a href="#">Выйти</a></li>-->
+                    <!--</ul>-->
+                </div>
+                <div class="poster-wrap">
+                    <ul class="poster-tabs">
+                        <li class="poster-link current" data-tab="tab-1">
+                            <div class="poster-link__item"><span>Афиша</span></div>
+                        </li>
+                        <li class="poster-link " data-tab="tab-2">
+                            <div class="poster-link__item"><span>Букинг</span></div>
+                        </li>
+                        <li class="poster-link " data-tab="tab-3">
+                            <div class="poster-link__item"><span>PRO BHUB</span></div>
+                        </li>
+                    </ul>
+                    <div class="poster-content">
+                        <div class="poster-flex">
+                            <div class="poster-center">
+                                <div class="poster-center__tabs">
+                                    <div class="poster-content__tab poster-content__small" id="tab-7">
+                                        <div class="subs">
+                                            <div class="subs-item">
+                                                <div class="subs-title">
+                                                    <span>Покупка билета на "Название мероприятия"</span>
+                                                </div>
+                                                <div class="subs-desc">
+                                                    <div class="subs-desc__item">
+                                                        <p>Внимание! </p>
+                                                        <p>Информация о скидке</p>
+                                                        <p>При оплате курса до 20.04 стоимость 1 500 грн вместо 2 000 грн.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="subs-item">
+                                                <div class="subs-title">
+                                                    <span>Пожалуйста, заполните все поля</span>
+                                                </div>
+                                                <div class="subs-desc">
+                                                    <form action="" class="form">
+                                                        <div>
+                                                            <div class="form-title">
+                                                                <p>Выберите тип билета</p>
+                                                            </div>
+                                                            <div class="form-radio form-radio__ticket">
+                                                                <div class="form-radio__big">
+                                                                    <label for="radio1">
+                                                                        <input type="radio" name="radio-but" value="" class="form-radio__item" id ="radio1" checked>
+                                                                        <div class="form-radio__label flex-between"> <span>Стандарт</span><span class="form-textSemiBold">120 грн</span></div>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="form-radio__big">
+                                                                    <label for=radio2>
+                                                                        <input type="radio" name="radio-but" value="" class="form-radio__item" id ="radio2">
+                                                                        <div class="form-radio__label flex-between"> <span>Вип</span><span class="form-textSemiBold">60 грн</span></div>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-number__wrap">
+                                                            <div class="form-title">
+                                                                <p>Кол-во</p>
+                                                                <div class="form-number">
+                                                                    <input type="text" value="1" size="5">
+                                                                    <a class="form-plus"></a>
+                                                                    <a class="form-minus"></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-title">
+                                                            <p>Контактная информация</p>
+                                                        </div>
+                                                        <div class="flex-start">
+                                                            <div class="form-block">
+                                                                <div class="form-item">
+                                                                    <p>Имя</p>
+                                                                    <input class="form-input" type="text" value="Уже заполнено">
+                                                                </div>
+                                                                <div class="form-item">
+                                                                    <p>Фамилия</p>
+                                                                    <input class="form-input" type="text" value="Уже заполнено">
+                                                                </div>
+                                                                <div class="form-item">
+                                                                    <p>E-mail</p>
+                                                                    <input class="form-input" type="text" placeholder="E-mail">
+                                                                </div>
+                                                                <div class="form-item">
+                                                                    <p>Телефон</p>
+                                                                    <input class="form-input" type="text" value="Уже заполнено">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-block">
+                                                                <div class="form-item">
+                                                                    <input class="form-input" type="text" placeholder="Промокод">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <div class="subs-item">
+                                                <div class="subs-title">
+                                                    <span>Ваш заказ</span>
+                                                </div>
+                                                <div class="subs-desc">
+                                                    <div class="flex-start">
+                                                        <div class="form-block form-textSemiBold">
+                                                            <p>Название мероприятия</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex-start">
+                                                        <div class="form-block form-textSemiBold">
+                                                            <p>Цена</p>
+                                                        </div>
+                                                        <div class="form-block">
+                                                            <p>120 грн</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex-start">
+                                                        <div class="form-block form-textSemiBold">
+                                                            <p>Тип билета</p>
+                                                        </div>
+                                                        <div class="form-block">
+                                                            <p>Стандарт</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex-start">
+                                                        <div class="form-block form-textSemiBold">
+                                                            <p>Количество</p>
+                                                        </div>
+                                                        <div class="form-block">
+                                                            <p>1 билет</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="subs-confirm">
+                                                        <div class="flex-start">
+                                                            <div class="form-block">
+                                                                <div class="subs-confirm__cancel">
+                                                                    <a href="#">Отмена</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-block">
+                                                                <button class="subs-confirm__button">Оплатить билет</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="subs">
+                                            <div class="subs-item">
+                                                <div class="subs-title">
+                                                    <span>Покупка книги "Название 2019"</span>
+                                                </div>
+                                                <div class="subs-desc">
+                                                    <div class="subs-desc__item">
+                                                        <p>Доставка печатных версий оплачивается дополнительно. Мы доставляем печатные версии книг  только по Украине</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="subs-item">
+                                                <div class="subs-title">
+                                                    <span>Пожалуйста, заполните все поля</span>
+                                                </div>
+                                                <div class="subs-desc">
+                                                    <form action="" class="form">
+                                                        <div class="form-title">
+                                                            <p>Контактная информация</p>
+                                                        </div>
+                                                        <div class="flex-start">
+                                                            <div class="form-block">
+                                                                <div class="form-item">
+                                                                    <p>Имя</p>
+                                                                    <input class="form-input" type="text" value="Уже заполнено">
+                                                                </div>
+                                                                <div class="form-item">
+                                                                    <p>Фамилия</p>
+                                                                    <input class="form-input" type="text" value="Уже заполнено">
+                                                                </div>
+                                                                <div class="form-item">
+                                                                    <p>E-mail</p>
+                                                                    <input class="form-input" type="text" placeholder="E-mail">
+                                                                </div>
+                                                                <div class="form-item">
+                                                                    <p>Телефон</p>
+                                                                    <input class="form-input" type="text" value="Уже заполнено">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-block">
+                                                                <div class="form-item">
+                                                                    <input class="form-input" type="text" placeholder="Город">
+                                                                </div>
+                                                                <div class="form-item">
+                                                                    <input class="form-input" type="text" placeholder="Улица">
+                                                                </div>
+                                                                <div class="form-item">
+                                                                    <input class="form-input" type="text" placeholder="Дом">
+                                                                </div>
+                                                                <div class="form-item">
+                                                                    <input class="form-input" type="text" placeholder="Коментарий">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <div class="subs-item">
+                                                <div class="subs-title">
+                                                    <span>Ваш заказ</span>
+                                                </div>
+                                                <div class="subs-desc">
+                                                    <div class="flex-start">
+                                                        <div class="form-block form-textSemiBold">
+                                                            <p>Название книги 2019</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex-start">
+                                                        <div class="form-block form-textSemiBold">
+                                                            <p>Цена</p>
+                                                        </div>
+                                                        <div class="form-block">
+                                                            <p>120 грн</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="subs-confirm">
+                                                        <div class="flex-start">
+                                                            <div class="form-block">
+                                                                <div class="subs-confirm__cancel">
+                                                                    <a href="#">Отмена</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-block">
+                                                                <button class="subs-confirm__button">Оплатить заказ</button>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="subs">
+                                            <div class="subs-item">
+                                                <div class="subs-title">
+                                                    <span>Подписка на новые журналы "Your Hair 3 Выпуск 2019"</span>
+                                                </div>
+                                                <div class="subs-desc">
+                                                    <div class="subs-desc__item">
+                                                        <p>Внимание! </p>
+                                                        <p>Подписка на журнал оформляется на будущий период –</p>
+                                                        <p>Подписка на журнал оформляется на будущий период –</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="subs-item">
+                                                <div class="subs-title">
+                                                    <span>Пожалуйста, заполните все поля</span>
+                                                </div>
+                                                <div class="subs-desc">
+                                                    <form action="" class="form">
+                                                        <div class="form-circle__wrap">
+                                                            <div class="form-title">
+                                                                <p>Выберите версию журнала</p>
+                                                            </div>
+                                                            <div class="form-circle">
+                                                                <p class="form-textSemiBold">Печатная версия</p>
+                                                                <p class="form-var">Варианты скидок:</p>
+                                                                <div class="flex-start">
+                                                                    <label for="circle-1">
+                                                                        <input type="radio" name="radio-circle" value="" class="form-circle__item" id ="circle-1" checked>
+                                                                        <div class="form-circle__label flex-between"> <span>Подписка на 12 месяцев (4 выпуска) </span> <span class="form-textSemiBold">480 грн</span></div>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="flex-start">
+                                                                    <label for="circle-2">
+                                                                        <input type="radio" name="radio-circle" value="" class="form-circle__item" id ="circle-2" >
+                                                                        <div class="form-circle__label flex-between"> <span>Подписка на 6 месяцев (2 выпуска) </span> <span class="form-textSemiBold">240 грн</span></div>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-circle">
+                                                                <p class="form-textSemiBold">Электронная версия</p>
+                                                                <p class="form-var">Варианты скидок:</p>
+                                                                <div class="flex-start">
+                                                                    <label for="circle-3">
+                                                                        <input type="radio" name="radio-circle" value="" class="form-circle__item" id ="circle-3" >
+                                                                        <div class="form-circle__label flex-between"> <span>Подписка на 12 месяцев (4 выпуска)</span><span class="form-textSemiBold">480 грн</span> </div>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="flex-start"></div>
+                                                                <label for="circle-4">
+                                                                    <input type="radio" name="radio-circle" value="" class="form-circle__item" id ="circle-4" >
+                                                                    <div class="form-circle__label flex-between"> <span>Подписка на 6 месяцев (2 выпуска) </span> <span class="form-textSemiBold">240 грн</span></div>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-title">
+                                                            <p>Контактная информация</p>
+                                                        </div>
+                                                        <div class="flex-start">
+                                                            <div class="form-block">
+                                                                <div class="form-item">
+                                                                    <p>Имя</p>
+                                                                    <input class="form-input" type="text" value="Уже заполнено">
+                                                                </div>
+                                                                <div class="form-item">
+                                                                    <p>Фамилия</p>
+                                                                    <input class="form-input" type="text" value="Уже заполнено">
+                                                                </div>
+                                                                <div class="form-item">
+                                                                    <p>E-mail</p>
+                                                                    <input class="form-input" type="text" placeholder="E-mail">
+                                                                </div>
+                                                                <div class="form-item">
+                                                                    <p>Телефон</p>
+                                                                    <input class="form-input" type="text" value="Уже заполнено">
+                                                                </div>
+                                                                <div class="form-item">
+                                                                    <p>Промокод если есть</p>
+                                                                    <input class="form-input" type="text" placeholder="Введите промокод если есть">
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="form-block">
+                                                                <div class="form-item">
+                                                                    <input class="form-input" type="text" placeholder="Город">
+                                                                </div>
+                                                                <div class="form-item">
+                                                                    <input class="form-input" type="text" placeholder="Улица">
+                                                                </div>
+                                                                <div class="form-item">
+                                                                    <input class="form-input" type="text" placeholder="Дом">
+                                                                </div>
+                                                                <div class="form-item">
+                                                                    <input class="form-input" type="text" placeholder="Коментарий">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <div class="subs-item">
+                                                <div class="subs-title">
+                                                    <span>Ваш заказ</span>
+                                                </div>
+                                                <div class="subs-desc">
+                                                    <div class="flex-start">
+                                                        <div class="form-block form-textSemiBold">
+                                                            <p>Your Hair 3 Выпуск 2019</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex-start">
+                                                        <div class="form-block form-textSemiBold">
+                                                            <p>Цена</p>
+                                                        </div>
+                                                        <div class="form-block">
+                                                            <p>120 грн</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex-start">
+                                                        <div class="form-block form-textSemiBold">
+                                                            <p>Печатная версия </p>
+                                                        </div>
+                                                        <div class="form-block">
+                                                            <p>Подписка на 12 месяцев (4 выпуска) </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="subs-confirm">
+                                                        <div class="flex-start">
+                                                            <div class="form-block">
+                                                                <div class="subs-confirm__cancel">
+                                                                    <a href="#">Отмена</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-block">
+                                                                <button class="subs-confirm__button">Пересчитать с промокодом</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="subs">
+                                            <div class="subs-item">
+                                                <div class="subs-title">
+                                                    <span>Покупка журнала "Your Hair 3 Выпуск 2019"</span>
+                                                </div>
+                                                <div class="subs-desc">
+                                                    <div class="subs-desc__item">
+                                                        <p>Доставка печатных версий оплачивается дополнительно (тариф «Новой Почты. Мы доставляем печатные версии журналов только по Украине. Если вы из другой страны, оформите электронную подписку или купите электронную версию журналаты»)</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="subs-item">
+                                                <div class="subs-title">
+                                                    <span>Пожалуйста, заполните все поля</span>
+                                                </div>
+                                                <div class="subs-desc">
+                                                    <form action="" class="form">
+                                                        <div class="form-radio">
+                                                            <div class="form-title">
+                                                                <p>Выберите версию журнала</p>
+                                                            </div>
+                                                            <div class="flex-start">
+                                                                <div class="form-block">
+                                                                    <label for="item-3">
+                                                                        <input type="radio" name="radio-but" value="" class="form-radio__item" id ="item-3" checked>
+                                                                        <div class="form-radio__label"> <span>Печатная версия <span class="form-textSemiBold">120 грн</span></span></div>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="form-block">
+                                                                    <label for=item-4>
+                                                                        <input type="radio" name="radio-but" value="" class="form-radio__item" id ="item-4">
+                                                                        <div class="form-radio__label"> <span>Электронная версия <span class="form-textSemiBold">60 грн</span></span></div>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-title">
+                                                            <p>Контактная информация</p>
+                                                        </div>
+                                                        <div class="flex-start">
+                                                            <div class="form-block">
+                                                                <div class="form-item">
+                                                                    <p>Имя</p>
+                                                                    <input class="form-input" type="text" value="Уже заполнено">
+                                                                </div>
+                                                                <div class="form-item">
+                                                                    <p>Фамилия</p>
+                                                                    <input class="form-input" type="text" value="Уже заполнено">
+                                                                </div>
+                                                                <div class="form-item">
+                                                                    <p>E-mail</p>
+                                                                    <input class="form-input" type="text" placeholder="E-mail">
+                                                                </div>
+                                                                <div class="form-item">
+                                                                    <p>Телефон</p>
+                                                                    <input class="form-input" type="text" value="Уже заполнено">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-block">
+                                                                <div class="form-item">
+                                                                    <input class="form-input" type="text" placeholder="Город">
+                                                                </div>
+                                                                <div class="form-item">
+                                                                    <input class="form-input" type="text" placeholder="Улица">
+                                                                </div>
+                                                                <div class="form-item">
+                                                                    <input class="form-input" type="text" placeholder="Дом">
+                                                                </div>
+                                                                <div class="form-item">
+                                                                    <input class="form-input" type="text" placeholder="Коментарий">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <div class="subs-item">
+                                                <div class="subs-title">
+                                                    <span>Ваш заказ</span>
+                                                </div>
+                                                <div class="subs-desc">
+                                                    <div class="flex-start">
+                                                        <div class="form-block form-textSemiBold">
+                                                            <p>Your Hair 3 Выпуск 2019</p>
+                                                            <p>Печатная версия </p>
+                                                        </div>
+                                                        <div class="form-block">
+                                                            <p>120 грн</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="subs-confirm">
+                                                        <div class="flex-start">
+                                                            <div class="form-block">
+                                                                <div class="subs-confirm__cancel">
+                                                                    <a href="#">Отмена</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-block">
+                                                                <button class="subs-confirm__button">Оплатить заказ</button>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="poster-adv">
+                                <div class="poster-adv__slider">
+                                    <div class="poster-adv__item">
+                                        <div class="poster-slider__title books">Книга</div>
+                                        <div class="poster-slider__img poster-adv__img">
+                                            <img src="../img/imageRight.png" alt="">
+                                        </div>
+                                        <div class="poster-slider__desc">
+                                            <div class="poster-slider__name">Лазер в дерматологии и косметологии . Потекаев Н. Н., Круглова Л. С.
+                                            </div>
+                                            <div class="poster-slider__bold">
+                                                <p>Цена:</p>
+                                                <p>1500</p>
+                                            </div>
+                                        </div>
+                                        <a class="poster-slider__read poster-adv__read" href="">Читать больше</a>
+                                    </div>
+                                    <div class="poster-adv__item">
+                                        <div class="poster-slider__title books">Книга</div>
+                                        <div class="poster-slider__img poster-adv__img">
+                                            <img src="../img/imageRight.png" alt="">
+                                        </div>
+                                        <div class="poster-slider__desc">
+                                            <div class="poster-slider__name">Лазер в дерматологии и косметологии . Потекаев Н. Н., Круглова Л. С.
+                                            </div>
+                                            <div class="poster-slider__bold">
+                                                <p>Цена:</p>
+                                                <p>1500</p>
+                                            </div>
+                                        </div>
+                                        <a class="poster-slider__read poster-adv__read" href="">Читать больше</a>
+                                    </div>
+                                </div>
+                                <a href="" class="poster-adv__simple">
+                                    <p>Pеклама</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script type="text/javascript" src="../../js/vendor.min.js"></script>
+<script type="text/javascript" src="../../js/app.min.js"></script>
+</html>

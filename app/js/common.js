@@ -105,6 +105,7 @@ $(document).ready(function() {
     });
 
 
+
     $('.poster-slider').slick({
         prevArrow: '<div class="poster-slider__prev"></div>',
         nextArrow: '<div class="poster-slider__next"></div>',
@@ -114,4 +115,27 @@ $(document).ready(function() {
         slidesToScroll: 1,
     });
 
+
+
+});
+
+$(document).ready(function(){
+    $('.form-minus').click(function () {
+        var $input = $(this).parent().find('input');
+        var count = parseInt($input.val()) - 1;
+        count = count < 1 ? 1 : count;
+        $input.val(count);
+        $input.change();
+        return false;
+    });
+    $('.form-plus').click(function () {
+        var $input = $(this).parent().find('input');
+        $input.val(parseInt($input.val()) + 1);
+        $input.change();
+        return false;
+    });
+    $('.open-history').click(function () {
+        console.log("ffff")
+        $('#balance').modal('hide')
+    });
 });
