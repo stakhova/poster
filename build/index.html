@@ -148,11 +148,44 @@
 <h5 class="modal-title">История платежей и пополнений</h5>
 </div>
 <div class="modal-body">
-<div class="modal-body">
-<p>table</p>
+<table class="modal-table ">
+<thead>
+<tr>
+<th>Дата/время</th>
+<th>Сумма</th>
+<th>Назначение платежа</th>
+</tr>
+</thead>
+<tbody>
+<tr class="modal-table__item modal-table__buy">
+<td><span>24.10.19/14:10</span></td>
+<td><span>1200 грн</span></td>
+<td><span>Покупка: Название книги</span></td>
+</tr>
+<tr class="modal-table__item modal-table__buy">
+<td><span>24.10.19/14:10</span></td>
+<td><span>1200 грн</span></td>
+<td><span>Покупка: Название книги</span></td>
+</tr>
+<tr class="modal-table__item modal-table__add">
+<td><span>24.10.19/14:10</span></td>
+<td><span>1200 грн</span></td>
+<td><span>Покупка: Название книги</span></td>
+</tr>
+<tr class="modal-table__item modal-table__buy">
+<td><span>24.10.19/14:10</span></td>
+<td><span>1200 грн</span></td>
+<td><span>Покупка: Название книги</span></td>
+</tr>
+<tr class="modal-table__item modal-table__buy">
+<td><span>24.10.19/14:10</span></td>
+<td><span>1200 грн</span></td>
+<td><span>Покупка: Покупка: Название мероприятиятия</span></td>
+</tr>
+</tbody>
+</table>
 <div class="modal-message__all">
 <span>Показать все</span>
-</div>
 </div>
 </div>
 </div>
@@ -283,7 +316,7 @@
 <div class="poster-center">
 <div class="poster-center__tabs">
 <div class="poster-content__tab poster-content__small" id="tab-4">
-<div class="poster-center__item">
+<div class="poster-center__item ticket">
 <div class="poster-select">
 <div class="poster-select__head">
 <input type="hidden" name="type_category" value="">
@@ -343,12 +376,12 @@
 <p>Место проведения</p>
 <p class="poster-table__title">Пространство Beauty Hub, ул. Большая Васильковская 132</p>
 </div>
-<div class="poster-table__block flex-between">
-<div class="poster-table__column">
+<div class="poster-table__column flex-between">
+<div class="poster-table__row">
 <p>Тип</p>
 <p class="poster-table__title">Конференция</p>
 </div>
-<div class="poster-table__column">
+<div class="poster-table__row">
 <p>Время проведения</p>
 <p class="poster-table__title">19:00 - 22:00</p>
 </div>
@@ -401,8 +434,7 @@
 <p class="poster-table__title">Офлайн</p>
 </div>
 <div class="poster-table__row">
-<button class="poster-table__button">Купить билет
-</button>
+<button class="poster-table__button">Купить билет</button>
 </div>
 </div>
 </div>
@@ -571,7 +603,7 @@
 <a href="#" class="journal-link">Перейти ко всем выпускам</a>
 </div>
 <div class="flex-start">
-<div class="poster-table__row">
+<div class="poster-table__row poster-table__padding ">
 <p>Цена</p>
 <p class="poster-table__title"> 160 грн</p>
 </div>
@@ -749,7 +781,7 @@
 <div class="flex-start">
 <div class="poster-table__row">
 <p>Цена</p>
-<p class="poster-table__title"> 160 грн</p>
+<p class="poster-table__title poster-table__padding "> 160 грн</p>
 </div>
 <div class="poster-table__row">
 <button class="poster-table__button">Купить

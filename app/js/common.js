@@ -35,9 +35,11 @@ $(document).ready(function() {
         $(this).next().slideToggle(100);
         $(this).toggleClass('active');
     });
+
     $('.poster-header__name').on('click', function () {
         $(this).next().slideToggle(100);
         $(this).toggleClass('active');
+        $(this).parent().toggleClass('active');
     });
 
     $('.poster-select__wrap').on('click', 'li', function () {
