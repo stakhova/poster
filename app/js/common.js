@@ -31,6 +31,18 @@ $(document).ready(function() {
 
 
 
+    $('.filter-up').on('click', function () {
+        $(this).addClass('filter-up-active');
+        $(this).next().removeClass('filter-down-active');
+    });
+    $('.filter-down').on('click', function () {
+        $(this).addClass('filter-down-active');
+        $(this).prev().removeClass('filter-up-active');
+    });
+
+
+
+
     $('.poster-select__head').on('click', function () {
         $(this).next().slideToggle(100);
         $(this).toggleClass('active');
