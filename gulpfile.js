@@ -12,7 +12,8 @@ var gulp         = require('gulp'),
     pngquant     = require('imagemin-pngquant'),
     cache        = require('gulp-cache'),
     autoprefixer = require('gulp-autoprefixer'),
-    babel        = require('gulp-babel');
+    babel        = require('gulp-babel'),
+    sourcemaps   = require('gulp-sourcemaps');
 
 
 var paths = {
@@ -45,7 +46,10 @@ var paths = {
 
 gulp.task('scss', function () {
     return gulp.src(paths.src.scss)
+        .pipe(sourcemaps.init())
         .pipe(scss())
+        .pipe(sourcemaps.write({includeContent: false}))
+        .pipe(sourcemaps.init({loadMaps: true}))
         .pipe(cssnano())
         .pipe(concat('app.min.css'))
         .pipe(autoprefixer([
@@ -59,6 +63,7 @@ gulp.task('scss', function () {
             'safari 5',
             'ios 6'
         ], {cascade: true}))
+        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(paths.dest.scss))
         .pipe(plumber())
         .pipe(browserSync.reload({stream: true}));

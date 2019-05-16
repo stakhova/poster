@@ -12,7 +12,8 @@ $(document).ready(function() {
 
 
     $('.poster-table__item' ).on('click', function () {
-        $(this).next().slideToggle(200);
+        // $(this).next().slideToggle(200);
+        $(this).next().fadeToggle(300);
         $(this).toggleClass('active');
     });
 
