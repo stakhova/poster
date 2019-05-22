@@ -44,7 +44,8 @@ $(document).ready(function() {
 
 
 
-    $('.poster-select__head').on('click', function () {
+    $('.poster-select__head').on('click', function (e) {
+        e.stopPropagation();
         $(this).next().slideToggle(100);
         $(this).toggleClass('active');
     });
@@ -130,8 +131,12 @@ $(document).ready(function() {
         slidesToScroll: 1,
     });
 
+});
 
-
+/* Close dropdown on outside click */
+$(document).click(function() {
+    $('div.poster-select__head.active').next().fadeToggle(300);
+    $('div.poster-select__head.active').toggleClass('active');
 });
 
 $(document).ready(function(){
