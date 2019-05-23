@@ -29,7 +29,12 @@ var paths = {
             'bower_components/jquery/dist/jquery.min.js',
             'bower_components/jquery-validation/dist/jquery.validate.min.js',
             'bower_components/jquery-validation/dist/additional-methods.min.js',
-            'app/vendor/js/slick.min.js'
+            'app/vendor/js/slick.min.js',
+            'app/vendor/js/jquery-ui.min.js',
+            'app/vendor/js/bootstrap.min.js',
+            'app/vendor/js/jquery-ui-price.min.js',
+            'app/vendor/js/jquery-date-ui.min.js',
+            'app/vendor/js/jquery.scrollsections.js',
         ],
     },
     dest: {
@@ -143,6 +148,13 @@ gulp.task('html', function () {
         .pipe(gulp.dest(paths.dest.html))
         .pipe(plumber())
         .pipe(browserSync.reload({stream: true}));
+});
+
+/* fileinclude tasks */
+gulp.task('fileinclude', function() {
+    gulp.src(['./app/html/template/*.html'])
+        .pipe(fileinclude())
+        .pipe(gulp.dest('./app/html/'));
 });
 
 gulp.task('watch', ['browser-sync', 'vendor-css', 'vendor-js', 'fonts', 'scss', 'html', 'babel', 'static'], function () {

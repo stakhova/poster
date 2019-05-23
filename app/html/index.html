@@ -5,7 +5,6 @@
     <title>Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="../../css/vendor.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../../css/app.min.css">
 </head>
 <body>
@@ -193,7 +192,7 @@
                         </div>
                     </div>
                     <div class="poster-header__person">
-                        <div class="poster-header__img">
+                        <div class="poster-header__img" data-toggle="modal" data-target="#enter">
                             <img src="../img/avatar.png" alt="">
                         </div>
                         <div class="poster-header__name">Иван</div>
@@ -202,10 +201,6 @@
                             <li><a href="#">Выйти</a></li>
                         </ul>
                     </div>
-                    <!--<ul class="poster-header__list">-->
-                    <!--<li><a href="#">Профиль</a></li>-->
-                    <!--<li><a href="#">Выйти</a></li>-->
-                    <!--</ul>-->
                 </div>
                 <div class="poster-wrap">
                     <ul class="poster-tabs">
@@ -1236,11 +1231,285 @@
             </div>
         </div>
     </div>
+
+
+
+
+    // registration
+    <div class="modal fade reg" id="enter" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog " role="document">
+            <div class="modal-content ">
+                <div class="modal-header">
+                    <ul class="modal-tab">
+                        <li class="modal-tab__link current" data-tab="tab_1">Авторизоваться</li>
+                        <li class="modal-tab__link" data-tab="tab_2">Регистрация</li>
+                    </ul>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-social">
+                        <div class="text-center">
+                            <p>Войти с помощью</p>
+                        </div>
+                        <div class="modal-social__block">
+                            <a href="#" class="modal-social__item"></a>
+                            <a href="#" class="modal-social__item"></a>
+                            <a href="#" class="modal-social__item"></a>
+                            <a href="#" class="modal-social__item"></a>
+                        </div>
+                    </div>
+                    <div id="tab_1" class="modal-tab__content current">
+                        <form action="">
+                            <div class="form-block">
+                                <div class="form-item">
+                                    <input class="form-input" type="text" placeholder="Ваш адрес электронной почты/телефон">
+                                </div>
+                                <div class="form-item">
+                                    <input class="form-input" type="password" placeholder="Пароль">
+                                </div>
+                            </div>
+                            <div class="modal-underline">
+                                <span class="modal-forgot" data-toggle="modal" data-target="#forgot_password">Забыли пароль?</span>
+                            </div>
+                            <div class="form-item">
+                                <button class="form-button ">Войти в систему</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="tab_2" class="modal-tab__content">
+                        <form action="">
+                            <div class="form-block">
+                                <div class="form-item">
+                                    <input class="form-input" type="text" placeholder="Номер телефона/Email">
+                                </div>
+                                <div class="text-center form-text">
+                                    <p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее </p>
+                                </div>
+                            </div>
+                            <div class="form-item text-center sent_code" data-toggle="modal" data-target="#code">
+                                <button class="form-button form-button__small">Отправить</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    //forgot password
+    <div class="modal fade reg" id="forgot_password" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog " role="document">
+            <div class="modal-content ">
+                <div class="modal-header">
+                    <ul class="modal-tab">
+                        <li class="modal-tab__link current" data-tab="tab_3">Авторизоваться</li>
+                        <li class="modal-tab__link" data-tab="tab_4">Регистрация</li>
+                    </ul>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-social">
+                        <div class="text-center">
+                            <p>Войти с помощью</p>
+                        </div>
+                        <div class="modal-social__block">
+                            <a href="#" class="modal-social__item"></a>
+                            <a href="#" class="modal-social__item"></a>
+                            <a href="#" class="modal-social__item"></a>
+                            <a href="#" class="modal-social__item"></a>
+                        </div>
+                    </div>
+                    <div id="tab_3" class="modal-tab__content current">
+                        <form action="">
+                            <div class="form-block">
+                                <div class="form-item">
+                                    <input class="form-input" type="text" placeholder="Ваш адрес электронной почты/телефон">
+                                </div>
+                                <div class="text-center form-text">
+                                    <p>На указанный адрес электронной почты будет отправлен временный пароль, введите его</p>
+                                </div>
+                            </div>
+                            <div class="modal-underline">
+                                <span class="modal-remember" data-toggle="modal" data-target="#enter">Я вспомнил свой пароль</span>
+                            </div>
+                            <div class="form-item">
+                                <button class="form-button">Получить пароль</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="tab_4" class="modal-tab__content">
+                        <form action="">
+                            <div class="form-block">
+                                <div class="form-item">
+                                    <input class="form-input" type="text" placeholder="Номер телефона/Email">
+                                </div>
+                                <div class="text-center form-text">
+                                    <p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее </p>
+                                </div>
+                            </div>
+                            <div class="form-item text-center sent-code" data-toggle="modal" data-target="#code">
+                                <button class="form-button form-button__small ">Отправить</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    //modal sent code
+    <div class="modal fade reg" id="code" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog " role="document">
+            <div class="modal-content ">
+                <div class="modal-header">
+                    <ul class="modal-tab">
+                        <li class="modal-tab__link" data-tab="tab_5">Авторизоваться</li>
+                        <li class="modal-tab__link current" data-tab="tab_6">Регистрация</li>
+                    </ul>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-social">
+                        <div class="text-center">
+                            <p>Войти с помощью</p>
+                        </div>
+                        <div class="modal-social__block">
+                            <a href="#" class="modal-social__item"></a>
+                            <a href="#" class="modal-social__item"></a>
+                            <a href="#" class="modal-social__item"></a>
+                            <a href="#" class="modal-social__item"></a>
+                        </div>
+                    </div>
+                    <div id="tab_5" class="modal-tab__content">
+                        <form action="">
+                            <div class="form-block">
+                                <div class="form-item">
+                                    <input class="form-input" type="text" placeholder="Ваш адрес электронной почты/телефон">
+                                </div>
+                                <div class="form-item">
+                                    <input class="form-input" type="password" placeholder="Пароль">
+                                </div>
+                            </div>
+                            <div class="modal-underline">
+                                <span class="modal-forgot" data-toggle="modal" data-target="#forgot_password">Забыли пароль?</span>
+                            </div>
+                            <div class="form-item">
+                                <button class="form-button">Войти в систему</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="tab_6" class="modal-tab__content current">
+                        <form action="">
+                            <div class="form-block">
+                                <div class="form-item">
+                                    <input class="form-input" type="text" placeholder="Код">
+                                </div>
+                                <div class="text-center form-text">
+                                    <p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее </p>
+                                </div>
+                            </div>
+                            <div class="form-item text-center">
+                                <button class="form-button">Войти в систему</button>
+                            </div>
+                        </form>
+                        <div class="modal-countdown">
+                            <div class="text-center form-text">
+                                <p>Код должен прийти в течении 30 сек</p>
+                            </div>
+                            <div id="countdown">
+                                <div id="countdown-number"></div>
+                                <svg>
+                                    <circle r="28" cx="32" cy="32"></circle>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="modal-underline">
+                            <span>Код не пришел ?</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    //modal success
+
+    <div class="modal fade reg" id="success" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content ">
+                <div class="modal-body modal-success">
+                    <div class="modal-success__icon"></div>
+                    <div class="text-center modal-success__text form-text">
+                        <p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--<div class="modal fade reg" id="success" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">-->
+        <!--<div class="modal-dialog modal-dialog-centered" role="document">-->
+            <!--&lt;!&ndash;<div class="modal-content ">&ndash;&gt;-->
+            <!--<div class="modal-body modal-success">-->
+                <!--<div class="modal-success__icon"></div>-->
+                <!--<div class="text-center modal-success__text form-text">-->
+                    <!--<p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее </p>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--</div>-->
+    <!--</div>-->
+
+
+    <div class="modal fade reg reg-fill" id="fill-all" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="reg-header">
+            <a href="index.html" class="sidebar-logo"></a>
+            <p>Для регистрации, в личном кабинете Beautyhub, пожалуйста заполните все поля</p>
+            <div class="poster-header__question" data-toggle="modal" data-target="#fill_all"></div>
+        </div>
+        <div class="modal-dialog modal-fill" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form action="" class="form">
+                        <div class="modal-fill__block">
+
+                            <div class="form-item">
+                                <input class="form-input" type="text" placeholder="Ваше Имя">
+                            </div>
+                            <div class="form-item">
+                                <input class="form-input" type="text" placeholder="Фамилия">
+                            </div>
+                        </div>
+                        <div class="modal-fill__block">
+                            <div class="form-item">
+                                <input class="form-input" type="text" placeholder="E-mail">
+                            </div>
+                            <div class="form-item">
+                                <p>Телефон</p>
+                                <input class="form-input" type="text" value="+ 3 098 76 75 533">
+                            </div>
+                        </div>
+                        <div class="modal-fill__block">
+                            <div class="form-item">
+                                <input class="form-input" type="text" placeholder="Пароль">
+                            </div>
+                            <div class="form-item">
+                                <input class="form-input" type="text" placeholder="Подтвердите пароль">
+                            </div>
+                        </div>
+                        <div class="modal-fill__text">
+                            <p>Для входа в личный кабинет. Количество символов не менее 10</p>
+                        </div>
+                        <div class="form-block">
+                            <button class="subs-confirm__button">Подтвердить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 </div>
 </body>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script type="text/javascript" src="../../js/vendor.min.js"></script>
 <script type="text/javascript" src="../../js/app.min.js"></script>
 </html>

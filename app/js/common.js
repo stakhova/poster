@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+
     $('.poster-slider').slick({
         prevArrow: '<div class="poster-slider__prev"></div>',
         nextArrow: '<div class="poster-slider__next"></div>',
@@ -70,6 +71,47 @@ $(document).ready(function() {
         $(this).next().slideToggle(300);
         $(this).toggleClass('active');
     });
+
+
+    $('ul.modal-tab li').click(function(){
+        var tab_id = $(this).attr('data-tab');
+
+        $('ul.modal-tab li').removeClass('current');
+        $('.modal-tab__content').removeClass('current');
+
+        $(this).addClass('current');
+        $("#"+tab_id).addClass('current');
+    });
+
+
+
+
+
+    $('ul.poster-tabs li').click(function () {
+        var tab_id = $(this).attr('data-tab');
+
+        $('ul.poster-tabs li').removeClass('current');
+        //$('ul.sidebar-role__list li').removeClass('current');
+        $('.poster-content__tab').removeClass('current');
+        $(this).addClass('current');
+        $('.poster-adv').removeClass('poster-adv__show');
+        $('.poster-recommended').removeClass('poster-recommended__show');
+        $('.poster-flex').css('display','none');
+
+        $("#" + tab_id).addClass('current');
+
+        $('.poster-slider').slick('unslick');
+        window.dispatchEvent (new Event ('resize'));
+        $('.poster-slider').slick({
+            prevArrow: '<div class="poster-slider__prev"></div>',
+            nextArrow: '<div class="poster-slider__next"></div>',
+            dots: true,
+            fade: false,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+        });
+    });
+
 
 
     $('ul.poster-tabs li').click(function () {
@@ -154,8 +196,40 @@ $(document).ready(function(){
         $input.change();
         return false;
     });
+
+    //modal change
+
+
+
+
+    var countdownNumberEl = document.getElementById('countdown-number');
+    var countdown = 32;
+
+    countdownNumberEl.textContent = countdown;
+    setInterval(function() {
+        countdown = --countdown <= 0 ? 30 : countdown;
+
+        countdownNumberEl.textContent = countdown;
+    }, 1000);
+
+});
+
+
+$(document).ready(function(){
     $('.open-history').click(function () {
-        console.log("ffff")
         $('#balance').modal('hide')
     });
+
+    $('.modal-remember').click(function () {
+        $('#forgot_password').modal('hide')
+    })
+
+    $('.modal-forgot').click(function () {
+        $('#enter').modal('hide')
+    });
+    $('.sent-code').click(function () {
+        $('#enter').modal('hide')
+        $('#forgot_password').modal('hide')
+    })
+
 });

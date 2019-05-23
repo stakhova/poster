@@ -325,6 +325,7 @@ a{
       }
     }
     &__question{
+      position: relative;
       width: 18px;
       height: 18px;
       &::after{
@@ -1585,13 +1586,8 @@ a{
   &-body{
     padding: 21px;
   }
-  //position: absolute;
   padding: 0;
   &-dialog{
-    //margin-right: 30%;
-    //position: relative;
-    //top: 0;
-    //left: 0;
     box-shadow: 0px 1px 3.8px 0.2px #b1b1b1;
     border-radius: 0;
     background-color: white;
@@ -1802,6 +1798,213 @@ a{
   }
 }
 
+
+.reg{
+  .modal{
+    //max-width: 495px;
+    //width: 100%;
+    &-content{
+      font: $SSP-Light;
+      box-shadow: 0px 1px 3.8px 0.2px #b1b1b1;
+      background-color: #ffffff;
+    }
+    &-body{
+      padding: 30px 10% 20px;
+    }
+    &-underline{
+      text-decoration: underline;
+      text-align: center;
+      padding: 20px 0;
+      cursor: pointer;
+    }
+    &-header{
+      background-color: #fafafa;
+      color: $blue;
+      padding:  0 13%;
+    }
+    &-countdown{
+      padding-top: 25px ;
+    }
+    &-social{
+      font-size: 16px;
+      &__item{
+        position: relative;
+          display: block;
+          width: 30px;
+          height: 30px;
+        &:after{
+          content: "";
+          position: absolute;
+          width: 30px;
+          height: 30px;
+          top:0;
+          left: 0;
+          z-index: 100;
+        }
+        &:first-child:after{
+          background: url('../img/fb.svg') no-repeat left top;
+        }
+        &:nth-child(2):after{
+          background: url('../img/linked.svg') no-repeat left top;
+        }
+        &:nth-child(3):after{
+          background: url('../img/google.svg') no-repeat left top;
+        }
+        &:nth-child(4):after{
+          background: url('../img/tw.svg') no-repeat left top;
+        }
+      }
+      &__block{
+        padding: 0 90px;
+        padding-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+      }
+    }
+    &-tab{
+      font-size: 14px;
+      width: 100%;
+      //margin: 0px;
+      //padding: 0px;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      li{
+      padding:16px 0;
+      display: inline-block;
+      cursor: pointer;
+        position: relative;
+    }
+
+      li.current{
+        font: $SSP-Bold;
+        &:after{
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 1px;
+          background-color: $blue;
+          bottom: 11px;
+          left: 0;
+        }
+        //border-bottom: 1px solid $blue;
+        ////text-decoration: underline;
+    }
+
+      &__content{
+        display: none;
+      }
+
+      &__content.current{
+        display: inherit;
+      }
+    }
+    &-success{
+      &__icon{
+        position: relative;
+        margin:  10px auto;
+        width: 72px;
+        height: 72px;
+        border-radius: 50%;
+        background-color: $green;
+        &:after{
+          content: "\e971";
+          position: absolute;
+          color: white;
+          top: 50%;
+          left: 50%;
+          font-size: 25px;
+          transform: translate(-50%,-50%);
+          font-family: 'icomoon';
+          z-index: 10;
+        }
+      }
+      &__text{
+        font-size: 16px!important;
+      }
+    }
+    &-fill{
+      max-width: 805px;
+      .modal-content{
+        height: 100vh;
+      }
+      .modal-body{
+        padding: 30px 21%;
+      }
+      &__block{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        height: 60px;
+      }
+      &__text{
+        font-size: 12px;
+        max-width: 200px;
+        text-align: center;
+      }
+      .form-input{
+        width: 200px;
+        padding-top: 0px;
+      }
+      .subs-confirm__button{
+        margin-top: 30px;
+        float: right;
+      }
+
+    }
+
+  }
+
+  .form-input{
+    font-size: 16px;
+    width: 100%;
+    padding-top: 43px;
+    padding-bottom: 6px;
+  }
+  .form-item{
+    display: block;
+    min-height: auto;
+  }
+  .form-block{
+    margin: 0 ;
+    width: 100%;
+  }
+  .form-text{
+    padding: 5px 0 20px;
+    font-size: 12px;
+    margin: 0;
+  }
+
+  &-header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 50px;
+    background-color: #fff;
+    box-shadow: 0 0 7.4px 0.6px #b1b1b1;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    //padding-right: 30px;
+    font-size: 16px;
+    .poster-header__question{
+      right: 130px;
+    }
+  }
+  .sidebar-logo{
+    width: auto;
+  }
+  &-fill{
+
+  }
+}
+
 .subs{
   background-color: #fff;
   box-shadow: 0px 1px 3.8px 0.2px #b1b1b1;
@@ -1900,6 +2103,20 @@ a{
     color: $blue;
     &::placeholder{
       color: $blue;
+    }
+  }
+  &-button{
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    border: none;
+    padding: 8px 0;
+    box-shadow: 0 0 7.4px 0.6px #b1b1b1;
+    background-image: linear-gradient(86deg, #3a4185, #02083f);
+    &__small{
+      padding: 8px 17px;
+      width: max-content;
     }
   }
   &-radio{
@@ -2149,6 +2366,52 @@ a{
 .book-table {
   td {
     padding-left: 0;
+  }
+}
+
+#countdown {
+  position: relative;
+  margin: 0 auto;
+  //margin-top: 100px;
+  height: 64px;
+  width: 64px;
+  text-align: center;
+  top: 15px;
+}
+
+#countdown-number {
+  color: $blue;
+  display: inline-block;
+  line-height: 64px;
+  font: $SSP-Light;
+  font-size: 24px;
+}
+
+svg {
+  position: absolute;
+  top: -14px;
+  left: 50% ;
+  width: 64px;
+  height: 64px;
+  transform: translateX(-50%) rotateY(-180deg) rotateZ(-90deg);
+}
+
+svg circle {
+  stroke-dasharray: 170px;
+  stroke-dashoffset: 0px;
+  stroke-linecap: round;
+  stroke-width: 6px;
+  stroke: $blue;
+  fill: none;
+  animation: countdown 30s linear infinite forwards;
+}
+
+@keyframes countdown {
+  from {
+    stroke-dashoffset: 0px;
+  }
+  to {
+    stroke-dashoffset: 170px;
   }
 }
 
