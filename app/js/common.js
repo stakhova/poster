@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
 
 
@@ -13,7 +14,6 @@ $(document).ready(function() {
 
 
     $('.poster-table__item' ).on('click', function () {
-        // $(this).next().slideToggle(200);
         $(this).next().fadeToggle(300);
         $(this).toggleClass('active');
     });
@@ -162,8 +162,6 @@ $(document).ready(function() {
         });
     });
 
-
-
     $('.poster-slider').slick({
         prevArrow: '<div class="poster-slider__prev"></div>',
         nextArrow: '<div class="poster-slider__next"></div>',
@@ -172,13 +170,15 @@ $(document).ready(function() {
         slidesToShow: 3,
         slidesToScroll: 1,
     });
-
 });
 
 /* Close dropdown on outside click */
 $(document).click(function() {
+    // close dropdown if clicked outside
     $('div.poster-select__head.active').next().fadeToggle(300);
     $('div.poster-select__head.active').toggleClass('active');
+    $('#question-drop').fadeToggle(300);
+
 });
 
 $(document).ready(function(){
@@ -198,9 +198,6 @@ $(document).ready(function(){
     });
 
     //modal change
-
-
-
 
     var countdownNumberEl = document.getElementById('countdown-number');
     var countdown = 32;
@@ -233,3 +230,22 @@ $(document).ready(function(){
     })
 
 });
+
+function setPosition() {
+    const element = document.getElementById('show-question');
+    const elementContent = document.getElementsByClassName('question-drop__content')[0];
+    var rect = element.getBoundingClientRect();
+    elementContent.style.right = `${window.innerWidth - rect.right}px`;
+}
+
+setPosition();
+
+
+$("#show-question").click(function(e) {
+    e.stopPropagation();
+    $('#question-drop').slideToggle();
+});
+
+window.onresize = function() {
+    setPosition()
+};

@@ -57,7 +57,7 @@ a{
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 1000;
+  z-index: 1001;
   object-fit: cover;
   //img{
   //  bottom: 0;
@@ -1176,6 +1176,10 @@ a{
 
       }
     }
+    &__actions {
+      display: flex;
+      justify-content: flex-end;
+    }
 
     thead tr{
       position: relative;
@@ -1192,7 +1196,10 @@ a{
         width: 18%;
       }
       :nth-child(4){
-        width: 44%;
+        width: 20%;
+      }
+      :nth-child(5){
+        width: 24%;
       }
     }
     th{
@@ -1570,14 +1577,20 @@ a{
 .books{
   thead tr{
     :nth-child(3){
-      width: 60%;
+      width: 20%;
+    }
+    :nth-child(4){
+      width: 40%;
     }
   }
 }
 .favorite{
   thead tr{
     :nth-child(2){
-      width: 73%;
+      width: 30%;
+    }
+    :nth-child(3){
+      width: 43%;
     }
   }
 }
@@ -1602,7 +1615,6 @@ a{
   }
   &-big{
     max-width: 630px;
-    z-index: 1050;
   }
   &-header{
     border-radius: 0;
@@ -2412,6 +2424,70 @@ svg circle {
   }
   to {
     stroke-dashoffset: 170px;
+  }
+}
+
+#question-drop {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  .question-drop {
+    &__content {
+      display: block;
+      width: 217px;
+      position: absolute;
+      top:39px;
+      right: 0;
+      z-index: 1060;
+      box-shadow: 0px 1px 3.8px 0.2px $text-shadow;
+    }
+    &__header {
+      width: 100%;
+      height: 45px;
+      font: $SSP;
+      font-size: 16px;
+      padding: 3px 21px;
+      background-color: #fafafa;
+      box-shadow: 0px 1px 3.8px 0.2px $text-shadow;
+      line-height: 18px;
+
+    }
+    &__body {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      background-color: $white;
+      span {
+        margin-right: 11px;
+      }
+      div {
+        margin-bottom: 15px;
+      }
+      div:nth-child(3) {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 0;
+        div {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+    &__site:after{
+      content: "\e945";
+      font-family: icomoon;
+    }
+    &__mail:after{
+      content: "\e968";
+      font-family: icomoon;
+    }
+    &__phone:after{
+      content: "\e967";
+      font-family: icomoon;
+    }
   }
 }
 

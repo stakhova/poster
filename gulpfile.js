@@ -26,15 +26,12 @@ var paths = {
         fonts       : 'app/fonts/**/*',
         vendorCss   : 'app/vendor/css/**/*.css',
         vendorJs    : [
-            'bower_components/jquery/dist/jquery.min.js',
+            'app/vendor/js/jquery-3.2.1.min.js',
             'bower_components/jquery-validation/dist/jquery.validate.min.js',
             'bower_components/jquery-validation/dist/additional-methods.min.js',
+            'app/vendor/js/bootstrap.min.js',
             'app/vendor/js/slick.min.js',
             'app/vendor/js/jquery-ui.min.js',
-            'app/vendor/js/bootstrap.min.js',
-            'app/vendor/js/jquery-ui-price.min.js',
-            'app/vendor/js/jquery-date-ui.min.js',
-            'app/vendor/js/jquery.scrollsections.js',
         ],
     },
     dest: {
@@ -142,27 +139,24 @@ gulp.task('deploy', function () {
     return gulp.src('build/**/*')
         .pipe(gulp.dest('../public'));
 });
+
 gulp.task('html', function () {
     return gulp.src(paths.src.html)
-        .pipe(pug({pretty: true}))
+        .pipe(pug({
+          pretty: true,
+          basedir: paths.src.html
+        }))
         .pipe(gulp.dest(paths.dest.html))
         .pipe(plumber())
         .pipe(browserSync.reload({stream: true}));
 });
 
-/* fileinclude tasks */
-gulp.task('fileinclude', function() {
-    gulp.src(['./app/html/template/*.html'])
-        .pipe(fileinclude())
-        .pipe(gulp.dest('./app/html/'));
-});
-
-gulp.task('watch', ['browser-sync', 'vendor-css', 'vendor-js', 'fonts', 'scss', 'html', 'babel', 'static'], function () {
+gulp.task('watch', ['browser-sync', 'vendor-css', 'vendor-js', 'fonts', 'img', 'scss', 'html', 'babel', 'static'], function () {
     gulp.watch(paths.src.scss, ['scss']);
     gulp.watch('app/html/**/*.html', ['html']);
     gulp.watch(paths.src.js, ['babel']);
 });
 
-gulp.task('build', ['clean', 'img', 'vendor-css', 'vendor-js', 'fonts', 'scss', 'babel', 'html', 'static']);
+gulp.task('build', ['clean', 'img', 'vendor-css', 'vendor-js', 'fonts', 'img', 'scss', 'babel', 'html', 'static']);
 
 gulp.task('default', ['browser-sync', 'watch']);

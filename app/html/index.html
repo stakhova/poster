@@ -11,197 +11,13 @@
 <div class="wrapper">
     <div class="container">
         <div class="main">
-            <div class="sidebar">
-                <!--<img src="../img/backgr.png" alt="">-->
-                <a href="index.html" class="sidebar-logo"></a>
-                <div class="sidebar-search">
-                    <input type="text" placeholder="Поиск">
-                </div>
-                <div class="sidebar-role">
-                    <span class="sidebar-role__user">Посетитель</span>
-                    <ul class="sidebar-role__list">
-                        <li data-tab="tab-4" class="poster-link">Мои билеты</li>
-                        <li data-tab="tab-5" class="poster-link">Мои книги</li>
-                        <li data-tab="tab-6" class="poster-link">Мои журналы</li>
-                        <li data-tab="tab-7" class="poster-link">Избранное</li>
-                    </ul>
-                </div>
-                <div class="sidebar-role">
-                    <span class="sidebar-role__organizer">Организатор</span>
-                    <ul class="sidebar-role__list">
-                        <li data-tab="tab-8" class="poster-link">Мои мероприятия</li>
-                        <li data-tab="tab-9" class="poster-link">Все промокоды</li>
-                        <li data-tab="tab-10" class="poster-link">Все скидки</li>
-                    </ul>
-                </div>
-                <div class="sidebar-button">
-                    <a href="#">Стать организатором</a>
-                </div>
-            </div>
+
+            include include/_left_sidebar.html
+
             <div class="poster">
-                <div class="poster-header">
-                    <div class="poster-header__question" data-toggle="modal" data-target="#question">
-                        <div class="modal fade" id="question" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-small" role="document">
-                                <div class="modal-content ">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Есть вопросы? <br>Связаться с нами! </h5>
-                                    </div>
-                                    <div class="modal-body">
-                                        <div class="modal-contact">
-                                            <div class="modal-contact__site">
-                                                <a href="https://bhub.com.ua">https://bhub.com.ua</a>
-                                            </div>
-                                            <div class="modal-contact__mail">
-                                                <a href="mailto:tickets.support">tickets.support</a>
-                                            </div>
-                                            <div class="modal-contact__phone">
-                                                <a href="tel:0442000392">+38 (044) 200-03-92</a>
-                                                <a href="tel:0442000392">+38 (044) 200-03-92</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="poster-header__message" data-toggle="modal" data-target="#message">
-                        <span>2</span>
-                        <div class="modal fade" id="message" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-big" role="document">
-                                <div class="modal-content ">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title">Ваши уведомления</h5>
-                                    </div>
-                                    <div class="modal-body modal-message">
-                                        <div class="modal-message__block">
-                                            <ul class="modal-message__list">
-                                                <li class="modal-message__item">
-                                                    <div class="modal-message__count">
-                                                        <span>2</span>
-                                                    </div>
-                                                    <div class="modal-message__desc">
-                                                        <div class="modal-message__title">
-                                                            <p>Афиша</p>
-                                                        </div>
-                                                        <p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного</p>
-                                                        <p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного <a href="">ссылка на что-то</a>  </p>
-                                                    </div>
-                                                </li>
-                                                <li class="modal-message__item">
-                                                    <div class="modal-message__count">
-                                                        <span>1</span>
-                                                    </div>
-                                                    <div class="modal-message__desc">
-                                                        <div class="modal-message__title">
-                                                            <p>Букинг</p>
-                                                        </div>
-                                                        <p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного</p>
-                                                    </div>
-                                                </li>
-                                                <li class="modal-message__item">
-                                                    <div class="modal-message__count">
-                                                        <span>2</span>
-                                                    </div>
-                                                    <div class="modal-message__desc">
-                                                        <div class="modal-message__title">
-                                                            <p>Pro bhub</p>
-                                                        </div>
-                                                        <p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного</p>
-                                                        <p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного <a href="">ссылка на что-то</a>  </p>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="modal-message__all">
-                                            <span>Показать все</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="poster-header__balance" data-toggle="modal" data-target="#balance">
-                        <span>1</span>
-                        <div class="modal fade" id="balance" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-small" role="document">
-                                <div class="modal-content ">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title">Ваш баланс</h5>
-                                    </div>
-                                    <div class="modal-body modal-balance">
-                                        <span>Доступно:</span>
-                                        <div class="modal-balance__available">100грн</div>
-                                        <div class="modal-balance__link">
-                                            <span class="open-history" data-toggle="modal" data-target="#history" >История транзакций</span>
-                                            <span>Пополнить баланс</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal fade" id="history" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-big" role="document">
-                                <div class="modal-content ">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title">История платежей и пополнений</h5>
-                                    </div>
-                                    <div class="modal-body">
-                                        <table class="modal-table ">
-                                            <thead>
-                                                <tr>
-                                                    <th>Дата/время</th>
-                                                    <th>Сумма</th>
-                                                    <th>Назначение платежа</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="modal-table__item modal-table__buy">
-                                                    <td><span>24.10.19/14:10</span></td>
-                                                    <td><span>1200 грн</span></td>
-                                                    <td><span>Покупка: Название книги</span></td>
-                                                </tr>
-                                                <tr class="modal-table__item modal-table__buy">
-                                                    <td><span>24.10.19/14:10</span></td>
-                                                    <td><span>1200 грн</span></td>
-                                                    <td><span>Покупка: Название книги</span></td>
-                                                </tr>
-                                                <tr class="modal-table__item modal-table__add">
-                                                    <td><span>24.10.19/14:10</span></td>
-                                                    <td><span>1200 грн</span></td>
-                                                    <td><span>Покупка: Название книги</span></td>
-                                                </tr>
-                                                <tr class="modal-table__item modal-table__buy">
-                                                    <td><span>24.10.19/14:10</span></td>
-                                                    <td><span>1200 грн</span></td>
-                                                    <td><span>Покупка: Название книги</span></td>
-                                                </tr>
-                                                <tr class="modal-table__item modal-table__buy">
-                                                    <td><span>24.10.19/14:10</span></td>
-                                                    <td><span>1200 грн</span></td>
-                                                    <td><span>Покупка: Покупка: Название мероприятиятия</span></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <div class="modal-message__all">
-                                            <span>Показать все</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="poster-header__person">
-                        <div class="poster-header__img" data-toggle="modal" data-target="#enter">
-                            <img src="../img/avatar.png" alt="">
-                        </div>
-                        <div class="poster-header__name">Иван</div>
-                        <ul class="poster-header__list">
-                            <li><a href="#">Профиль</a></li>
-                            <li><a href="#">Выйти</a></li>
-                        </ul>
-                    </div>
-                </div>
+
+                include include/_top_navbar.html
+
                 <div class="poster-wrap">
                     <ul class="poster-tabs">
                         <li class="poster-link current" data-tab="tab-1">
@@ -346,6 +162,7 @@
                                                     <th>Дата<span class="filter-up"></span><span class="filter-down"></span></th>
                                                     <th>Тематика<span class="filter-up"></span><span class="filter-down"></span></th>
                                                     <th>Тип билета<span class="filter-up"></span><span class="filter-down"></span></th>
+                                                    <th><span class="filter-empty"></span></th>
                                                 </tr>
                                                 </thead>
                                                 <tbody>
@@ -356,16 +173,20 @@
                                                     <td>
                                                         <div class="flex-between">
                                                             <span>Стандарт</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="poster-table__actions">
                                                             <div class="poster-table__icon">
-                                                                <div class="poster-table__print"></div>
-                                                                <div class="poster-table__download"></div>
-                                                                <div class="poster-table__go"></div>
+                                                            <div class="poster-table__print"></div>
+                                                            <div class="poster-table__download"></div>
+                                                            <div class="poster-table__go"></div>
                                                             </div>
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr class="poster-table__desc">
-                                                    <td colspan="4">
+                                                    <td colspan="5">
                                                         <table class="event-table">
                                                             <tr>
                                                                 <td>
@@ -454,15 +275,18 @@
                                                     <td>
                                                         <div class="flex-between">
                                                             <span>Вип</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="poster-table__actions">
                                                             <div class="poster-table__icon">
-                                                                <div class="poster-table__ticket"></div>
-                                                                <div class="poster-table__go"></div>
-                                                            </div>
+                                                            <div class="poster-table__ticket"></div>
+                                                            <div class="poster-table__go"></div>
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr class="poster-table__desc">
-                                                    <td colspan="4">
+                                                    <td colspan="5">
                                                         <table class="event-table">
                                                             <tr>
                                                                 <td>
@@ -541,6 +365,7 @@
                                                     <th>Название<span class="filter-up"></span><span class="filter-down"></span></th>
                                                     <th>Дата<span class="filter-up"></span><span class="filter-down"></span></th>
                                                     <th>Тематика<span class="filter-up"></span><span class="filter-down"></span></th>
+                                                    <th><span class="filter-empty"></span></th>
                                                 </tr>
                                                 </thead>
                                                 <tbody>
@@ -550,14 +375,16 @@
                                                     <td>
                                                         <div class="flex-between">
                                                             <span>Косметология</span>
-                                                            <div class="poster-table__icon">
-                                                                <div class="poster-table__go"></div>
-                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="poster-table__actions">
+                                                            <div class="poster-table__go"></div>
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr class="poster-table__desc">
-                                                    <td colspan="3">
+                                                    <td colspan="4">
                                                         <table class="book-table">
                                                             <tr>
                                                                 <td>
@@ -831,6 +658,7 @@
                                                 <tr>
                                                     <th>Название<span class="filter-up"></span><span class="filter-down"></span></th>
                                                     <th>Тематика<span class="filter-up"></span><span class="filter-down"></span></th>
+                                                    <th></th>
                                                 </tr>
                                                 </thead>
                                                 <tbody>
@@ -839,6 +667,10 @@
                                                     <td>
                                                         <div class="flex-between">
                                                             <span>Косметология</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="poster-table__actions">
                                                             <div class="poster-table__icon">
                                                                 <div class="poster-table__delete"></div>
                                                                 <div class="poster-table__go"></div>
@@ -847,7 +679,7 @@
                                                     </td>
                                                 </tr>
                                                 <tr class="poster-table__desc">
-                                                    <td colspan="2">
+                                                    <td colspan="3">
                                                         <table class="event-table">
                                                             <tr>
                                                                 <td>
@@ -897,6 +729,10 @@
                                                     <td>
                                                         <div class="flex-between">
                                                             <span>Косметология</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="poster-table__actions">
                                                             <div class="poster-table__icon">
                                                                 <div class="poster-table__delete"></div>
                                                                 <div class="poster-table__go"></div>
@@ -905,7 +741,7 @@
                                                     </td>
                                                 </tr>
                                                 <tr class="poster-table__desc">
-                                                    <td colspan="2">
+                                                    <td colspan="3">
                                                         <!--<div class="flex-start poster-table__descWrap">-->
                                                             <!--<div class="poster-table__column">-->
                                                                 <!--<p>Журнал</p>-->
@@ -1023,6 +859,10 @@
                                                     <td>
                                                         <div class="flex-between">
                                                             <span>Косметология</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="poster-table__actions">
                                                             <div class="poster-table__icon">
                                                                 <div class="poster-table__delete"></div>
                                                                 <div class="poster-table__go"></div>
@@ -1031,7 +871,7 @@
                                                     </td>
                                                 </tr>
                                                 <tr class="poster-table__desc">
-                                                    <td colspan="2">
+                                                    <td colspan="3">
                                                         <div class="flex-start poster-table__descWrap">
                                                             <div class="poster-table__column">
                                                                 <p>Книга</p>
@@ -1231,284 +1071,10 @@
             </div>
         </div>
     </div>
-
-
-
-
-    // registration
-    <div class="modal fade reg" id="enter" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog " role="document">
-            <div class="modal-content ">
-                <div class="modal-header">
-                    <ul class="modal-tab">
-                        <li class="modal-tab__link current" data-tab="tab_1">Авторизоваться</li>
-                        <li class="modal-tab__link" data-tab="tab_2">Регистрация</li>
-                    </ul>
-                </div>
-                <div class="modal-body">
-                    <div class="modal-social">
-                        <div class="text-center">
-                            <p>Войти с помощью</p>
-                        </div>
-                        <div class="modal-social__block">
-                            <a href="#" class="modal-social__item"></a>
-                            <a href="#" class="modal-social__item"></a>
-                            <a href="#" class="modal-social__item"></a>
-                            <a href="#" class="modal-social__item"></a>
-                        </div>
-                    </div>
-                    <div id="tab_1" class="modal-tab__content current">
-                        <form action="">
-                            <div class="form-block">
-                                <div class="form-item">
-                                    <input class="form-input" type="text" placeholder="Ваш адрес электронной почты/телефон">
-                                </div>
-                                <div class="form-item">
-                                    <input class="form-input" type="password" placeholder="Пароль">
-                                </div>
-                            </div>
-                            <div class="modal-underline">
-                                <span class="modal-forgot" data-toggle="modal" data-target="#forgot_password">Забыли пароль?</span>
-                            </div>
-                            <div class="form-item">
-                                <button class="form-button ">Войти в систему</button>
-                            </div>
-                        </form>
-                    </div>
-                    <div id="tab_2" class="modal-tab__content">
-                        <form action="">
-                            <div class="form-block">
-                                <div class="form-item">
-                                    <input class="form-input" type="text" placeholder="Номер телефона/Email">
-                                </div>
-                                <div class="text-center form-text">
-                                    <p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее </p>
-                                </div>
-                            </div>
-                            <div class="form-item text-center sent_code" data-toggle="modal" data-target="#code">
-                                <button class="form-button form-button__small">Отправить</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    //forgot password
-    <div class="modal fade reg" id="forgot_password" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog " role="document">
-            <div class="modal-content ">
-                <div class="modal-header">
-                    <ul class="modal-tab">
-                        <li class="modal-tab__link current" data-tab="tab_3">Авторизоваться</li>
-                        <li class="modal-tab__link" data-tab="tab_4">Регистрация</li>
-                    </ul>
-                </div>
-                <div class="modal-body">
-                    <div class="modal-social">
-                        <div class="text-center">
-                            <p>Войти с помощью</p>
-                        </div>
-                        <div class="modal-social__block">
-                            <a href="#" class="modal-social__item"></a>
-                            <a href="#" class="modal-social__item"></a>
-                            <a href="#" class="modal-social__item"></a>
-                            <a href="#" class="modal-social__item"></a>
-                        </div>
-                    </div>
-                    <div id="tab_3" class="modal-tab__content current">
-                        <form action="">
-                            <div class="form-block">
-                                <div class="form-item">
-                                    <input class="form-input" type="text" placeholder="Ваш адрес электронной почты/телефон">
-                                </div>
-                                <div class="text-center form-text">
-                                    <p>На указанный адрес электронной почты будет отправлен временный пароль, введите его</p>
-                                </div>
-                            </div>
-                            <div class="modal-underline">
-                                <span class="modal-remember" data-toggle="modal" data-target="#enter">Я вспомнил свой пароль</span>
-                            </div>
-                            <div class="form-item">
-                                <button class="form-button">Получить пароль</button>
-                            </div>
-                        </form>
-                    </div>
-                    <div id="tab_4" class="modal-tab__content">
-                        <form action="">
-                            <div class="form-block">
-                                <div class="form-item">
-                                    <input class="form-input" type="text" placeholder="Номер телефона/Email">
-                                </div>
-                                <div class="text-center form-text">
-                                    <p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее </p>
-                                </div>
-                            </div>
-                            <div class="form-item text-center sent-code" data-toggle="modal" data-target="#code">
-                                <button class="form-button form-button__small ">Отправить</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    //modal sent code
-    <div class="modal fade reg" id="code" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog " role="document">
-            <div class="modal-content ">
-                <div class="modal-header">
-                    <ul class="modal-tab">
-                        <li class="modal-tab__link" data-tab="tab_5">Авторизоваться</li>
-                        <li class="modal-tab__link current" data-tab="tab_6">Регистрация</li>
-                    </ul>
-                </div>
-                <div class="modal-body">
-                    <div class="modal-social">
-                        <div class="text-center">
-                            <p>Войти с помощью</p>
-                        </div>
-                        <div class="modal-social__block">
-                            <a href="#" class="modal-social__item"></a>
-                            <a href="#" class="modal-social__item"></a>
-                            <a href="#" class="modal-social__item"></a>
-                            <a href="#" class="modal-social__item"></a>
-                        </div>
-                    </div>
-                    <div id="tab_5" class="modal-tab__content">
-                        <form action="">
-                            <div class="form-block">
-                                <div class="form-item">
-                                    <input class="form-input" type="text" placeholder="Ваш адрес электронной почты/телефон">
-                                </div>
-                                <div class="form-item">
-                                    <input class="form-input" type="password" placeholder="Пароль">
-                                </div>
-                            </div>
-                            <div class="modal-underline">
-                                <span class="modal-forgot" data-toggle="modal" data-target="#forgot_password">Забыли пароль?</span>
-                            </div>
-                            <div class="form-item">
-                                <button class="form-button">Войти в систему</button>
-                            </div>
-                        </form>
-                    </div>
-                    <div id="tab_6" class="modal-tab__content current">
-                        <form action="">
-                            <div class="form-block">
-                                <div class="form-item">
-                                    <input class="form-input" type="text" placeholder="Код">
-                                </div>
-                                <div class="text-center form-text">
-                                    <p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее </p>
-                                </div>
-                            </div>
-                            <div class="form-item text-center">
-                                <button class="form-button">Войти в систему</button>
-                            </div>
-                        </form>
-                        <div class="modal-countdown">
-                            <div class="text-center form-text">
-                                <p>Код должен прийти в течении 30 сек</p>
-                            </div>
-                            <div id="countdown">
-                                <div id="countdown-number"></div>
-                                <svg>
-                                    <circle r="28" cx="32" cy="32"></circle>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="modal-underline">
-                            <span>Код не пришел ?</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    //modal success
-
-    <div class="modal fade reg" id="success" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content ">
-                <div class="modal-body modal-success">
-                    <div class="modal-success__icon"></div>
-                    <div class="text-center modal-success__text form-text">
-                        <p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--<div class="modal fade reg" id="success" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">-->
-        <!--<div class="modal-dialog modal-dialog-centered" role="document">-->
-            <!--&lt;!&ndash;<div class="modal-content ">&ndash;&gt;-->
-            <!--<div class="modal-body modal-success">-->
-                <!--<div class="modal-success__icon"></div>-->
-                <!--<div class="text-center modal-success__text form-text">-->
-                    <!--<p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее </p>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--&lt;!&ndash;</div>&ndash;&gt;-->
-        <!--</div>-->
-    <!--</div>-->
-
-
-    <div class="modal fade reg reg-fill" id="fill-all" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="reg-header">
-            <a href="index.html" class="sidebar-logo"></a>
-            <p>Для регистрации, в личном кабинете Beautyhub, пожалуйста заполните все поля</p>
-            <div class="poster-header__question" data-toggle="modal" data-target="#fill_all"></div>
-        </div>
-        <div class="modal-dialog modal-fill" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <form action="" class="form">
-                        <div class="modal-fill__block">
-
-                            <div class="form-item">
-                                <input class="form-input" type="text" placeholder="Ваше Имя">
-                            </div>
-                            <div class="form-item">
-                                <input class="form-input" type="text" placeholder="Фамилия">
-                            </div>
-                        </div>
-                        <div class="modal-fill__block">
-                            <div class="form-item">
-                                <input class="form-input" type="text" placeholder="E-mail">
-                            </div>
-                            <div class="form-item">
-                                <p>Телефон</p>
-                                <input class="form-input" type="text" value="+ 3 098 76 75 533">
-                            </div>
-                        </div>
-                        <div class="modal-fill__block">
-                            <div class="form-item">
-                                <input class="form-input" type="text" placeholder="Пароль">
-                            </div>
-                            <div class="form-item">
-                                <input class="form-input" type="text" placeholder="Подтвердите пароль">
-                            </div>
-                        </div>
-                        <div class="modal-fill__text">
-                            <p>Для входа в личный кабинет. Количество символов не менее 10</p>
-                        </div>
-                        <div class="form-block">
-                            <button class="subs-confirm__button">Подтвердить</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
 </div>
+
+include include/_modal.html
+
 </body>
 <script type="text/javascript" src="../../js/vendor.min.js"></script>
 <script type="text/javascript" src="../../js/app.min.js"></script>
