@@ -20,7 +20,7 @@ var paths = {
     src: {
         scss        : 'app/sass/**/*.scss',
         js          : 'app/js/**/*.js',
-        html        : 'app/html/*.html',
+        html        : 'app/html/**/*.html',
         img         : 'app/img/**/*',
         static      : 'app/static/**/*',
         fonts       : 'app/fonts/**/*',
