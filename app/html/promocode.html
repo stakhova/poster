@@ -1,0 +1,202 @@
+include include/_header.html
+<div class="wrapper">
+    <div class="container">
+        <div class="main">
+
+            include include/_left_sidebar.html
+
+            <div class="poster">
+
+                include include/_top_navbar.html
+
+                <div class="poster-wrap">
+                    include include/_poster_tabs.html
+                    <div class="poster-content">
+                        <div class="poster-flex">
+                            <div class="poster-center">
+                                <div class="poster-center__tabs">
+                                    <div class="poster-content__tab poster-content__small">
+                                        <div class="create-start">
+                                            <p>Промо-коды <br>Предложите специальные условия Вашим особым гостям <br>Предложите билеты со скидкой определённым группам посетителей (например, пресса, студенты и т.д.) Вы создатите промокод именно к этому мероприятию!</p>
+                                            <div class="create-button">
+                                                <button>Создать промокод</button>
+                                            </div>
+                                        </div>
+                                        <div class="create">
+                                            <div class="create-title">
+                                                <p>Создание нового промо-кода</p>
+                                            </div>
+                                            <div class="create-wrap">
+                                                <form action="">
+                                                    <div class="create-content">
+                                                        <input class="create-input__text" type="text" placeholder="Ваш промокод:">
+                                                        <p class="create-input__desc">Количество символов ограничено, текст подсказка</p>
+                                                        <div class="create-input">
+                                                            <div class="form-title">
+                                                                <p>К каким билетам относится скидка:</p>
+                                                            </div>
+                                                            <div class="form-radio__big">
+                                                                <label for="radio11">
+                                                                    <input type="radio" name="radio-but" value="" class="form-radio__item" id ="radio11">
+                                                                    <div class="form-radio__label flex-between"> <span>Ко всем билетам, этого мероприятия включая те, что будут созданы в будущем</span></div>
+                                                                </label>
+                                                            </div>
+                                                            <div class="flex-start">
+                                                                <div class="form-radio__big create-input__padding">
+                                                                    <label for=radio12>
+                                                                        <input type="radio" name="radio-but" value="" class="form-radio__item" id ="radio12">
+                                                                        <div class="form-radio__label flex-between"> <span>Стандарт</span></div>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="form-radio__big">
+                                                                    <label for=radio13>
+                                                                        <input type="radio" name="radio-but" value="" class="form-radio__item" id ="radio13">
+                                                                        <div class="form-radio__label flex-between"> <span>Люкс</span></div>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="create-title">
+                                                <p>Выберите количество раз, сколько можно использовать промокод</p>
+                                            </div>
+                                            <div class="create-wrap">
+                                                <form action="">
+                                                    <div class="create-content">
+                                                        <label class="create-switcher flex-start">
+                                                            <input type="checkbox" name="switcher-discount" id="switcher-discount" checked><span></span>
+                                                            <div class="create-discount__title">
+                                                                <p>Неограниченное количество раз</p>
+                                                            </div>
+                                                        </label>
+                                                        <div class="create-discount">
+                                                            <div class="create-input">
+                                                                <p class="create-input__title">Величина скидки по промокоду:</p>
+                                                                <div class="flex-start">
+                                                                    <div class="create-input create-input__discount">
+                                                                        <input type="text" class="create-input__text" placeholder="0">
+                                                                    </div>
+                                                                    <div class="create-input create-input__ticket">
+                                                                        <div class="create-select">
+                                                                            <div class="create-select__head">
+                                                                                <input type="hidden" name="type_category" value="">
+                                                                                <div class="create-select__current input"><span>%</span></div>
+                                                                            </div>
+                                                                            <div class="create-select__wrap">
+                                                                                <ul class="create-select__dropdown">
+                                                                                    <li>
+                                                                                        <span>%</span>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <span>$</span>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <span>&</span>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="create-input">
+                                                                <div class="form-radio__big">
+                                                                    <label for=radio16>
+                                                                        <input type="checkbox" name="radio-but" value="" class="form-radio__item" id ="radio16">
+                                                                        <div class="form-radio__label flex-between"> <span>Ограничить время начала действия промокода</span></div>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="create-button">
+                                                                <span>Назад</span>
+                                                                <button>Добавить промокод</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="discount-table">
+                                            <div class="create-start">
+                                                <p>Предложите специальные условия Вашим особым гостям <br>Предложите билеты со скидкой определённым группам посетителей. Вы создатите промокод именно к этому мероприятию!</p>
+                                            </div>
+                                            <table class="poster-table">
+                                                <thead>
+                                                <tr>
+                                                    <th>К билетам</th>
+                                                    <th>Промо - код</th>
+                                                    <th>Использован</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr class="discount-table__item">
+                                                    <td><span>К избранным билетам</span></td>
+                                                    <td><span>576787090354607</span></td>
+                                                    <td><span>0 раз</span></td>
+                                                    <td>
+                                                        <div class="poster-table__actions">
+                                                            <div class="poster-table__icon">
+                                                                <div class="poster-table__done"></div>
+                                                                <div class="poster-table__edit"></div>
+                                                                <div class="poster-table__copy"></div>
+                                                                <div class="poster-table__delete"></div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="discount-table__item">
+                                                    <td><span>Ко всем билетам</span></td>
+                                                    <td><span>12345678900000</span></td>
+                                                    <td><span>0 раз</span></td>
+                                                    <td>
+                                                        <div class="poster-table__actions">
+                                                            <div class="poster-table__icon">
+                                                                <div class="poster-table__done"></div>
+                                                                <div class="poster-table__edit"></div>
+                                                                <div class="poster-table__copy"></div>
+                                                                <div class="poster-table__delete"></div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                            <div class="create-button">
+                                                <button>Добавить промокод</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="poster-adv">
+                                <div class="poster-adv__simple">
+                                    <div class="poster-adv__title">
+                                        <p>Вы можете изменить и заполнить  другие настройки</p>
+                                    </div>
+                                    <ul class="poster-adv__list">
+                                        <li><a href="">Основные настройки</a></li>
+                                        <li><a href="">Внешний вид билета</a></li>
+                                        <li class="active"><a href="">Создать промокод</a></li>
+                                        <li><a href="">Создать скидку</a></li>
+                                        <li><a href="">Анкета клиента</a></li>
+                                        <li><a href="">Перейти на страницу мероприятия</a></li>
+                                    </ul>
+                                </div>
+                                <a href="" class="poster-adv__simple">
+                                    <p>Pеклама</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+include include/_modal.html
+
+include include/_footer.html
