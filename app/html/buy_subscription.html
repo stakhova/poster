@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../../css/vendor.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/app.min.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="container">
+        <div class="main">
+            <div class="sidebar">
+                <!--<img src="../img/backgr.png" alt="">-->
+                <a href="index.html" class="sidebar-logo"></a>
+                <div class="sidebar-search">
+                    <input type="text" placeholder="Поиск">
+                </div>
+                <div class="sidebar-role">
+                    <span class="sidebar-role__user">Посетитель</span>
+                    <ul class="sidebar-role__list">
+                        <li data-tab="tab-4" class="poster-link">Мои билеты</li>
+                        <li data-tab="tab-5" class="poster-link">Мои книги</li>
+                        <li data-tab="tab-6" class="poster-link">Мои журналы</li>
+                        <li data-tab="tab-7" class="poster-link">Избранное</li>
+                    </ul>
+                </div>
+                <div class="sidebar-role">
+                    <span class="sidebar-role__organizer">Организатор</span>
+                    <ul class="sidebar-role__list">
+                        <li data-tab="tab-8" class="poster-link">Мои мероприятия</li>
+                        <li data-tab="tab-9" class="poster-link">Все промокоды</li>
+                        <li data-tab="tab-10" class="poster-link">Все скидки</li>
+                    </ul>
+                </div>
+                <div class="sidebar-button">
+                    <a href="#">Стать организатором</a>
+                </div>
+            </div>
+            <div class="poster">
+                <div class="poster-header">
+                    <div class="poster-header__question" data-toggle="modal" data-target="#question">
+                        <div class="modal fade" id="question" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-small" role="document">
+                                <div class="modal-content ">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Есть вопросы? <br>Связаться с нами! </h5>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>hhhhhhhhhhhhhhhhhhhh</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="poster-header__message">
+                        <span>2</span>
+                    </div>
+                    <div class="poster-header__balance">
+                        <span>1</span>
+                    </div>
+                    <div class="poster-header__person">
+                        <div class="poster-header__img">
+                            <img src="../img/avatar.png" alt="">
+                        </div>
+                        <div class="poster-header__name">Иван</div>
+                        <ul class="poster-header__list">
+                            <li><a href="#">Профиль</a></li>
+                            <li><a href="#">Выйти</a></li>
+                        </ul>
+                    </div>
+                    <!--<ul class="poster-header__list">-->
+                    <!--<li><a href="#">Профиль</a></li>-->
+                    <!--<li><a href="#">Выйти</a></li>-->
+                    <!--</ul>-->
+                </div>
+                <div class="poster-wrap">
+                    <ul class="poster-tabs">
+                        <li class="poster-link current" data-tab="tab-1">
+                            <div class="poster-link__item"><span>Афиша</span></div>
+                        </li>
+                        <li class="poster-link " data-tab="tab-2">
+                            <div class="poster-link__item"><span>Букинг</span></div>
+                        </li>
+                        <li class="poster-link " data-tab="tab-3">
+                            <div class="poster-link__item"><span>PRO BHUB</span></div>
+                        </li>
+                    </ul>
+                    <div class="poster-content">
+                        <div class="poster-flex">
+                            <div class="poster-center">
+                                <div class="poster-center__tabs">
+                                    <div class="poster-content__tab poster-content__small" id="tab-7">
+                                        <div class="subs">
+                                            <div class="subs-item">
+                                                <div class="subs-title">
+                                                    <span>Подписка на новые журналы "Your Hair 3 Выпуск 2019"</span>
+                                                </div>
+                                            </div>
+                                            <div class="subs-item">
+                                                <div class="subs-desc">
+                                                    <form action="" class="form">
+                                                        <div class="form-circle__wrap">
+                                                            <div class="form-circle">
+                                                                <p class="form-textSemiBold">Печатная версия</p>
+                                                                <div class="flex-start">
+                                                                    <label for="circle-1">
+                                                                        <input type="radio" name="radio-circle" value="" class="form-circle__item" id ="circle-1" onclick="showDelivery();" checked>
+                                                                        <div class="form-circle__label flex-between"> <span>Подписка на 12 месяцев (4 выпуска) </span> <span class="form-textSemiBold">480 грн</span></div>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="flex-start">
+                                                                    <label for="circle-2">
+                                                                        <input type="radio" name="radio-circle" value="" class="form-circle__item" id ="circle-2" onclick="showDelivery();" >
+                                                                        <div class="form-circle__label flex-between"> <span>Подписка на 6 месяцев (2 выпуска) </span> <span class="form-textSemiBold">240 грн</span></div>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-circle">
+                                                                <p class="form-textSemiBold">Электронная версия</p>
+                                                                <div class="flex-start">
+                                                                    <label for="circle-3">
+                                                                        <input type="radio" name="radio-circle" value="" class="form-circle__item" id ="circle-3" onclick="hideDelivery();" >
+                                                                        <div class="form-circle__label flex-between"> <span>Подписка на 12 месяцев (4 выпуска)</span><span class="form-textSemiBold">480 грн</span> </div>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="flex-start"></div>
+                                                                <label for="circle-4">
+                                                                    <input type="radio" name="radio-circle" value="" class="form-circle__item" id ="circle-4" onclick="hideDelivery();" >
+                                                                    <div class="form-circle__label flex-between"> <span>Подписка на 6 месяцев (2 выпуска) </span> <span class="form-textSemiBold">240 грн</span></div>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-title">
+                                                            <p>Контактная информация</p>
+                                                        </div>
+                                                        <div class="flex-start">
+                                                            <div class="form-block">
+                                                                <div class="form-item">
+                                                                    <p>Фамилия</p>
+                                                                    <input class="form-input" type="text" value="Уже заполнено">
+                                                                </div>
+                                                                <div class="form-item">
+                                                                    <p>Имя</p>
+                                                                    <input class="form-input" type="text" value="Уже заполнено">
+                                                                </div>
+                                                                <div class="form-item">
+                                                                    <input class="form-input" type="text" placeholder="Введите промокод если есть">
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="form-block">
+                                                                <div class="form-item">
+                                                                    <p>E-mail</p>
+                                                                    <input class="form-input" type="text" value="Уже заполнено">
+                                                                </div>
+                                                                <div class="form-item">
+                                                                    <p>Телефон</p>
+                                                                    <input class="form-input" type="text" value="Уже заполнено">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div id="form-delivery">
+                                                            <div class="form-title">
+                                                                <p>Выберите способ доставки:</p>
+                                                            </div>
+                                                            <div class="form-circle">
+                                                                <div class="flex-start">
+                                                                    <label for="circle-11">
+                                                                        <input type="radio" name="radio-circle_delivery" value="" class="form-circle__item" id ="circle-11" onclick="show1();"  checked>
+                                                                        <div class="form-circle__label flex-between"> <span>В отделение новой почты </span></div>
+                                                                    </label>
+                                                                </div>
+                                                                <div id="show1">
+                                                                    <div class="create-input form-item">
+                                                                        <p>Город</p>
+                                                                        <input class="create-input__text" type="text" value="Киев">
+                                                                    </div>
+                                                                    <div class="create-input form-item" >
+                                                                        <p>Отделение новой почты</p>
+                                                                        <div class="create-select">
+                                                                            <div class="create-select__head">
+                                                                                <input type="hidden" name="type_category" value="">
+                                                                                <div class="create-select__current input"><span>87 отделение </span>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="create-select__wrap">
+                                                                                <ul class="create-select__dropdown">
+                                                                                    <li>
+                                                                                        <span>84 отделение </span>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <span>83 отделение </span>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <span>82 отделение </span>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <span>81 отделение </span>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                        <p class="create-input__desc">Выберите из списка отделение новой почты</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="flex-start">
+                                                                    <label for="circle-22">
+                                                                        <input type="radio" name="radio-circle_delivery" value="" class="form-circle__item" id ="circle-22" onclick="show2();" >
+                                                                        <div class="form-circle__label flex-between"> <span>Доставка на дом</span></div>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="flex-start" id="show2">
+                                                                    <div class="form-block">
+                                                                        <div class="form-item">
+                                                                            <input class="form-input" type="text" placeholder="Город">
+                                                                        </div>
+                                                                        <div class="form-item">
+                                                                            <input class="form-input" type="text" placeholder="Улица">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-block">
+                                                                        <div class="form-item">
+                                                                            <input class="form-input" type="text" placeholder="Дом">
+                                                                        </div>
+                                                                        <div class="form-item">
+                                                                            <input class="form-input" type="text" placeholder="Коментарий">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <ul class="form-list" id="list1">
+                                                                <li>Доставка печатных версий оплачивается дополнительно (тариф «Новой Почты»)</li>
+                                                                <li>Мы доставляем печатные версии журналов только по Украине. Если вы из другой страны, оформите электронную подписку или купите электронную версию журнала</li>
+                                                            </ul>
+                                                            <ul class="form-list" id="list2">
+                                                                <li>Доставка печатных версий оплачивается дополнительно (тариф «Новой Почты»)</li>
+                                                                <li>Мы доставляем печатные версии журналов только по Украине. Если вы из другой страны, оформите электронную подписку или купите электронную версию журнала</li>
+                                                                <li> Внимание! Подписка на журнал оформляется на будущий период – Вы начнете получать журнал в течение двух месяцев</li>
+                                                            </ul>
+                                                        </div>
+                                                        <ul class="form-list" id="list3">
+                                                            <li>Внимание! Подписка на журнал оформляется на будущий период – Вы начнете получать журнал в течение двух месяцев</li>
+                                                        </ul>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <div class="subs-item">
+                                                <div class="subs-title">
+                                                    <span>Ваш заказ</span>
+                                                </div>
+                                                <div class="subs-desc subs-order">
+                                                    <div class="flex-start">
+                                                        <div class="form-block form-textSemiBold">
+                                                            <p>Подписка на 12 месяцев (4 выпуска)<p>Печатная версия</p></p>
+                                                        </div>
+                                                        <div class="form-block">
+                                                            <p>Your Hair 3 Выпуск 2019</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex-start">
+                                                        <div class="form-block form-textSemiBold">
+                                                            <p>Цена:</p>
+                                                        </div>
+                                                        <div class="form-block">
+                                                            <p>120 грн</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="subs-confirm">
+                                                        <div class="flex-start">
+                                                            <div class="form-block">
+                                                                <div class="subs-confirm__cancel">
+                                                                    <a href="#">Отмена</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-block">
+                                                                <button class="subs-confirm__button">Пересчитать с промокодом</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="poster-adv">
+                                <div class="poster-adv__slider">
+                                    <div class="poster-adv__item">
+                                        <div class="poster-slider__title books">Книга</div>
+                                        <div class="poster-slider__img poster-adv__img">
+                                            <img src="../img/imageRight.png" alt="">
+                                        </div>
+                                        <div class="poster-slider__desc">
+                                            <div class="poster-slider__name">Лазер в дерматологии и косметологии . Потекаев Н. Н., Круглова Л. С.
+                                            </div>
+                                            <div class="poster-slider__bold">
+                                                <p>Цена:</p>
+                                                <p>1500</p>
+                                            </div>
+                                        </div>
+                                        <a class="poster-slider__read poster-adv__read" href="">Читать больше</a>
+                                    </div>
+                                    <div class="poster-adv__item">
+                                        <div class="poster-slider__title books">Книга</div>
+                                        <div class="poster-slider__img poster-adv__img">
+                                            <img src="../img/imageRight.png" alt="">
+                                        </div>
+                                        <div class="poster-slider__desc">
+                                            <div class="poster-slider__name">Лазер в дерматологии и косметологии . Потекаев Н. Н., Круглова Л. С.
+                                            </div>
+                                            <div class="poster-slider__bold">
+                                                <p>Цена:</p>
+                                                <p>1500</p>
+                                            </div>
+                                        </div>
+                                        <a class="poster-slider__read poster-adv__read" href="">Читать больше</a>
+                                    </div>
+                                </div>
+                                <a href="" class="poster-adv__simple">
+                                    <p>Pеклама</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script type="text/javascript" src="../../js/vendor.min.js"></script>
+<script type="text/javascript" src="../../js/app.min.js"></script>
+</html>

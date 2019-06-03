@@ -1,5 +1,28 @@
+
 $(document).ready(function() {
 
+
+
+    $(".create-list").ready(function () {
+        $(".create-list__item").each(function() {
+            $(this).find('.create-list__content').each(function(){
+                $('.create-button button').click(function() {
+                    $(this).parents('.create-list__content').hide();
+                    $(this).parents('.create-list__item').next('.create-list__item').find('.create-list__content').addClass("open");
+                    $(this).parents('.create-list__item').next('.create-list__item').find('.create-list__title').addClass("active");
+                    $(this).parents('.create-list__item').find('.create-list__content').removeClass("open");
+                    $(this).parents('.create-list__item').find('.create-list__title').addClass("done");
+                });
+                $('.create-button span').click(function() {
+                    $(this).parents('.create-list__content').hide();
+                    $(this).parents('.create-list__item').prev('.create-list__item').find('.create-list__content').addClass("open");
+                    $(this).parents('.create-list__item').find('.create-list__title').removeClass("active");
+                    $(this).parents('.create-list__item').prev('.create-list__item').find('.create-list__title').removeClass("done");
+                    $(this).parents('.create-list__item').find('.create-list__content').removeClass("open");
+                });
+            });
+        });
+    });
 
     $('.poster-slider').slick({
         prevArrow: '<div class="poster-slider__prev"></div>',
@@ -13,7 +36,7 @@ $(document).ready(function() {
 
 
     $('.poster-table__item' ).on('click', function () {
-        $(this).next().slideToggle(200);
+        $(this).next('.poster-table__desc').fadeToggle(300);
         $(this).toggleClass('active');
     });
 
@@ -41,10 +64,18 @@ $(document).ready(function() {
         $(this).prev().removeClass('filter-up-active');
     });
 
+    // data-picker
 
 
+    // data-picker
+    // $( function() {
+    //     console.log("ddd");
+    //     $( "#datepicker2" ).datepicker();
+    // } );
 
-    $('.poster-select__head').on('click', function () {
+    // poster select
+    $('.poster-select__head').on('click', function (e) {
+        e.stopPropagation();
         $(this).next().slideToggle(100);
         $(this).toggleClass('active');
     });
@@ -63,6 +94,29 @@ $(document).ready(function() {
         $('.poster-select__head input').val(val);
         $(parent).find('.poster-select__wrap').slideUp(100);
     });
+
+    // create event select
+    $('.create-select__head').on('click', function (e) {
+        e.stopPropagation();
+        $(this).next().slideToggle(100);
+        $(this).toggleClass('active');
+    });
+
+    $('.create-header__name').on('click', function () {
+        $(this).next().slideToggle(100);
+        $(this).toggleClass('active');
+        $(this).parent().toggleClass('active');
+    });
+
+    $('.create-select__wrap').on('click', 'li', function () {
+        $('.create-select__head').removeClass('active');
+        var val = $(this).text();
+        var parent = $(this).closest('.create-select');
+        $(parent).find('.create-select__current span').text(val).removeClass('active');
+        $('.create-select__head input').val(val);
+        $(parent).find('.create-select__wrap').slideUp(100);
+    });
+
 
     $('.sidebar-role span').click(function () {
         // $(this).hide('header-mob__submenu');
@@ -160,8 +214,6 @@ $(document).ready(function() {
         });
     });
 
-
-
     $('.poster-slider').slick({
         prevArrow: '<div class="poster-slider__prev"></div>',
         nextArrow: '<div class="poster-slider__next"></div>',
@@ -170,8 +222,51 @@ $(document).ready(function() {
         slidesToShow: 3,
         slidesToScroll: 1,
     });
+    $('.create-img span').click(function () {
+        $(this).parents('.create-img').remove();
+    });
+
+    // $(".create-append").each(function() {
+    //     $(this).find('.create-input__item').each(function(){
+    //         $('.create-plus').click(function () {
+    //                 let content= $('<div class="create-input__item"><div class="create-input create-input__ticket"><input class="create-input__text" type="text" placeholder="Укр">\</div>\<div class="create-input create-input__ticket">\<input class="create-input__text" type="text" placeholder="Название билета:">\<p class="create-input__desc">(Напр. VIP, Пресса и т.д.)</p>\</div>\<div class="create-input create-input__ticket">\<input class="create-input__text" type="text" placeholder="Цена:">\</div>\<div class="create-input create-input__ticket">\<span class="create-input__title">Количество:</span>\<input class="create-input__text" type="text">\<p class="create-input__desc">(Не ограничено)</p>\</div>\<div class="create-minus"></div><div class="create-plus"></div></div>')
+    //                 $(this).closest('.create-append').append(content);
+    //             });
+    //     });
+    //     $(this).find('.create-input__item').each(function(){
+    //         $('.create-minus').click(function () {
+    //                 $(this).parents('.create-input__item').remove();
+    //             });
+    //     });
+    // });
+
+    $('.create-plus').click(function () {
+        var content= $('<div class="create-input__item"><div class="create-input create-input__ticket"><input class="create-input__text" type="text" placeholder="Укр">\</div>\<div class="create-input create-input__ticket">\<input class="create-input__text" type="text" placeholder="Название билета:">\<p class="create-input__desc">(Напр. VIP, Пресса и т.д.)</p>\</div>\<div class="create-input create-input__ticket">\<input class="create-input__text" type="text" placeholder="Цена:">\</div>\<div class="create-input create-input__ticket">\<span class="create-input__title">Количество:</span>\<input class="create-input__text" type="text">\<p class="create-input__desc">(Не ограничено)</p>\</div>\<div class="create-minus"></div><div class="create-plus"></div></div>')
+        // $('.create-append').append(content);
+        $(this).closest('.create-append').append(content);
+    });
+    $('.create-minus').click(function () {
+        $(this).parents('.create-input__item').remove();
+    });
 
 
+    //radio-button show content
+
+
+    //anketa toggle
+    $('.anketa-title' ).on('click', function () {
+        $(this).next().fadeToggle(300);
+        $(this).toggleClass('active');
+    });
+
+});
+
+/* Close dropdown on outside click */
+$(document).click(function() {
+    // close dropdown if clicked outside
+    $('div.poster-select__head.active').next().fadeToggle(300);
+    $('div.poster-select__head.active').toggleClass('active');
+    $('#question-drop').fadeToggle(300);
 
 });
 
@@ -193,9 +288,6 @@ $(document).ready(function(){
 
     //modal change
 
-
-
-
     var countdownNumberEl = document.getElementById('countdown-number');
     var countdown = 32;
 
@@ -208,7 +300,12 @@ $(document).ready(function(){
 
 });
 
-
+$(document).ready(function(){
+    $(function() {
+        $( "#datepicker" ).datepicker();
+        console.log("sasa");
+    });
+});
 $(document).ready(function(){
     $('.open-history').click(function () {
         $('#balance').modal('hide')
@@ -227,3 +324,60 @@ $(document).ready(function(){
     })
 
 });
+
+
+function setPosition() {
+    const element = document.getElementById('show-question');
+    const elementContent = document.getElementsByClassName('question-drop__content')[0];
+    var rect = element.getBoundingClientRect();
+    elementContent.style.right = `${window.innerWidth - rect.right}px`;
+}
+
+setPosition();
+
+
+$("#show-question").click(function(e) {
+    e.stopPropagation();
+    $('#question-drop').slideToggle();
+});
+window.onresize = function() {
+    setPosition()
+};
+
+function show1(){
+    document.getElementById('show1').style.display ='block';
+    document.getElementById('show2').style.display = 'none';
+    document.getElementById('list1').style.display ='block';
+    document.getElementById('list2').style.display = 'none';
+}
+function show2(){
+    document.getElementById('show1').style.display ='none';
+    document.getElementById('show2').style.display = 'flex';
+    document.getElementById('list1').style.display ='none';
+    document.getElementById('list2').style.display = 'block';
+}
+function showDelivery(){
+    document.getElementById('form-delivery').style.display ='block';
+    document.getElementById('list3').style.display ='none';
+}
+function hideDelivery(){
+    document.getElementById('form-delivery').style.display ='none';
+    document.getElementById('list3').style.display ='block';
+}
+
+
+
+function chooseDiscount (){
+    if ( $('input[name="switcher-discount"]').is(':checked') ) {
+        document.getElementById('calendar-show').style.display ='none';
+        document.getElementById('titletemp').style.display ='none';
+        document.getElementById('titleopt').style.display ='flex';
+    }
+    else {
+        document.getElementById('calendar-show').style.display ='flex';
+        document.getElementById('titleopt').style.display ='none';
+        document.getElementById('titletemp').style.display ='block';
+    }
+}
+
+
