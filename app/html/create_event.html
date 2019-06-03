@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="../../css/vendor.min.css">
-    <link rel="stylesheet" href="../../css/app.min.css">
-</head>
-<body>
+include include/_header.html
 <div class="wrapper">
     <div class="container">
         <div class="main">
@@ -19,22 +10,12 @@
                 include include/_top_navbar.html
 
                 <div class="poster-wrap">
-                    <ul class="poster-tabs">
-                        <li class="poster-link current" data-tab="tab-1">
-                            <div class="poster-link__item"><span>Афиша</span></div>
-                        </li>
-                        <li class="poster-link " data-tab="tab-2">
-                            <div class="poster-link__item"><span>Букинг</span></div>
-                        </li>
-                        <li class="poster-link " data-tab="tab-3">
-                            <div class="poster-link__item"><span>PRO BHUB</span></div>
-                        </li>
-                    </ul>
+                    include include/_poster_tabs.html
                     <div class="poster-content">
                         <div class="poster-flex">
                             <div class="poster-center">
                                 <div class="poster-center__tabs">
-                                    <div class="poster-content__tab poster-content__small current" id="tab-4">
+                                    <div class="poster-content__tab poster-content__small">
                                         <div class="create">
                                             <div class="create-title">
                                                 <p>Для создания мероприятия, заполните следующие поля</p>
@@ -309,49 +290,7 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="poster-adv">
-                                <div class="poster-adv__slider">
-                                    <div class="poster-adv__item">
-                                        <!--<div class="poster-slider__title books">Книга</div>-->
-                                        <div class="poster-slider__img poster-adv__img">
-                                            <img src="../img/imageRight.png" alt="">
-                                        </div>
-                                        <div class="poster-slider__desc">
-                                            <div class="poster-slider__name">1- Лазер в дерматологии и косметологии . Потекаев Н. Н., Круглова Л. С.
-                                            </div>
-                                            <div class="poster-slider__footer">
-                                                <div class="poster-slider__bold">
-                                                    <p>Цена:</p>
-                                                    <p>1500</p>
-                                                </div>
-                                                <a class="poster-slider__read poster-adv__read">Читать больше</a>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="poster-adv__item">
-                                        <!--<div class="poster-slider__title books">Книга</div>-->
-                                        <div class="poster-slider__img poster-adv__img">
-                                            <img src="../img/imageRight.png" alt="">
-                                        </div>
-                                        <div class="poster-slider__desc">
-                                            <div class="poster-slider__name">2- Лазер в дерматологии и косметологии . Потекаев Н. Н., Круглова Л. С.
-                                            </div>
-                                            <div class="poster-slider__footer">
-                                                <div class="poster-slider__bold">
-                                                    <p>Цена:</p>
-                                                    <p>1500</p>
-                                                </div>
-                                                <a class="poster-slider__read poster-adv__read" href="">Читать больше</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <a href="" class="poster-adv__simple">
-                                    <p>Pеклама</p>
-                                </a>
-                            </div>
+                            include include/_right_sidebar.html
                         </div>
                     </div>
                 </div>
@@ -362,7 +301,4 @@
 
 include include/_modal.html
 
-</body>
-<script type="text/javascript" src="../../js/vendor.min.js"></script>
-<script type="text/javascript" src="../../js/app.min.js"></script>
-</html>
+include include/_footer.html

@@ -57,7 +57,8 @@ a{
 }
 .sidebar{
   width: $left-sidebar-width;
-  height: 737px;
+  min-height: 737px;
+  height: auto;
   box-shadow: 0 0 7.4px 0.6px #b1b1b1;
   background-color: #ecfaf4;
   position: fixed;
@@ -124,6 +125,7 @@ a{
     font:$SSP-Light;
     color: $grey;
     font-size: 16px;
+
     span{
       position: relative;
       cursor: pointer;
@@ -203,7 +205,7 @@ a{
     }
 
     &__list{
-      display: none;
+    display: none;
     background-color: #e1faef;
       li{
         cursor: pointer;
@@ -218,12 +220,13 @@ a{
     //height: 30px;
     width: 100%;
     text-align: center;
-    box-shadow: 0 0 7.4px 0.6px #b1b1b1;
-    background-image: linear-gradient(86deg, #3a4185, #02083f);
-    margin: 20px 0;
+
+    padding: 30px 0;
     a{
       color: white;
       display: block;
+      box-shadow: 0 0 7.4px 0.6px #b1b1b1;
+      background-image: linear-gradient(86deg, #3a4185, #02083f);
       width: 100%;
       height: 100%;
       padding: 8px 0;
@@ -493,8 +496,21 @@ a{
     background-image: linear-gradient(86deg, #3a4185, #02083f);
     margin: 15px 0;
   }
-
   &-link {
+    &__small{
+      a{
+        padding: 0!important;
+        padding: 7px 7px 7px 43px!important;
+        font-size: 14px!important;
+      }
+    }
+    &__kongres{
+      border-top: 1px solid #c1c4c6;
+      border-bottom: 1px solid #c1c4c6;
+      a{
+        padding: 15px 15px 15px 43px!important;
+      }
+    }
     &__item {
       padding: 16px 25px 16px 112px;
       cursor: pointer;
@@ -1506,8 +1522,7 @@ a{
 
   &-adv {
     padding-top: 10px;
-    display: none;
-
+    //display: none;
     &__title {
       font-size: 16px;
       width: 100%;
@@ -1582,18 +1597,9 @@ a{
       }
 
       //display: flex;
-      .poster-slider {
-        &__desc {
-          padding: 0;
-        }
+    }
 
-        &__footer {
-          display: flex;
-          flex-direction: row;
-        }
-      }
-
-      &__show {
+    &__show {
         width: 30%;
         //padding-left: 40px;
         max-width: 223px;
@@ -3862,5 +3868,5 @@ a{
       }
     }
   }
-}
+
 @import 'media';
