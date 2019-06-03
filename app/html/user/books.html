@@ -1,0 +1,119 @@
+include ../include/_header.html
+
+<div class="wrapper">
+    <div class="container">
+        <div class="main">
+
+            include ../include/_left_sidebar.html
+
+            <div class="poster">
+
+                include ../include/_top_navbar.html
+
+                <div class="poster-wrap">
+
+                    <!--include ../include/_poster_tabs.html-->
+
+                    <div class="poster-content">
+                        <div class="poster-flex">
+                            <div class="poster-center">
+                                <div class="poster-center__tabs">
+                                    <!--include ../include/_tmp_tabs.html-->
+                                    <div class="poster-content__tab poster-content__small" id="tab-5">
+                                        <div class="poster-center__item books">
+                                            <div class="poster-select">
+                                                <div class="poster-select__head">
+                                                    <input type="hidden" name="type_category" value="">
+                                                    <div class="poster-select__current input"><span>Все книги</span>
+                                                    </div>
+                                                </div>
+                                                <div class="poster-select__wrap">
+                                                    <ul class="poster-select__dropdown">
+                                                        <li>
+                                                            <span>Все книги</span>
+                                                        </li>
+                                                        <li>
+                                                            <span>Книги</span>
+                                                        </li>
+                                                        <li>
+                                                            <span>Другие</span>
+                                                        </li>
+                                                        <li>
+                                                            <span>Все</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <table class="poster-table">
+                                                <thead>
+                                                <tr>
+                                                    <th>Название<span class="filter-up"></span><span class="filter-down"></span></th>
+                                                    <th>Дата<span class="filter-up"></span><span class="filter-down"></span></th>
+                                                    <th>Тематика<span class="filter-up"></span><span class="filter-down"></span></th>
+                                                    <th><span class="filter-empty"></span></th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr class="poster-table__item">
+                                                    <td><span>Лазер в дерматол...</span></td>
+                                                    <td><span>23/10/19</span></td>
+                                                    <td>
+                                                        <div class="flex-between">
+                                                            <span>Косметология</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="poster-table__actions">
+                                                            <div class="poster-table__go"></div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="poster-table__desc">
+                                                    <td colspan="4">
+                                                        <table class="book-table">
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="flex-start poster-table__descWrap">
+                                                                        <div class="poster-table__column">
+                                                                            <p>Книга</p>
+                                                                            <p class="poster-table__title">Лазер в дерматологии и косметологии </p>
+                                                                        </div>
+                                                                        <div class="poster-table__column">
+                                                                            <p>Автор</p>
+                                                                            <p class="poster-table__title">Потекаев Н. Н., Круглова Л. С.</p>
+                                                                        </div>
+                                                                        <div class="poster-table__column">
+                                                                            <p>Доп.информ.</p>
+                                                                            <p class="poster-table__title">Заказана. <br>Отправлена</p>
+                                                                        </div>
+                                                                        <div class="poster-table__column">
+                                                                            <p>Цена</p>
+                                                                            <p class="poster-table__title">1200 грн</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <!--end tab-->
+                                </div>
+                                include ../include/_recommended.html
+                            </div>
+
+                            include ../include/_right_sidebar.html
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+include ../include/_modal.html
+
+include ../include/_footer.html
