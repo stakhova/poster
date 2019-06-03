@@ -33,10 +33,18 @@ $(document).ready(function() {
         slidesToScroll: 1,
     });
 
-
+    $('.poster-adv__slider').slick({
+        prevArrow: '<div class="poster-adv__sliderPrev"></div>',
+        nextArrow: '<div class="poster-adv__sliderNext"></div>',
+        dots: false,
+        fade: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    });
 
     $('.poster-table__item' ).on('click', function () {
         $(this).next('.poster-table__desc').fadeToggle(300);
+        $(this).next().fadeToggle(300);
         $(this).toggleClass('active');
     });
 
@@ -76,11 +84,14 @@ $(document).ready(function() {
     // poster select
     $('.poster-select__head').on('click', function (e) {
         e.stopPropagation();
+    $('.poster-select__head').on('click', function (e) {
+        e.stopPropagation();
         $(this).next().slideToggle(100);
         $(this).toggleClass('active');
     });
 
-    $('.poster-header__name').on('click', function () {
+    $('.poster-header__name').on('click', function (e) {
+        e.stopPropagation();
         $(this).next().slideToggle(100);
         $(this).toggleClass('active');
         $(this).parent().toggleClass('active');
@@ -121,7 +132,7 @@ $(document).ready(function() {
     $('.sidebar-role span').click(function () {
         // $(this).hide('header-mob__submenu');
         $(this).next().slideToggle(300);
-        $(this).toggleClass('active');
+        // $(this).toggleClass('active');
     });
 
 
@@ -140,79 +151,71 @@ $(document).ready(function() {
 
 
     $('ul.poster-tabs li').click(function () {
-        var tab_id = $(this).attr('data-tab');
+        // var tab_id = $(this).attr('data-tab');
 
-        $('ul.poster-tabs li').removeClass('current');
+        // $('ul.poster-tabs li').removeClass('current');
         //$('ul.sidebar-role__list li').removeClass('current');
-        $('.poster-content__tab').removeClass('current');
-        $(this).addClass('current');
-        $('.poster-adv').removeClass('poster-adv__show');
-        $('.poster-recommended').removeClass('poster-recommended__show');
-        $('.poster-flex').css('display','none');
+        // $('.poster-content__tab').removeClass('current');
+        // $(this).addClass('current');
+        // $('.poster-adv').removeClass('poster-adv__show');
+        // $('.poster-recommended').removeClass('poster-recommended__show');
+        // $('.poster-flex').css('display','none');
 
-        $("#" + tab_id).addClass('current');
+        // $("#" + tab_id).addClass('current');
 
         $('.poster-slider').slick('unslick');
         window.dispatchEvent (new Event ('resize'));
-        $('.poster-slider').slick({
-            prevArrow: '<div class="poster-slider__prev"></div>',
-            nextArrow: '<div class="poster-slider__next"></div>',
-            dots: true,
-            fade: false,
-            slidesToShow: 3,
-            slidesToScroll: 1,
-        });
+        // $('.poster-slider').slick({
+        //     prevArrow: '<div class="poster-slider__prev"></div>',
+        //     nextArrow: '<div class="poster-slider__next"></div>',
+        //     dots: true,
+        //     fade: false,
+        //     slidesToShow: 3,
+        //     slidesToScroll: 1,
+        // });
     });
 
 
 
-    $('ul.poster-tabs li').click(function () {
-        var tab_id = $(this).attr('data-tab');
+    // $('ul.poster-tabs li').click(function () {
+    //     var tab_id = $(this).attr('data-tab');
+    //
+    //     $('ul.poster-tabs li').removeClass('current');
+    //     //$('ul.sidebar-role__list li').removeClass('current');
+    //     $('.poster-content__tab').removeClass('current');
+    //     $(this).addClass('current');
+    //     // $('.poster-adv').removeClass('poster-adv__show');
+    //     $('.poster-recommended').removeClass('poster-recommended__show');
+    //     // $('.poster-flex').css('display','none');
+    //
+    //     $("#" + tab_id).addClass('current');
+    //
+    //     $('.poster-slider').slick('unslick');
+    //     window.dispatchEvent (new Event ('resize'));
+    //     $('.poster-slider').slick({
+    //         prevArrow: '<div class="poster-slider__prev"></div>',
+    //         nextArrow: '<div class="poster-slider__next"></div>',
+    //         dots: true,
+    //         fade: false,
+    //         slidesToShow: 3,
+    //         slidesToScroll: 1,
+    //     });
+    // });
 
-        $('ul.poster-tabs li').removeClass('current');
-        //$('ul.sidebar-role__list li').removeClass('current');
-        $('.poster-content__tab').removeClass('current');
-        $(this).addClass('current');
-        $('.poster-adv').removeClass('poster-adv__show');
-        $('.poster-recommended').removeClass('poster-recommended__show');
-        $('.poster-flex').css('display','none');
 
-        $("#" + tab_id).addClass('current');
-
-        $('.poster-slider').slick('unslick');
-        window.dispatchEvent (new Event ('resize'));
-        $('.poster-slider').slick({
-            prevArrow: '<div class="poster-slider__prev"></div>',
-            nextArrow: '<div class="poster-slider__next"></div>',
-            dots: true,
-            fade: false,
-            slidesToShow: 3,
-            slidesToScroll: 1,
-        });
-    });
-
-
-    $('ul.sidebar-role__list li').click(function () {
-        var tab_id = $(this).attr('data-tab');
-        $('ul.sidebar-role__list li').removeClass('current');
-        //$('ul.poster-tabs li').removeClass('current');
-        $('.poster-content__tab').removeClass('current');
-        $(this).addClass('current');
-        $("#" + tab_id).addClass('current');
-        $('.poster-adv').addClass('poster-adv__show');
-        $('.poster-recommended').addClass('poster-recommended__show');
-        $('.poster-flex').css('display','flex');
-
-        window.dispatchEvent (new Event ('resize'));
-        $('.poster-adv__slider').slick({
-            prevArrow: '<div class="poster-adv__sliderPrev"></div>',
-            nextArrow: '<div class="poster-adv__sliderNext"></div>',
-            dots: false,
-            fade: false,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-        });
-    });
+    // $('ul.sidebar-role__list li').click(function () {
+    //     var tab_id = $(this).attr('data-tab');
+    //     $('ul.sidebar-role__list li').removeClass('current');
+    //     //$('ul.poster-tabs li').removeClass('current');
+    //     $('.poster-content__tab').removeClass('current');
+    //     $(this).addClass('current');
+    //     $("#" + tab_id).addClass('current');
+    //     // $('.poster-adv').addClass('poster-adv__show');
+    //     $('.poster-recommended').addClass('poster-recommended__show');
+    //     // $('.poster-flex').css('display','flex');
+    //
+    //     window.dispatchEvent (new Event ('resize'));
+    // });
 
     $('.poster-slider').slick({
         prevArrow: '<div class="poster-slider__prev"></div>',
@@ -251,7 +254,18 @@ $(document).ready(function() {
 
 
     //radio-button show content
+});
 
+/* Close dropdown on outside click */
+$(document).click(function() {
+    // close dropdown if clicked outside
+    $('div.poster-select__head.active').next().fadeToggle(300);
+    $('div.poster-select__head.active').toggleClass('active');
+    $('#question-drop').fadeOut(300);
+    $('#notifications-drop').fadeOut(300);
+    $('.poster-header__name').removeClass('active');
+    $('.poster-header__person').removeClass('active');
+    $('.poster-header__list').fadeOut(300);
 
     //anketa toggle
     $('.anketa-title' ).on('click', function () {
@@ -381,3 +395,35 @@ function chooseDiscount (){
 }
 
 
+
+
+function setPosition() {
+    // Set position of the questions drop
+    const element = document.getElementById('show-question');
+    const elementContent = document.getElementsByClassName('question-drop__content')[0];
+    var rect = element.getBoundingClientRect();
+    elementContent.style.right = `${window.innerWidth - rect.right}px`;
+
+    // Set position of the notifications drop
+    const notificationsShowElement = document.getElementById('show-notifications');
+    const notificationsContent = document.getElementsByClassName('notifications-drop__content')[0];
+    var notificationsRect = notificationsShowElement.getBoundingClientRect();
+    notificationsContent.style.right = `${window.innerWidth - notificationsRect.right - 4}px`;
+}
+
+setPosition();
+
+
+$("#show-question").click(function(e) {
+    e.stopPropagation();
+    $('#question-drop').slideToggle();
+});
+
+$("#show-notifications").click(function(e) {
+    e.stopPropagation();
+    $('#notifications-drop').slideToggle();
+});
+
+window.onresize = function() {
+    setPosition()
+};
