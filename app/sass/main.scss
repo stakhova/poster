@@ -206,7 +206,7 @@ a{
 
     &__list{
     display: none;
-    background-color: #e1faef;
+      background-color: #e1faef;
       li{
         cursor: pointer;
         a {
@@ -1595,8 +1595,6 @@ a{
         display: flex;
         flex-direction: row;
       }
-
-      //display: flex;
     }
 
     &__show {
@@ -3772,101 +3770,198 @@ a{
   }
 
   #notifications-drop {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1060;
 
-    .notifications-drop {
-      &__content {
-        width: 600px;
-        display: block;
-        position: absolute;
-        top: 39px;
-        right: 0;
-        z-index: 1060;
-        box-shadow: 0px 1px 3.8px 0.2px $text-shadow;
-        background-color: $white;
-      }
+  .notifications-drop {
 
-      &__header {
-        font-family: $SSP;
-        font-size: 16px;
-        padding: 15px 21px;
+    &__content {
+      width: 600px;
+      display: block;
+      position: absolute;
+      top:39px;
+      right: 0;
+      box-shadow: 0px 1px 3.8px 0.2px $text-shadow;
+      background-color: $white;
+    }
+
+    &__header {
+      font-family: $SSP;
+      font-size: 16px;
+      padding: 15px 21px;
+      background-color: $header-background;
+      box-shadow: 0px 1px 3.8px 0.2px $text-shadow;
+    }
+
+    &__body {
+      margin-top: 2px;
+
+      .nav-tabs {
+        border: none;
         background-color: $header-background;
-        box-shadow: 0px 1px 3.8px 0.2px $text-shadow;
-      }
 
-      &__body {
-        margin-top: 2px;
+        .nav-item {
+          padding: 20px;
+        }
 
-        .nav-tabs {
+        .nav-link {
+          padding: 5px;
           border: none;
-          background-color: $header-background;
 
-          .nav-item {
-            padding: 20px;
+          &.active {
+            color: $blue;
+            font-family: $SSP-Bold;
+            font-weight: bold;
+            border-bottom: solid 1px $blue;
+            background-color: $header-background;
           }
-
-          .nav-link {
-            padding: 5px;
-            border: none;
-
-            &.active {
-              color: $blue;
-              font-family: $SSP-Bold;
-              font-weight: bold;
-              border-bottom: solid 1px $blue;
-              background-color: $header-background;
-            }
-          }
-        }
-      }
-
-      &__message {
-        &__list {
-          padding: 0 20px;
-        }
-
-        &__item {
-          display: flex;
-          flex-direction: row;
-          flex-wrap: nowrap;
-          align-items: center;
-          border-bottom: 1px solid $blue;
-        }
-
-        &__count {
-          width: 24px;
-          height: 16px;
-          border-radius: 50%;
-          text-align: center;
-          line-height: 16px;
-          box-shadow: 0px 1px 3.8px 0.2px $text-shadow;
-          background-color: $green;
-          font-size: 12px;
-          font-weight: normal;
-          font-style: normal;
-          font-stretch: normal;
-          letter-spacing: normal;
-        }
-
-        &__desc {
-          padding: 8px 15px;
-        }
-      }
-
-      &__footer {
-        text-align: center;
-        line-height: 58px;
-
-        a:hover {
-          text-decoration: underline;
         }
       }
     }
+
+    &__message {
+
+      &__list {
+        padding: 0 20px;
+      }
+
+      &__item {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        border-bottom: 1px solid $blue;
+        justify-content: space-between;
+      }
+
+      &__count {
+        width: 24px;
+        height: 15px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 14px;
+        box-shadow: 0px 1px 3.8px 0.2px $text-shadow;
+        background-color: $green;
+        font-size: 12px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        letter-spacing: normal;
+      }
+
+      &__desc {
+        padding: 8px 15px;
+      }
+
+      &__more:before {
+        content: "...";
+        font-size: 30px;
+        line-height: 30px;
+        padding: 0 0 20px 0;
+        display: block;
+      }
+    }
+
+    &__footer {
+      text-align: center;
+      line-height: 58px;
+      a:hover {
+        text-decoration: underline;
+      }
+    }
   }
+}
+
+#balance-drop {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  .balance-drop {
+    &__content {
+      width: 217px;
+      display: block;
+      position: absolute;
+      top: 39px;
+      right: 0;
+      z-index: 1060;
+      box-shadow: 0px 1px 3.8px 0.2px $text-shadow;
+      background-color: $white;
+    }
+
+    &__header {
+      font-family: $SSP;
+      font-size: 16px;
+      padding: 15px 21px;
+      background-color: $header-background;
+      box-shadow: 0px 1px 3.8px 0.2px $text-shadow;
+    }
+
+    &__body {
+      margin-top: 2px;
+    }
+  }
+}
+
+.notifications {
+  max-height: 590px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  &__header {
+    font-family: $SSP;
+    font-size: 16px;
+    padding: 11px 21px;
+    background-color: $header-background;
+  }
+  &__content {
+    background-color: $white;
+
+  }
+  &__message {
+    &__list {
+      padding: 0 20px;
+    }
+    &__item {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      border-bottom: 1px solid $blue;
+      justify-content: space-between;
+    }
+    &__count {
+      width: 24px;
+      height: 16px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 16px;
+      box-shadow: 0px 1px 3.8px 0.2px $text-shadow;
+      background-color: $green;
+      font-size: 12px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      letter-spacing: normal;
+    }
+    &__desc {
+      padding: 8px 0px;
+    }
+    &__more:before {
+      content: "...";
+      font-size: 30px;
+      line-height: 30px;
+      padding: 0 0 20px 0;
+      display: block;
+    }
+  }
+}
 
 @import 'media';
