@@ -9,7 +9,7 @@
     <!--<div class="poster-header__message" data-toggle="modal" data-target="#message">-->
         <!--<span>2</span>-->
     <!--</div>-->
-    <div class="poster-header__balance" data-toggle="modal" data-target="#balance">
+    <div class="poster-header__balance" id="show-balance">
         <span>1</span>
     </div>
     <div class="poster-header__person">
@@ -83,8 +83,9 @@
                                 <p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного</p>
                                 <p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного <a href="">ссылка на что-то</a>  </p>
                             </div>
-                            <div class="notifications-drop__message__more">
-                            </div>
+                            <a href="#">
+                                <div class="notifications-drop__message__more"></div>
+                            </a>
                         </li>
                         <li class="notifications-drop__message__item">
                             <div class="notifications-drop__message__count">
@@ -93,8 +94,9 @@
                             <div class="notifications-drop__message__desc">
                                 <p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного</p>
                             </div>
-                            <div class="notifications-drop__message__more">
-                            </div>
+                            <a href="#">
+                                <div class="notifications-drop__message__more"></div>
+                            </a>
                         </li>
                         <li class="notifications-drop__message__item">
                             <div class="notifications-drop__message__count">
@@ -104,8 +106,9 @@
                                 <p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного</p>
                                 <p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного <a href="">ссылка на что-то</a>  </p>
                             </div>
-                            <div class="notifications-drop__message__more">
-                            </div>
+                            <a href="#">
+                                <div class="notifications-drop__message__more"></div>
+                            </a>
                         </li>
                       </ul>
                   </div>
@@ -138,9 +141,27 @@
                 </div>
             </div>
             <div class="notifications-drop__footer">
-                <span><a href="#">Показать все</a></span>
+                <span><a href="/user/notifications.html">Показать все</a></span>
             </div>
         </div>
     </div>
 </div>
 <!-- End notifications modal -->
+
+<!-- Balance modal -->
+<div id="balance-drop">
+    <div class="balance-drop__content ">
+        <div class="balance-drop__header">
+            <h5 class="modal-title">Ваш баланс</h5>
+        </div>
+        <div class="balance-drop__body">
+            <span>Доступно:</span>
+            <div class="balance-drop__available">100грн</div>
+            <div class="balance-drop__link">
+                <span class="open-history" data-toggle="modal" data-target="#history">История транзакций</span>
+                <span><a href="#">Пополнить баланс</a></span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End of balance modal -->
