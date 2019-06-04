@@ -876,6 +876,21 @@ a{
     margin-right: 40px;
     //max-width: 605px;
     //width: 100%;
+
+    .empty-event {
+      color: $blue;
+      padding: 15% 20%;
+      text-align: center;
+      font-size: 16px;
+
+      a {
+        margin-top: 24px;
+        display: block;
+        color: $blue-link-color;
+        text-decoration: underline;
+        font-size: 14px;
+      }
+    }
   }
 
   &-main {
@@ -1247,6 +1262,42 @@ a{
         font-family: 'icomoon';
       }
     }
+    &__attention {
+      &--orange {
+        color: $orange;
+        border: 1px solid $orange;
+        &:after {
+          content: "\e972";
+          font-family: icomoon;
+        }
+      }
+      &:after {
+        content: "\e972";
+        font-family: icomoon;
+      }
+    }
+
+    &__billed {
+      &--bigger {
+        display: flex;
+        margin-right: 12px;
+        margin-top: 5px;
+        align-self: start;
+
+        &:after {
+          content: "\e973";
+          color: #3a4185;
+          font-size: 12px;
+          font-family: 'icomoon';
+        }
+      }
+       &:after {
+        content: "\e973";
+        color: #3a4185;
+        font-size: 12px;
+        font-family: 'icomoon';
+      }
+    }
 
     &__edit {
       &:after {
@@ -1285,6 +1336,21 @@ a{
     }
 
     &__ticket {
+
+      &--bigger {
+        display: flex;
+        margin-right: 12px;
+        margin-top: 3px;
+        align-self: start;
+
+        &:after {
+          content: "\e907";
+          color: #3a4185;
+          font-size: 18px;
+          font-family: 'icomoon';
+        }
+      }
+
       &:after {
         content: "\e907";
         color: #3a4185;
