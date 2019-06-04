@@ -2389,9 +2389,8 @@ a{
 
     &-confirm {
       position: relative;
-      //left: 88px;
       font-size: 14px;
-      padding-top: 20px;
+      //padding-top: 20px;
 
       .flex-start {
         align-items: center;
@@ -2419,6 +2418,9 @@ a{
     }
 
     &-order {
+      .flex-start{
+        padding-bottom: 20px;
+      }
       .form-block:first-child {
         margin-right: 80px;
         margin-bottom: 10px;
@@ -2440,11 +2442,11 @@ a{
       font: $SSP-Semibold;
       padding: 25px 0;
       font-size: 16px;
-      margin: 0 15px 0 0px;
+      margin: 0 10px 0 0px;
     }
 
     &-block {
-      width: 200px;
+      width: 50%;
       //width: 100%;
       margin: 0 15px 0 0px;
     }
@@ -2463,7 +2465,7 @@ a{
 
     &-input {
       font-size: 16px;
-      width: 200px;
+      width: 100%;
       border: none;
       border-bottom: 1px solid $blue;
       padding: 6px 0;
@@ -3060,6 +3062,7 @@ a{
       &__item {
         padding: 14px 0;
         padding-left: 25px;
+        position: relative;
 
         &:first-child .create-list__title:after {
           content: "1";
@@ -3201,7 +3204,11 @@ a{
     &-input {
       padding: 20px 0;
       width: 100%;
-
+      &__price{
+        font: $SSP-Semibold;
+        font-size: 16px;
+        padding-top: 6px;
+      }
       &__block {
         padding-top: 20px;
       }
@@ -3238,7 +3245,7 @@ a{
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
-
+        position: relative;
         & > *:not(:last-child) {
           margin-right: 10px;
         }
@@ -3506,9 +3513,9 @@ a{
       border: 1px solid $blue;
       cursor: pointer;
       border-radius: 100%;
-      position: relative;
-      right: 0;
-      top: 15px;
+      position: absolute;
+      right: 37px;
+      bottom: 20px;
 
       &:after {
         content: "";
@@ -3530,9 +3537,9 @@ a{
       border: 1px solid $blue;
       cursor: pointer;
       border-radius: 100%;
-      position: relative;
+      position: absolute;
       right: 0;
-      top: 15px;
+      bottom: 20px;
 
       &:after {
         content: "";
@@ -3640,6 +3647,7 @@ a{
   }
 
   .anketa {
+    position: relative;
     width: 100%;
 
     &-title {
@@ -3649,8 +3657,8 @@ a{
 
       :first-child {
         padding-right: 160px;
+        position: relative;
       }
-
       &:before {
         content: "";
         position: absolute;
@@ -3662,7 +3670,6 @@ a{
         background: url('../img/down.svg') no-repeat left top;
         z-index: 3;
       }
-
       &.active {
         box-shadow: 0px 1px 3.8px 0.2px #b1b1b1;
         background-color: #fafafa;
@@ -3673,21 +3680,65 @@ a{
         }
       }
     }
+    &-done{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right:10px;
+      &:before{
+        content: "";
+        position: absolute;
+        background-color: #3a4185;
+        width: 20px;
+        height: 20px;
+        right: 0px;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 50%;
+      }
+      &:after{
+        content: "\e97f";
+        position: absolute;
+        color: #fff;
+        font-size: 8px;
+        right: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-family: 'icomoon';
+        z-index: 3;
+      }
+
+    }
 
     &-desc {
       box-shadow: 0px 1px 3.8px 0.2px #b1b1b1;
       padding: 30px 10px;
       display: none;
+      .create-button{
+        padding-top: 40px;
+      }
     }
 
     &-content {
       .create-select__current:before {
         bottom: -3px;
       }
-
-      .create-input__ticket:first-child {
-        width: 200px;
+      .create-select{
+        max-width: 100%;
       }
+      .create-input__ticket:first-child {
+        width: 47%;
+      }
+      .create-input__ticket:nth-child(2){
+        width: 12%;
+      }
+      .create-input__ticket:nth-child(3){
+        width: 14%;
+      }
+      .create-input__ticket{
+        margin-right: 30px;
+      }
+
     }
   }
 
