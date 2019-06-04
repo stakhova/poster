@@ -1,0 +1,304 @@
+include include/_header.html
+<div class="wrapper">
+    <div class="container">
+        <div class="main">
+
+            include include/_left_sidebar.html
+
+            <div class="poster">
+
+                include include/_top_navbar.html
+
+                <div class="poster-wrap">
+                    include include/_poster_tabs.html
+                    <div class="poster-content">
+                        <div class="poster-flex">
+                            <div class="poster-center">
+                                <div class="poster-center__tabs">
+                                    <div class="poster-content__tab poster-content__small">
+                                        <div class="create">
+                                            <div class="create-title">
+                                                <p>Для создания мероприятия, заполните следующие поля</p>
+                                            </div>
+                                            <form action="">
+                                                <div class="create-content">
+                                                    <ul class="create-list">
+                                                        <li class="create-list__item">
+                                                            <span class="create-list__title">Создание нового мероприятия</span>
+                                                            <div class="create-list__content">
+                                                                <div class="create-input">
+                                                                    <input class="create-input__text" type="text" placeholder="Название мероприятия:">
+                                                                    <p class="create-input__desc">Количество символов ограничено, текст подсказка</p>
+                                                                </div>
+                                                                <div class="create-input">
+                                                                    <div class="create-select">
+                                                                        <div class="create-select__head">
+                                                                            <input type="hidden" name="type_category" value="">
+                                                                            <div class="create-select__current input"><span>Тип мероприятия:</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="create-select__wrap">
+                                                                            <ul class="create-select__dropdown">
+                                                                                <li>
+                                                                                    <span>Тип 1</span>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <span>Тип 2</span>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <span>Тип 3</span>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <span>Тип 4</span>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                    <p class="create-input__desc">Выберите из списка тип мероприятия</p>
+                                                                </div>
+                                                                <div class="create-input">
+                                                                    <p class="create-input__title">Форма проведения:</p>
+                                                                    <div class="flex-between">
+                                                                        <div class="form-radio__big">
+                                                                            <label for="radio11">
+                                                                                <input type="radio" name="radio-but" value="" class="form-radio__item" id ="radio11">
+                                                                                <div class="form-radio__label flex-between"> <span>Онлайн</span></div>
+                                                                            </label>
+                                                                        </div>
+                                                                        <div class="form-radio__big">
+                                                                            <label for=radio12>
+                                                                                <input type="radio" name="radio-but" value="" class="form-radio__item" id ="radio12">
+                                                                                <div class="form-radio__label flex-between"> <span>Офлайн</span></div>
+                                                                            </label>
+                                                                        </div>
+                                                                        <div class="form-radio__big">
+                                                                            <label for=radio13>
+                                                                                <input type="radio" name="radio-but" value="" class="form-radio__item" id ="radio13">
+                                                                                <div class="form-radio__label flex-between"> <span>Запись</span></div>
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="create-input">
+                                                                    <div class="create-select">
+                                                                        <div class="create-select__head">
+                                                                            <input type="hidden" name="type_category" value="">
+                                                                            <div class="create-select__current input"><span>Тематика мероприятия:</span></div>
+                                                                        </div>
+                                                                        <div class="create-select__wrap">
+                                                                            <ul class="create-select__dropdown">
+                                                                                <li>
+                                                                                    <span>Тематика 1</span>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <span>Тематика 2</span>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <span>Тематика 3</span>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <span>Тематика 4</span>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                    <p class="create-input__desc">Выберите из списка тип мероприятия</p>
+                                                                </div>
+                                                                <div class="create-button">
+                                                                    <button>Далее</button>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="create-list__item">
+                                                            <span class="create-list__title">Дата и время</span>
+                                                            <div class="create-list__content">
+                                                                <div class="flex-between create-input__calendars">
+                                                                    <div class="create-input create-input__calendar">
+                                                                        <input type="text" placeholder="Начало мероприятия:">
+                                                                        <p class="create-input__desc">Дата и время проведения</p>
+                                                                    </div>
+                                                                    <div class="create-input create-input__calendar">
+                                                                        <input type="text" placeholder="Конец мероприятия:">
+                                                                        <p class="create-input__desc">Дата и время проведения</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="create-button">
+                                                                    <span>Назад</span>
+                                                                    <button>Далее</button>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="create-list__item">
+                                                            <span class="create-list__title">О событии</span>
+                                                            <div class="create-list__content">
+                                                                <div class="create-input">
+                                                                    <div class="create-select">
+                                                                        <div class="create-select__head">
+                                                                            <input type="hidden" name="type_category" value="">
+                                                                            <div class="create-select__current input"><span>Место проведения:</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="create-select__wrap">
+                                                                            <ul class="create-select__dropdown">
+                                                                                <li>
+                                                                                    <span>Место проведения: 1</span>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <span>Место проведения: 2</span>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <span>Место проведения: 3</span>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <span>Место проведения: 4</span>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                    <p class="create-input__desc">Выберите из ранее созданных или создайте новое</p>
+                                                                </div>
+                                                                <div class="create-input">
+                                                                    <p class="create-input__title">Краткое описание:</p>
+                                                                    <textarea class="create-input__text"></textarea>
+                                                                    <p class="create-input__desc">Мета тег должен быть емким и при этом содержательным, размер - от 150  до 200 знаков</p>
+                                                                </div>
+                                                                <div class="create-input">
+                                                                    <p class="create-input__title">Полное описание:</p>
+                                                                    <textarea class="create-input__text"></textarea>
+                                                                    <p class="create-input__desc">Мета тег должен быть емким и при этом содержательным, размер - от 150  до 200 знаков</p>
+                                                                </div>
+                                                                <div class="create-input">
+                                                                    <p class="create-input__title">Изображение мероприятия:</p>
+                                                                    <div class="create-img__download">
+                                                                        <!--<input type="file" name="photo" multiple accept="image/*,image/jpeg">-->
+                                                                    </div>
+                                                                    <div class="create-img">
+                                                                        <img src="../img/imageRight.png" alt="">
+                                                                        <span></span>
+                                                                    </div>
+                                                                    <p class="create-input__desc">Мета тег должен быть емким и при этом содержательным, размер - от 150  до 200 знаков</p>
+                                                                </div>
+
+                                                                <div class="create-button">
+                                                                    <span>Назад</span>
+                                                                    <button>Далее</button>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="create-list__item">
+                                                            <span class="create-list__title">Информация об организаторе</span>
+                                                            <div class="create-list__content">
+                                                                <div class="create-input">
+                                                                    <input class="create-input__text" type="text" placeholder="Номер телефона:">
+                                                                </div>
+                                                                <div class="create-input">
+                                                                    <div class="create-select">
+                                                                        <div class="create-select__head">
+                                                                            <input type="hidden" name="type_category" value="">
+                                                                            <div class="create-select__current input"><span>Выберите из списка:</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="create-select__wrap">
+                                                                            <ul class="create-select__dropdown create-social">
+                                                                                <li>
+                                                                                    <span>facebook</span>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <span>instagram</span>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <span>youtube</span>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <span>linkedin</span>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <span>сайт</span>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                    <p class="create-input__desc">Сайт, электронный адрес, профили организатора в соцсетях</p>
+                                                                </div>
+                                                                <div class="create-button">
+                                                                    <span>Назад</span>
+                                                                    <button>Далее</button>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="create-list__item">
+                                                            <span class="create-list__title">Создание билета</span>
+                                                            <div class="create-list__content">
+                                                                <div class="create-append">
+                                                                    <div class="create-input__item">
+                                                                        <div class="create-input create-input__ticket">
+                                                                            <input class="create-input__text" type="text" placeholder="Укр">
+                                                                        </div>
+                                                                        <div class="create-input create-input__ticket">
+                                                                            <input class="create-input__text" type="text" placeholder="Название билета:">
+                                                                            <p class="create-input__desc">(Напр. VIP, Пресса и т.д.)</p>
+                                                                        </div>
+                                                                        <div class="create-input create-input__ticket">
+                                                                            <input class="create-input__text" type="text" placeholder="Цена:">
+                                                                        </div>
+                                                                        <div class="create-input create-input__ticket">
+                                                                            <span class="create-input__title">Количество:</span>
+                                                                            <input class="create-input__text" type="text">
+                                                                            <p class="create-input__desc">(Не ограничено)</p>
+                                                                        </div>
+                                                                        <div class="create-minus"></div>
+                                                                        <div class="create-plus"></div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="create-button">
+                                                                    <span>Назад</span>
+                                                                    <button>Создать мероприятие</button>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="create">
+                                            <div class="create-title">
+                                                <p>Создание нового места проведения</p>
+                                            </div>
+                                            <div class="create-wrap">
+                                                <form action="">
+                                                    <div>
+                                                        <div class="create-input">
+                                                            <input class="create-input__text" type="text" placeholder="Название места проведения:">
+                                                            <p class="create-input__desc">Используется для ввода однострочного текста</p>
+                                                        </div>
+                                                        <div class="create-input">
+                                                            <input class="create-input__text" type="text" placeholder="Поиск адреса:">
+                                                        </div>
+                                                        <div class="create-map">
+                                                            <div class="create-map__item"></div>
+                                                            <p class="create-input__desc">Вы можете переместить маркер, чтобы указать местоположение точнее</p>
+                                                        </div>
+                                                        <div class="create-button">
+                                                            <span>Отмена</span>
+                                                            <button>Сохранить место</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            include include/_right_sidebar.html
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+include include/_modal.html
+
+include include/_footer.html
