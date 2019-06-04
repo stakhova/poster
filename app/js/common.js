@@ -116,6 +116,8 @@ $(document).ready(function() {
     });
 
 
+
+
     $('.sidebar-role span').click(function () {
         // $(this).hide('header-mob__submenu');
         $(this).next().slideToggle(300);
@@ -428,5 +430,29 @@ function chooseDiscount (){
         document.getElementById('titleopt').style.display ='none';
         document.getElementById('titletemp').style.display ='block';
     }
+}
+function chooseCount(){
+    if ( $('input[name="switcher-discount"]').is(':unchecked') ) {
+        document.getElementById('titleMuch').style.display ='none';
+        document.getElementById('titleCount').style.display ='flex';
+    }
+    else {
+        document.getElementById('titleCount').style.display ='none';
+        document.getElementById('titleMuch').style.display ='block';
+    }
+}
+
+function showProm1(){
+    document.getElementById('showProm2').style.display = 'none';
+}
+function showProm2(){
+    document.getElementById('showProm2').style.display = 'block';
+}
+
+function showCheck(){
+    document.getElementById('showCheck').style.display ='block';
+}
+function hideCheck(){
+    document.getElementById('showCheck').style.display ='none';
 }
 

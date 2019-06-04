@@ -1259,10 +1259,14 @@ a{
 
     &__copy {
       &:after {
-        content: "\e949";
-        color: #3a4185;
-        font-size: 14px;
-        font-family: 'icomoon';
+        //content: "\e949";
+        //color: #3a4185;
+        //font-size: 14px;
+        //font-family: 'icomoon';
+        content: "";
+        width: 12px;
+        height: 13px;
+        background: url('../img/copy2.svg') no-repeat left top;
       }
     }
 
@@ -2524,6 +2528,7 @@ a{
           //width: 16px;
           //height: 12px;
           top: 50%;
+          border: none;
           transform: translateY(-50%);
           left: 0px;
           background: url('../img/done.svg') no-repeat left top;
@@ -2569,7 +2574,7 @@ a{
         min-width: 320px;
         position: relative;
         left: 25px;
-
+        font: $SSP-Light;
         &:before {
           content: "";
           position: absolute;
@@ -3092,9 +3097,9 @@ a{
       &__item:not(:first-child) {
         position: relative;
 
-        .create-list__content {
-          display: none;
-        }
+        //.create-list__content {
+        //  display: none;
+        //}
 
         .create-list__title:before {
           opacity: 0.3;
@@ -3259,11 +3264,11 @@ a{
         position: relative;
 
         &:first-child {
-          width: 10%;
+          width: 7%;
         }
 
         &:nth-child(2) {
-          width: 40%;
+          width: 35%;
         }
 
         &:nth-child(3) {
@@ -3366,7 +3371,18 @@ a{
       width: 100%;
       //display: flex;
       margin-left: auto;
-
+      //&__icon{
+      //  &:before {
+      //    content: '';
+      //    position: absolute;
+      //    width: 20px;
+      //    height: 20px;
+      //    left: 0px;
+      //    top: 50%;
+      //    transform: translateY(-50%);
+      //    background: url('../img/inst.svg') no-repeat left top;
+      //  }
+      //}
       &__head {
         &:after {
           content: "";
@@ -3462,11 +3478,9 @@ a{
       justify-content: flex-end;
       align-items: center;
       font: $SSP-Light;
-
-      button {
+      button, a {
         border: none;
-        padding: 0 30px;
-        height: 30px;
+        padding: 8px 30px;
         color: white;
         text-align: center;
         box-shadow: 0 0 7.4px 0.6px #b1b1b1;
@@ -3515,7 +3529,8 @@ a{
       border-radius: 100%;
       position: absolute;
       right: 37px;
-      bottom: 20px;
+      bottom: 50%;
+      transform: translate(-50%);
 
       &:after {
         content: "";
@@ -3539,7 +3554,8 @@ a{
       border-radius: 100%;
       position: absolute;
       right: 0;
-      bottom: 20px;
+      bottom: 50%;
+      transform: translate(-50%);
 
       &:after {
         content: "";
@@ -3642,7 +3658,7 @@ a{
 
   }
 
-  #show2, #list2, #list3, #titleopt {
+  #show2, #list2, #list3, #titleopt, #titleCount, #showProm2, #showCheck {
     display: none;
   }
 
@@ -4013,6 +4029,11 @@ a{
       display: block;
     }
   }
+}
+input[name=radio-but]~ div  {
+  font: $SSP-Semibold;
+  padding-bottom: 18px;
+  padding-top: 18px;
 }
 
 @import 'media';
