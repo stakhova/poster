@@ -1,0 +1,59 @@
+include include/_header.html
+<div class="wrapper">
+    <div class="container">
+        <div class="main">
+
+            include include/_left_sidebar.html
+
+            <div class="poster">
+
+                include include/_top_navbar.html
+
+                <div class="poster-wrap">
+                    include include/_poster_tabs.html
+                    <div class="poster-content">
+                        <div class="poster-flex">
+                            <div class="poster-center">
+                                <div class="poster-center__tabs">
+                                    <div class="poster-content__tab poster-content__small">
+                                        <div class="create">
+                                            <div class="create-title">
+                                                <p>Создание нового места проведения</p>
+                                            </div>
+                                            <div class="create-wrap">
+                                                <form action="">
+                                                    <div>
+                                                        <div class="create-input">
+                                                            <input class="create-input__text" type="text" placeholder="Название места проведения:">
+                                                            <p class="create-input__desc">Используется для ввода однострочного текста</p>
+                                                        </div>
+                                                        <div class="create-input">
+                                                            <input class="create-input__text" type="text" placeholder="Поиск адреса:">
+                                                        </div>
+                                                        <div class="create-map">
+                                                            <div class="create-map__item"></div>
+                                                            <p class="create-input__desc">Вы можете переместить маркер, чтобы указать местоположение точнее</p>
+                                                        </div>
+                                                        <div class="create-button">
+                                                            <span>Отмена</span>
+                                                            <button>Сохранить место</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            include include/_right_sidebar.html
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+include include/_modal.html
+
+include include/_footer.html

@@ -324,9 +324,8 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
-    $(function() {
-        $( "#datepicker" ).datepicker();
-        console.log("sasa");
+    $(function(){
+        $(".datepicker").datepicker();
     });
 });
 
@@ -430,5 +429,4 @@ function chooseDiscount (){
         document.getElementById('titletemp').style.display ='block';
     }
 }
-
 
