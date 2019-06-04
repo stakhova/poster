@@ -323,13 +323,6 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
-    $(function() {
-        $( "#datepicker" ).datepicker();
-        console.log("sasa");
-    });
-});
-
-$(document).ready(function(){
     $('.open-history').click(function () {
         $('#balance').modal('hide')
     });
