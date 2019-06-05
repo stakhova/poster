@@ -32,6 +32,7 @@ var paths = {
             'bower_components/jquery-validation/dist/additional-methods.min.js',
             'app/vendor/js/bootstrap.min.js',
             'app/vendor/js/slick.min.js',
+            'app/vendor/js/Chart.bundle.min.js'
         ],
     },
     dest: {
