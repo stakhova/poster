@@ -214,14 +214,14 @@ $(document).ready(function() {
         slidesToShow: 3,
         slidesToScroll: 1,
     });
-    // $('.poster-recommended__slider').slick({
-    //     prevArrow: '<div class="poster-slider__prev"></div>',
-    //     nextArrow: '<div class="poster-slider__next"></div>',
-    //     dots: true,
-    //     fade: false,
-    //     slidesToShow: 3,
-    //     slidesToScroll: 1,
-    // });
+    $('.poster-recommended__slider').slick({
+        prevArrow: false,
+        nextArrow: false,
+        dots: true,
+        fade: false,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+    });
     $('.create-img span').click(function () {
         $(this).parents('.create-img').remove();
     });
@@ -478,7 +478,14 @@ function showType3(){
 }
 
 
-
+function checkCalendar(){
+    if ( $('input[name="check_calendar"]').is(':checked') ) {
+        document.getElementById('check_calen').style.display ='block';
+    }
+    else {
+        document.getElementById('check_calen').style.display ='none';
+    }
+}
 
 
 // $(document).ready(function() {
