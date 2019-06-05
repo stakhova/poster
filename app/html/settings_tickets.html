@@ -1,0 +1,303 @@
+include include/_header.html
+<div class="wrapper">
+    <div class="container">
+        <div class="main">
+
+            include include/_left_sidebar.html
+
+            <div class="poster">
+
+                include include/_top_navbar.html
+
+                <div class="poster-wrap">
+                    include include/_poster_tabs.html
+                    <div class="poster-content">
+                        <div class="poster-flex">
+                            <div class="poster-center">
+                                <div class="poster-center__tabs">
+                                    <div class="poster-content__tab poster-content__small">
+                                        <div class="discount-table">
+                                            <div class="create-start">
+                                                <p>Создайте билеты <br>Создавайте билеты и устанавливайте цены для посетителей мероприятия</p>
+                                            </div>
+                                            <table class="poster-table">
+                                                <thead>
+                                                <tr>
+                                                    <th>Название</th>
+                                                    <th>Цена</th>
+                                                    <th>Продано</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr class="poster-table__item">
+                                                    <td><span>Вип</span></td>
+                                                    <td><span>100 грн</span></td>
+                                                    <td><span>20</span></td>
+                                                    <td>
+                                                        <div class="poster-table__actions">
+                                                            <div class="poster-table__icon">
+                                                                <div class="poster-table__done"></div>
+                                                                <div class="poster-table__edit"></div>
+                                                                <div class="poster-table__delete"></div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="poster-table__desc">
+                                                    <td colspan="4">
+                                                        <table class="settings-table">
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="flex-between poster-table__descWrap">
+                                                                        <div class="poster-table__column">
+                                                                            <p>Тип билетов</p>
+                                                                            <p class="poster-table__title">Лестница цен по дате</p>
+                                                                        </div>
+                                                                        <div class="poster-table__column">
+                                                                            <p>Количество билетов всего</p>
+                                                                            <p class="poster-table__title">100 шт</p>
+                                                                        </div>
+                                                                        <div class="poster-table__column">
+                                                                            <p>Осталось</p>
+                                                                            <p class="poster-table__title">80 шт</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr class="poster-table__item">
+                                                    <td><span>Стандарт</span></td>
+                                                    <td><span>100 грн</span></td>
+                                                    <td><span>20</span></td>
+                                                    <td>
+                                                        <div class="poster-table__actions">
+                                                            <div class="poster-table__icon">
+                                                                <div class="poster-table__done"></div>
+                                                                <div class="poster-table__edit"></div>
+                                                                <div class="poster-table__delete"></div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="poster-table__desc">
+                                                    <td colspan="4">
+                                                        <table class="book-table">
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="flex-start poster-table__descWrap">
+                                                                        <div class="poster-table__column">
+                                                                            <p>Книга</p>
+                                                                            <p class="poster-table__title">Лазер в дерматологии и косметологии </p>
+                                                                        </div>
+                                                                        <div class="poster-table__column">
+                                                                            <p>Автор</p>
+                                                                            <p class="poster-table__title">Потекаев Н. Н., Круглова Л. С.</p>
+                                                                        </div>
+                                                                        <div class="poster-table__column">
+                                                                            <p>Доп.информ.</p>
+                                                                            <p class="poster-table__title">Заказана. <br>Отправлена</p>
+                                                                        </div>
+                                                                        <div class="poster-table__column">
+                                                                            <p>Цена</p>
+                                                                            <p class="poster-table__title">1200 грн</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                            <div class="create-button">
+                                                <button>Добавить гуппу билетов</button>
+                                            </div>
+                                        </div>
+                                        <div class="create">
+                                            <div class="create-title">
+                                                <p>Выберите и создайте новый тип билета</p>
+                                            </div>
+                                            <div class="create-wrap">
+                                                <form action="">
+                                                    <div class="create-content">
+                                                        <div class="form-circle">
+                                                            <div class="flex-start">
+                                                                <label for="circle-11">
+                                                                    <input type="radio" name="radio-circle_setting" value="" class="form-circle__item" id ="circle-11" onclick="showType1();" checked>
+                                                                    <div class="form-circle__label flex-between"> <span>Простой тип</span></div>
+                                                                </label>
+                                                            </div>
+                                                            <div id="showType1">
+                                                                <div class="create-append__wrap">
+                                                                    <div class="create-append" >
+                                                                        <div class="create-input__item">
+                                                                            <div class="create-input create-input__ticket">
+                                                                                <input class="create-input__text" type="text" placeholder="Укр">
+                                                                            </div>
+                                                                            <div class="create-input create-input__ticket">
+                                                                                <input class="create-input__text" type="text" placeholder="Название билета:">
+                                                                                <p class="create-input__desc">(Напр. VIP, Пресса и т.д.)</p>
+                                                                            </div>
+                                                                            <div class="create-input create-input__ticket">
+                                                                                <input class="create-input__text" type="text" placeholder="Цена:">
+                                                                            </div>
+                                                                            <div class="create-input create-input__ticket">
+                                                                                <span class="create-input__title">Количество:</span>
+                                                                                <input class="create-input__text" type="text">
+                                                                                <p class="create-input__desc">(Не ограничено)</p>
+                                                                            </div>
+                                                                            <div class="create-minus"></div>
+                                                                            <div class="create-plus"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="create-button">
+                                                                    <span>Назад</span>
+                                                                    <button>Добавить группу</button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="flex-start">
+                                                                <label for="circle-22">
+                                                                    <input type="radio" name="radio-circle_setting" value="" class="form-circle__item" id ="circle-22" onclick="showType2();" >
+                                                                    <div class="form-circle__label flex-between"> <span>Лестница цен по дате</span></div>
+                                                                </label>
+                                                            </div>
+                                                            <div id="showType2">
+                                                                <div class="create-append__wrap">
+                                                                    <div class="create-append" >
+                                                                        <div class="create-input__item">
+                                                                            <div class="create-input create-input__ticket">
+                                                                                <input class="create-input__text" type="text" placeholder="Укр">
+                                                                            </div>
+                                                                            <div class="create-input create-input__ticket">
+                                                                                <input class="create-input__text" type="text" placeholder="Название билета:">
+                                                                                <p class="create-input__desc">(Напр. VIP, Пресса и т.д.)</p>
+                                                                            </div>
+                                                                            <div class="create-input create-input__ticket">
+                                                                                <input class="create-input__text" type="text" placeholder="Цена:">
+                                                                            </div>
+                                                                            <div class="create-input create-input__ticket">
+                                                                                <span class="create-input__title">Количество:</span>
+                                                                                <input class="create-input__text" type="text">
+                                                                                <p class="create-input__desc">(Не ограничено)</p>
+                                                                            </div>
+                                                                            <div class="create-minus"></div>
+                                                                            <div class="create-plus"></div>
+                                                                        </div>
+                                                                        <div class="flex-between create-discount create-input__calendars">
+                                                                            <div class="create-input create-input__calendar">
+                                                                                <input type="text" class="datepicker" placeholder="Цена актуальна с:"/>
+                                                                                <p class="create-input__desc">Дата и время</p>
+                                                                            </div>
+                                                                            <div class="create-input create-input__calendar">
+                                                                                <input type="text" class="datepicker" placeholder="Цена актуальна до"/>
+                                                                                <p class="create-input__desc">Дата и время</p>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                </div>
+
+                                                                <div class="create-button">
+                                                                    <span>Назад</span>
+                                                                    <button>Добавить группу</button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="flex-start">
+                                                                <label for="circle-33">
+                                                                    <input type="radio" name="radio-circle_setting" value="" class="form-circle__item" id ="circle-33" onclick="showType3();" >
+                                                                    <div class="form-circle__label flex-between"> <span>Лестница цен по количеству проданных билетов </span></div>
+                                                                </label>
+                                                            </div>
+                                                            <div id="showType3">
+                                                                <div class="create-append__wrap">
+                                                                    <div class="create-append" >
+                                                                        <div class="create-input__item">
+                                                                            <div class="create-input create-input__ticket">
+                                                                                <input class="create-input__text" type="text" placeholder="Укр">
+                                                                            </div>
+                                                                            <div class="create-input create-input__ticket">
+                                                                                <input class="create-input__text" type="text" placeholder="Название билета:">
+                                                                                <p class="create-input__desc">(Напр. VIP, Пресса и т.д.)</p>
+                                                                            </div>
+                                                                            <div class="create-input create-input__ticket">
+                                                                                <input class="create-input__text" type="text" placeholder="Цена:">
+                                                                            </div>
+                                                                            <div class="create-input create-input__ticket">
+                                                                                <span class="create-input__title">Количество:</span>
+                                                                                <input class="create-input__text" type="text">
+                                                                                <p class="create-input__desc">(Не ограничено)</p>
+                                                                            </div>
+                                                                            <div class="create-minus"></div>
+                                                                            <div class="create-plus"></div>
+                                                                        </div>
+                                                                        <div class="create-input__item hide-input">
+                                                                            <div class="create-input create-input__ticket">
+                                                                                <input class="create-input__text" type="text" placeholder="Укр">
+                                                                            </div>
+                                                                            <div class="create-input create-input__ticket">
+                                                                                <input class="create-input__text" type="text" placeholder="Название билета:">
+                                                                                <p class="create-input__desc">(Напр. VIP, Пресса и т.д.)</p>
+                                                                            </div>
+                                                                            <div class="create-input create-input__ticket">
+                                                                                <input class="create-input__text" type="text" placeholder="Цена:">
+                                                                            </div>
+                                                                            <div class="create-input create-input__ticket">
+                                                                                <span class="create-input__title">Количество от:</span>
+                                                                                <input class="create-input__text" type="text">
+                                                                            </div>
+                                                                            <div class="create-input create-input__ticket">
+                                                                                <span class="create-input__title">Количество до:</span>
+                                                                                <input class="create-input__text" type="text">
+                                                                                <p class="create-input__desc">(Не ограничено)</p>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                                <div class="create-button">
+                                                                    <span>Назад</span>
+                                                                    <button>Добавить группу</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="poster-adv">
+                                <div class="poster-adv__simple">
+                                    <div class="poster-adv__title">
+                                        <p>Вы можете изменить и заполнить  другие настройки</p>
+                                    </div>
+                                    <ul class="poster-adv__list">
+                                        <li><a href="">Основные настройки</a></li>
+                                        <li><a href="">Внешний вид билета</a></li>
+                                        <li><a href="">Создать промокод</a></li>
+                                        <li><a href="">Создать скидку</a></li>
+                                        <li><a href="">Анкета клиента</a></li>
+                                        <li><a href="">Перейти на страницу мероприятия</a></li>
+                                    </ul>
+                                </div>
+                                <a href="" class="poster-adv__simple">
+                                    <p>Pеклама</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+include include/_modal.html
+
+include include/_footer.html
