@@ -214,32 +214,36 @@ $(document).ready(function() {
         slidesToShow: 3,
         slidesToScroll: 1,
     });
+    // $('.poster-recommended__slider').slick({
+    //     prevArrow: '<div class="poster-slider__prev"></div>',
+    //     nextArrow: '<div class="poster-slider__next"></div>',
+    //     dots: true,
+    //     fade: false,
+    //     slidesToShow: 3,
+    //     slidesToScroll: 1,
+    // });
     $('.create-img span').click(function () {
         $(this).parents('.create-img').remove();
     });
 
-    // $(".create-append").each(function() {
-    //     $(this).find('.create-input__item').each(function(){
-    //         $('.create-plus').click(function () {
-    //                 let content= $('<div class="create-input__item"><div class="create-input create-input__ticket"><input class="create-input__text" type="text" placeholder="Укр">\</div>\<div class="create-input create-input__ticket">\<input class="create-input__text" type="text" placeholder="Название билета:">\<p class="create-input__desc">(Напр. VIP, Пресса и т.д.)</p>\</div>\<div class="create-input create-input__ticket">\<input class="create-input__text" type="text" placeholder="Цена:">\</div>\<div class="create-input create-input__ticket">\<span class="create-input__title">Количество:</span>\<input class="create-input__text" type="text">\<p class="create-input__desc">(Не ограничено)</p>\</div>\<div class="create-minus"></div><div class="create-plus"></div></div>')
-    //                 $(this).closest('.create-append').append(content);
-    //             });
-    //     });
-    //     $(this).find('.create-input__item').each(function(){
-    //         $('.create-minus').click(function () {
-    //                 $(this).parents('.create-input__item').remove();
-    //             });
-    //     });
+    $(".create-append").each(function() {
+        $(this).find('.create-input__item').each(function(){
+            $(this).find('.create-plus').click(function () {
+                $(this).parents('.create-append').clone(true,true).appendTo('.create-append__wrap');
+            });
+        });
+        $(this).find('.create-input__item').each(function(){
+            $(this).find('.create-minus').click(function () {
+                $(this).parents('.create-append').remove();
+            });
+        });
+    });
+    // $('.create-plus').click(function () {
+    //     $(this).parents('.create-append').clone(true,true).appendTo('.create-append__wrap');
     // });
-
-    $('.create-plus').click(function () {
-        var content= $('<div class="create-input__item"><div class="create-input create-input__ticket"><input class="create-input__text" type="text" placeholder="Укр">\</div>\<div class="create-input create-input__ticket">\<input class="create-input__text" type="text" placeholder="Название билета:">\<p class="create-input__desc">(Напр. VIP, Пресса и т.д.)</p>\</div>\<div class="create-input create-input__ticket">\<input class="create-input__text" type="text" placeholder="Цена:">\</div>\<div class="create-input create-input__ticket">\<span class="create-input__title">Количество:</span>\<input class="create-input__text" type="text">\<p class="create-input__desc">(Не ограничено)</p>\</div>\<div class="create-minus"></div><div class="create-plus"></div></div>')
-        // $('.create-append').append(content);
-        $(this).closest('.create-append').append(content);
-    });
-    $('.create-minus').click(function () {
-        $(this).parents('.create-input__item').remove();
-    });
+    // $('.create-minus').click(function () {
+    //     $(this).parents('.create-append').remove();
+    // });
 
 
     //radio-button show content
@@ -404,7 +408,7 @@ function show1(){
 }
 function show2(){
     document.getElementById('show1').style.display ='none';
-    document.getElementById('show2').style.display = 'flex';
+    document.getElementById('show2').style.display = 'block';
     document.getElementById('list1').style.display ='none';
     document.getElementById('list2').style.display = 'block';
 }
@@ -456,3 +460,31 @@ function hideCheck(){
     document.getElementById('showCheck').style.display ='none';
 }
 
+
+function showType1(){
+    document.getElementById('showType1').style.display ='block';
+    document.getElementById('showType2').style.display = 'none';
+    document.getElementById('showType3').style.display = 'none';
+}
+function showType2(){
+    document.getElementById('showType2').style.display ='block';
+    document.getElementById('showType1').style.display = 'none';
+    document.getElementById('showType3').style.display = 'none';
+}
+function showType3(){
+    document.getElementById('showType3').style.display ='block';
+    document.getElementById('showType2').style.display = 'none';
+    document.getElementById('showType1').style.display = 'none';
+}
+
+
+
+
+
+// $(document).ready(function() {
+//     var newaddress= $("#addresses div.address").eq(0).clone();
+//     newaddress.find('input').each(function() {
+//         this.name= this.name.replace('[0]', '['+i+']');
+//     });
+//     $('#addresses').append(newaddress);
+// });
