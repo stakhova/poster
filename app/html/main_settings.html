@@ -18,16 +18,16 @@ include include/_header.html
                                     <div class="poster-content__tab poster-content__small">
                                         <div class="create">
                                             <div class="create-title">
-                                                <p>Для создания мероприятия, заполните следующие поля</p>
+                                                <p>Основные настройки </p>
                                             </div>
                                             <form action="">
-                                                <div class="create-content">
+                                                <div class="create-content settings">
                                                     <ul class="create-list">
                                                         <li class="create-list__item">
-                                                            <span class="create-list__title">Создание нового мероприятия</span>
+                                                            <span class="create-list__title">Редактирования мероприятия</span>
                                                             <div class="create-list__content">
                                                                 <div class="create-input">
-                                                                    <input class="create-input__text" type="text" placeholder="Название мероприятия:">
+                                                                    <input class="create-input__text" type="text" value="Заполнено">
                                                                     <p class="create-input__desc">Количество символов ограничено, текст подсказка</p>
                                                                 </div>
                                                                 <div class="create-input">
@@ -61,7 +61,7 @@ include include/_header.html
                                                                     <div class="flex-between">
                                                                         <div class="form-radio__big">
                                                                             <label for="radio11">
-                                                                                <input type="radio" name="radio-but" value="" class="form-radio__item" id ="radio11">
+                                                                                <input type="radio" name="radio-but" value="" class="form-radio__item" id ="radio11" checked>
                                                                                 <div class="form-radio__label flex-between"> <span>Онлайн</span></div>
                                                                             </label>
                                                                         </div>
@@ -265,7 +265,24 @@ include include/_header.html
                                     </div>
                                 </div>
                             </div>
-                            include include/_right_sidebar.html
+                            <div class="poster-adv">
+                                <div class="poster-adv__simple">
+                                    <div class="poster-adv__title">
+                                        <p>Вы можете изменить и заполнить  другие настройки</p>
+                                    </div>
+                                    <ul class="poster-adv__list">
+                                        <li><a href="">Основные настройки</a></li>
+                                        <li><a href="">Внешний вид билета</a></li>
+                                        <li><a href="">Создать промокод</a></li>
+                                        <li><a href="">Создать скидку</a></li>
+                                        <li><a href="">Анкета клиента</a></li>
+                                        <li><a href="">Перейти на страницу мероприятия</a></li>
+                                    </ul>
+                                </div>
+                                <a href="" class="poster-adv__simple">
+                                    <p>Pеклама</p>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>

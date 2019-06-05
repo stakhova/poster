@@ -1113,13 +1113,10 @@ a{
     &__item {
       position: relative;
       border-bottom: 1px solid $blue;
-
       td {
         position: relative;
-
         &:first-child {
           cursor: pointer;
-
           span {
             cursor: pointer;
             display: block;
@@ -1127,7 +1124,6 @@ a{
             height: 20px;
             overflow: hidden;
           }
-
           &:after {
             content: "";
             position: absolute;
@@ -1147,7 +1143,7 @@ a{
         box-shadow: 0px 1px 3.8px 0.2px #b1b1b1;
 
         td:first-child:after {
-          transform: translateY(-50%) rotate(0deg) !important;
+          transform: translateY(-50%) rotate(180deg) !important;
         }
       }
 
@@ -3321,9 +3317,9 @@ a{
           margin-right: 10px;
         }
 
-        &:last-child .create-plus {
-          display: block;
-        }
+        //&:last-child .create-plus {
+        //  display: block;
+        //}
       }
 
       &__ticket {
@@ -3344,6 +3340,9 @@ a{
         &:nth-child(4) {
           width: 18%;
         }
+        &:nth-child(5) {
+          width: 18%;
+        }
 
         .create-input__title {
           position: absolute;
@@ -3358,8 +3357,8 @@ a{
         border-bottom: 1px solid $blue;
         color: $blue;
         font: $SSP-Light;
-
-        &::placeholder {
+        font-size: 16px;
+        &::placeholder{
           font: $SSP-Light;
           font-size: 16px;
           color: $blue;
@@ -3604,10 +3603,10 @@ a{
         top: 50%;
         left: 50%;
         width: 12px;
-        height: 12px;
-        transform: translate(-50%, -50%);
+        height: 2px;
+        transform: translate(-50%,-50%);
         z-index: 3;
-        background: url('../img/delete.svg') no-repeat left top;
+        background: url('../img/minus.svg') no-repeat left top;
       }
     }
 
@@ -3705,13 +3704,28 @@ a{
         }
       }
     }
+    &-append{
+      position: relative;
+      &:last-child {
+        .create-plus {
+          display: block;
+        }
+      }
+
+      .create-plus{
+        display: none;
+      }
+      .create-input__calendars{
+        width: 83%;
+      }
+    }
   }
 
   .discount {
     &-table {
-      .poster-table__item td:first-child:after {
-        display: none;
-      }
+      //.poster-table__item td:first-child:after {
+      //  display: none;
+      //}
 
       thead {
         border-bottom: 1px solid #3a4185;
@@ -3724,7 +3738,7 @@ a{
 
   }
 
-  #show2, #list2, #list3, #titleopt, #titleCount, #showProm2, #showCheck {
+  #show2, #list2, #list3, #titleopt, #titleCount, #showProm2, #showCheck, #showType2,#showType3 {
     display: none;
   }
 
@@ -3824,9 +3838,6 @@ a{
     }
   }
 
-  .create-list {
-
-  }
 
   #question-drop {
     display: none;
@@ -4044,6 +4055,39 @@ a{
   }
 }
 
+
+.settings {
+  &-table{
+    width: 100%;
+    td{
+      padding-left: 0;
+    }
+    .poster-table__column{
+      width: 30%;
+    }
+  }
+  .create-list__title{
+    &:after {
+      content: "\e97f" !important;
+      color: #fff;
+      font-size: 8px;
+      left: -20px;
+      font-family: 'icomoon';
+      z-index: 3;
+    }
+    &:before {
+      opacity: 1 !important;
+    }
+  }
+  .create-list__item {
+    .create-list__content{
+      display: none;
+    }
+    &:first-child .create-list__content{
+       display: block;
+    }
+  }
+}
 .notifications {
   max-height: 590px;
   overflow-y: scroll;
@@ -4093,6 +4137,13 @@ a{
       line-height: 30px;
       padding: 0 0 20px 0;
       display: block;
+    }
+  }
+}
+.hide-input{
+  .create-input{
+    &:first-child,&:nth-child(2){
+    display: none;
     }
   }
 }

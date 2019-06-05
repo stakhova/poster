@@ -116,6 +116,8 @@ $(document).ready(function() {
     });
 
 
+
+
     $('.sidebar-role span').click(function () {
         // $(this).hide('header-mob__submenu');
         $(this).next().slideToggle(300);
@@ -216,18 +218,23 @@ $(document).ready(function() {
         $(this).parents('.create-img').remove();
     });
 
-    // $(".create-append").each(function() {
-    //     $(this).find('.create-input__item').each(function(){
-    //         $('.create-plus').click(function () {
-    //                 let content= $('<div class="create-input__item"><div class="create-input create-input__ticket"><input class="create-input__text" type="text" placeholder="Укр">\</div>\<div class="create-input create-input__ticket">\<input class="create-input__text" type="text" placeholder="Название билета:">\<p class="create-input__desc">(Напр. VIP, Пресса и т.д.)</p>\</div>\<div class="create-input create-input__ticket">\<input class="create-input__text" type="text" placeholder="Цена:">\</div>\<div class="create-input create-input__ticket">\<span class="create-input__title">Количество:</span>\<input class="create-input__text" type="text">\<p class="create-input__desc">(Не ограничено)</p>\</div>\<div class="create-minus"></div><div class="create-plus"></div></div>')
-    //                 $(this).closest('.create-append').append(content);
-    //             });
-    //     });
-    //     $(this).find('.create-input__item').each(function(){
-    //         $('.create-minus').click(function () {
-    //                 $(this).parents('.create-input__item').remove();
-    //             });
-    //     });
+    $(".create-append").each(function() {
+        $(this).find('.create-input__item').each(function(){
+            $(this).find('.create-plus').click(function () {
+                $(this).parents('.create-append').clone(true,true).appendTo('.create-append__wrap');
+            });
+        });
+        $(this).find('.create-input__item').each(function(){
+            $(this).find('.create-minus').click(function () {
+                $(this).parents('.create-append').remove();
+            });
+        });
+    });
+    // $('.create-plus').click(function () {
+    //     $(this).parents('.create-append').clone(true,true).appendTo('.create-append__wrap');
+    // });
+    // $('.create-minus').click(function () {
+    //     $(this).parents('.create-append').remove();
     // });
 
     $('.create-plus').click(function () {
@@ -324,6 +331,12 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
+    $(function(){
+        $(".datepicker").datepicker();
+    });
+});
+
+$(document).ready(function(){
     $('.open-history').click(function () {
         $('#balance').modal('hide')
     });
@@ -341,6 +354,7 @@ $(document).ready(function(){
     })
 
 });
+
 
 function setPosition() {
     // Set position of the questions drop
@@ -395,7 +409,7 @@ function show1(){
 }
 function show2(){
     document.getElementById('show1').style.display ='none';
-    document.getElementById('show2').style.display = 'flex';
+    document.getElementById('show2').style.display = 'block';
     document.getElementById('list1').style.display ='none';
     document.getElementById('list2').style.display = 'block';
 }
@@ -448,6 +462,33 @@ function hideCheck(){
 }
 
 
+function showType1(){
+    document.getElementById('showType1').style.display ='block';
+    document.getElementById('showType2').style.display = 'none';
+    document.getElementById('showType3').style.display = 'none';
+}
+function showType2(){
+    document.getElementById('showType2').style.display ='block';
+    document.getElementById('showType1').style.display = 'none';
+    document.getElementById('showType3').style.display = 'none';
+}
+function showType3(){
+    document.getElementById('showType3').style.display ='block';
+    document.getElementById('showType2').style.display = 'none';
+    document.getElementById('showType1').style.display = 'none';
+}
+
+
+
+
+
+// $(document).ready(function() {
+//     var newaddress= $("#addresses div.address").eq(0).clone();
+//     newaddress.find('input').each(function() {
+//         this.name= this.name.replace('[0]', '['+i+']');
+//     });
+//     $('#addresses').append(newaddress);
+// });
 
 // $(document).ready(function() {
 //
