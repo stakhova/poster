@@ -1568,7 +1568,7 @@ a{
   }
 
   &-adv {
-    max-width: 20%;
+    max-width: 25%;
     padding-top: 10px;
     //display: none;
     &__title {
@@ -3356,7 +3356,6 @@ a{
       &__calendar {
         width: 100%;
         position: relative;
-
         &:before {
           content: "";
           position: absolute;
@@ -3373,7 +3372,8 @@ a{
           border: none;
           width: 100%;
           border-bottom: 1px solid $blue;
-
+          font: 16px;
+          color: $blue;
           &::placeholder {
             font: $SSP-Light;
             font-size: 16px;
@@ -4133,6 +4133,10 @@ input[name=radio-but]~ div  {
   font: $SSP-Semibold;
   padding-bottom: 18px;
   padding-top: 18px;
+}
+#check_calen{
+  width: 45%;
+  display: none;
 }
 
 @import 'media';

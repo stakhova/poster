@@ -478,7 +478,14 @@ function showType3(){
 }
 
 
-
+function checkCalendar(){
+    if ( $('input[name="check_calendar"]').is(':checked') ) {
+        document.getElementById('check_calen').style.display ='block';
+    }
+    else {
+        document.getElementById('check_calen').style.display ='none';
+    }
+}
 
 
 // $(document).ready(function() {
