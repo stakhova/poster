@@ -1,0 +1,114 @@
+include ../include/_header.html
+
+<div class="wrapper">
+    <div class="container">
+        <div class="main">
+
+            include ../include/_left_sidebar.html
+
+            <div class="poster">
+
+                include ../include/_top_navbar.html
+
+                <div class="poster-wrap">
+
+                    include ../include/_poster_tabs.html
+
+                    <div class="poster-content">
+                        <div class="poster-flex">
+                            <div class="poster-center">
+                                <div class="poster-center__tabs">
+                                    <!--include ../include/_tmp_tabs.html-->
+                                    <div class="stat__content">
+                                        <div class="poster-select">
+                                            <div class="poster-select__head">
+                                                <input type="hidden" name="type_category" value="">
+                                                <div class="poster-select__current input"><span>Выбрать билеты</span>
+                                                </div>
+                                            </div>
+                                            <div class="poster-select__wrap">
+                                                <ul class="poster-select__dropdown">
+                                                    <li>
+                                                        <span>Группа билетов №1</span>
+                                                    </li>
+                                                    <li>
+                                                        <span>Группа билетов №2</span>
+                                                    </li>
+                                                    <li>
+                                                        <span>Группа билетов №3</span>
+                                                    </li>
+                                                    <li>
+                                                        <span>Группа билетов №4</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="stat__title">Статистика</div>
+
+                                        <dic class="stat__container">
+                                            <div class="stat__filters">
+                                                <a href="#">Дн</a>
+                                                <a href="#">Нед</a>
+                                                <a href="#">Мес</a>
+                                                <a href="#" class="ml-auto">Выбрать период даты</a>
+                                            </div>
+                                            <div class="stat__info">
+                                                <div class="stat__info__row">
+                                                    <div>
+                                                        <span>Продано билетов (всего)</span>
+                                                        <p>57 шт</p>
+                                                    </div>
+                                                    <div>
+                                                        <span>Общий доход (всего)</span>
+                                                        <p>+ 2200 грн</p>
+                                                    </div>
+                                                </div>
+                                                <div class="stat__info__row">
+                                                    <div>
+                                                        <div class="stat__info__filter active">
+                                                            <span class="square square--blue"></span>
+                                                            <p>Кол-во оплаченных билетов</p>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="stat__info__filter">
+                                                            <span class="square square--green"></span>
+                                                            <p>Кол-во просмотров мероприятия</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="chart__container">
+                                                <canvas id="myChart" width="200" height="200"></canvas>
+                                            </div>
+                                            <div class="stat__info">
+                                                <div class="stat__info__row">
+                                                    <div>
+                                                        <span>Продано билетов за выбранный период</span>
+                                                        <p>57 шт</p>
+                                                    </div>
+                                                    <div>
+                                                        <span>Доход за выбранный период</span>
+                                                        <p>+ 2200 грн</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </dic>
+                                    </div>
+                                </div>
+                                <!--include ../include/_recommended.html-->
+                            </div>
+
+                            <!--include ../include/_right_sidebar.html-->
+                            include ../include/_right_sidebar_organizer.html
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+include ../include/_modal.html
+
+include ../include/_footer.html
