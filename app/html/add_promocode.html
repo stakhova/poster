@@ -1,0 +1,168 @@
+include include/_header.html
+<div class="wrapper">
+    <div class="container">
+        <div class="main">
+
+            include include/_left_sidebar.html
+
+            <div class="poster">
+
+                include include/_top_navbar.html
+
+                <div class="poster-wrap">
+                    include include/_poster_tabs.html
+                    <div class="poster-content">
+                        <div class="poster-flex">
+                            <div class="poster-center">
+                                <div class="poster-center__tabs">
+                                    <div class="poster-content__tab poster-content__small">
+                                        <div class="create">
+                                            <div class="create-title">
+                                                <p>Создание нового промо-кода</p>
+                                            </div>
+                                            <div class="create-wrap">
+                                                <form action="">
+                                                    <div class="create-content">
+                                                        <input class="create-input__text" type="text" placeholder="Ваш промокод:">
+                                                        <p class="create-input__desc">Количество символов ограничено, текст подсказка</p>
+                                                        <div class="create-input">
+                                                            <div class="form-title">
+                                                                <p>К какому мероприятию и билету относится промокод:</p>
+                                                            </div>
+                                                            <div class="form-circle">
+                                                                <div class="flex-start">
+                                                                    <label for="circle-11">
+                                                                        <input type="radio" name="radio-circle_promocode" value="" class="form-circle__item" id ="circle-11" onclick="showProm1();" checked>
+                                                                        <div class="form-circle__label flex-between"> <span>Ко всем мероприятиям и билетам (включая те, что будут созданы в будущем)</span></div>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="flex-start">
+                                                                    <label for="circle-22">
+                                                                        <input type="radio" name="radio-circle_promocode" value="" class="form-circle__item" id ="circle-22" onclick="showProm2();" >
+                                                                        <div class="form-circle__label flex-between"> <span>Выбрать мероприятие и билет</span></div>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="" id="showProm2">
+                                                                    <div class="form-radio__big">
+                                                                        <label for="radio111">
+                                                                            <input type="radio" name="radio-but" value="" class="form-radio__item" id ="radio111" onclick="showCheck();">
+                                                                            <div class="form-radio__label flex-between"> <span>Снижение инфламейджинга: новая эра в развитии биоревитализации</span></div>
+                                                                        </label>
+                                                                        <div id="showCheck">
+                                                                            <div class="form-radio__big">
+                                                                                <label for="radio112">
+                                                                                    <input type="radio" name="radioCheck" value="" class="form-radio__item" id ="radio112">
+                                                                                    <div class="form-radio__label flex-between"> <span>Ко всем билетам, этого мероприятия включая те, что будут созданы в будущем</span></div>
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="flex-start">
+                                                                                <div class="form-radio__big create-input__padding">
+                                                                                    <label for=radio123>
+                                                                                        <input type="radio" name="radioCheck" value="" class="form-radio__item" id ="radio123">
+                                                                                        <div class="form-radio__label flex-between"> <span>Стандарт</span></div>
+                                                                                    </label>
+                                                                                </div>
+                                                                                <div class="form-radio__big">
+                                                                                    <label for=radio134>
+                                                                                        <input type="radio" name="radioCheck" value="" class="form-radio__item" id ="radio134">
+                                                                                        <div class="form-radio__label flex-between"> <span>Люкс</span></div>
+                                                                                    </label>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-radio__big create-input__padding">
+                                                                        <label for=radio12>
+                                                                            <input type="radio" name="radio-but" value="" class="form-radio__item" id ="radio12" onclick="hideCheck();">
+                                                                            <div class="form-radio__label flex-between"> <span>Международный прекурс Х Съезда специалистов эстетической медицины</span></div>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="create-title">
+                                                <p>Выберите количество раз, сколько можно использовать промокод</p>
+                                            </div>
+                                            <div class="create-wrap">
+                                                <form action="">
+                                                    <div class="create-content">
+                                                        <label class="create-switcher flex-start">
+                                                            <input type="checkbox" name="switcher-discount" id="switcher-discount" onclick="chooseCount();" checked><span></span>
+                                                            <div class="create-discount__title">
+                                                                <div class="flex-start" id="titleCount">
+                                                                    <p>Код может быть использован:</p>
+                                                                    <input type="text" class="create-input__text">
+                                                                    <p>раз</p>
+                                                                </div>
+                                                                <p id="titleMuch">Неограниченное количество раз</p>
+                                                            </div>
+                                                            <!--<input type="checkbox" name="switcher-discount" id="switcher-discount" checked><span></span>-->
+                                                            <!--<div class="create-discount__title">-->
+                                                                <!--<p>Неограниченное количество раз</p>-->
+                                                            <!--</div>-->
+                                                        </label>
+                                                        <div class="create-discount">
+                                                            <div class="create-input">
+                                                                <p class="create-input__title">Величина скидки по промокоду:</p>
+                                                                <div class="flex-start">
+                                                                    <div class="create-input create-input__discount">
+                                                                        <input type="text" class="create-input__text" placeholder="0">
+                                                                    </div>
+                                                                    <div class="create-input create-input__ticket">
+                                                                        <div class="create-select">
+                                                                            <div class="create-select__head">
+                                                                                <input type="hidden" name="type_category" value="">
+                                                                                <div class="create-select__current input"><span>%</span></div>
+                                                                            </div>
+                                                                            <div class="create-select__wrap">
+                                                                                <ul class="create-select__dropdown">
+                                                                                    <li>
+                                                                                        <span>%</span>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <span>$</span>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <span>&</span>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="create-input">
+                                                                <div class="form-radio__big">
+                                                                    <label for=radio16>
+                                                                        <input type="checkbox" name="radio-but" value="" class="form-radio__item" id ="radio16">
+                                                                        <div class="form-radio__label flex-between"> <span>Ограничить время начала действия промокода</span></div>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="create-button">
+                                                                <span>Назад</span>
+                                                                <button>Добавить промокод</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            include include/_right_sidebar.html
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+include include/_modal.html
+
+include include/_footer.html

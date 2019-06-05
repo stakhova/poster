@@ -27,11 +27,11 @@ var paths = {
         vendorCss   : 'app/vendor/css/**/*.css',
         vendorJs    : [
             'app/vendor/js/jquery-3.2.1.min.js',
+            'app/vendor/js/jquery-ui.min.js',
             'bower_components/jquery-validation/dist/jquery.validate.min.js',
             'bower_components/jquery-validation/dist/additional-methods.min.js',
             'app/vendor/js/bootstrap.min.js',
             'app/vendor/js/slick.min.js',
-            'app/vendor/js/jquery-ui.min.js',
         ],
     },
     dest: {
