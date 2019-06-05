@@ -33,7 +33,7 @@ include include/_header.html
                                                                 <div class="create-input">
                                                                     <div class="create-select">
                                                                         <div class="create-select__head">
-                                                                            <input type="hidden" name="type_category" value="">
+                                                                            <input type="hidden" name="type_category" value="" required>
                                                                             <div class="create-select__current input"><span>Тип мероприятия:</span>
                                                                             </div>
                                                                         </div>
@@ -114,11 +114,11 @@ include include/_header.html
                                                             <div class="create-list__content">
                                                                 <div class="flex-between create-input__calendars">
                                                                     <div class="create-input create-input__calendar">
-                                                                        <input class="" id="datepicker" type="text" placeholder="Начало мероприятия:">
+                                                                        <input type="text" class="datepicker" placeholder="Начало мероприятия:"/>
                                                                         <p class="create-input__desc">Дата и время проведения</p>
                                                                     </div>
                                                                     <div class="create-input create-input__calendar">
-                                                                        <input class="" id="datepicker2" type="text" placeholder="Конец мероприятия:">
+                                                                        <input type="text" class="datepicker" placeholder="Конец мероприятия:"/>
                                                                         <p class="create-input__desc">Дата и время проведения</p>
                                                                     </div>
                                                                 </div>
@@ -193,7 +193,7 @@ include include/_header.html
                                                                 </div>
                                                                 <div class="create-input">
                                                                     <div class="create-select">
-                                                                        <div class="create-select__head">
+                                                                        <div class="create-select__head create-select__icon">
                                                                             <input type="hidden" name="type_category" value="">
                                                                             <div class="create-select__current input"><span>Выберите из списка:</span>
                                                                             </div>
@@ -260,32 +260,6 @@ include include/_header.html
                                                     </ul>
                                                 </div>
                                             </form>
-                                        </div>
-                                        <div class="create">
-                                            <div class="create-title">
-                                                <p>Создание нового места проведения</p>
-                                            </div>
-                                            <div class="create-wrap">
-                                                <form action="">
-                                                    <div>
-                                                        <div class="create-input">
-                                                            <input class="create-input__text" type="text" placeholder="Название места проведения:">
-                                                            <p class="create-input__desc">Используется для ввода однострочного текста</p>
-                                                        </div>
-                                                        <div class="create-input">
-                                                            <input class="create-input__text" type="text" placeholder="Поиск адреса:">
-                                                        </div>
-                                                        <div class="create-map">
-                                                            <div class="create-map__item"></div>
-                                                            <p class="create-input__desc">Вы можете переместить маркер, чтобы указать местоположение точнее</p>
-                                                        </div>
-                                                        <div class="create-button">
-                                                            <span>Отмена</span>
-                                                            <button>Сохранить место</button>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>

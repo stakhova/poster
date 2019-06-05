@@ -70,6 +70,7 @@ $(document).ready(function() {
     });
 
 
+    // poster select
     $('.poster-select__head').on('click', function (e) {
         e.stopPropagation();
         $(this).next().slideToggle(100);
@@ -421,9 +422,30 @@ function chooseDiscount (){
         document.getElementById('titletemp').style.display ='block';
     }
 }
+function chooseCount(){
+    if ( $('input[name="switcher-discount"]').is(':unchecked') ) {
+        document.getElementById('titleMuch').style.display ='none';
+        document.getElementById('titleCount').style.display ='flex';
+    }
+    else {
+        document.getElementById('titleCount').style.display ='none';
+        document.getElementById('titleMuch').style.display ='block';
+    }
+}
 
+function showProm1(){
+    document.getElementById('showProm2').style.display = 'none';
+}
+function showProm2(){
+    document.getElementById('showProm2').style.display = 'block';
+}
 
-
+function showCheck(){
+    document.getElementById('showCheck').style.display ='block';
+}
+function hideCheck(){
+    document.getElementById('showCheck').style.display ='none';
+}
 
 
 
