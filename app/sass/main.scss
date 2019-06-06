@@ -47,7 +47,7 @@ a{
   //max-width: 1142px;
   //margin: 0 auto;
   padding: 0;
-  background: #eeeeee;
+  //background: #eeeeee;
 }
 .main{
   width: 100%;
@@ -1176,7 +1176,13 @@ a{
         border: 1px solid $blue;
         position: relative;
         box-shadow: -0.1px 2px 3.9px 0.1px #b1b1b1;
-
+        a{
+          display: block;
+          width: 100%;
+          height: 100%;
+          position: relative;
+          z-index: 11;
+        }
         &:after {
           position: absolute;
           top: 50%;
@@ -1664,7 +1670,7 @@ a{
         //display: flex;
       }
 
-      &__simple {
+      &__simple, &__menu {
         display: block;
         width: 100%;
         min-height: 268px;
@@ -1683,6 +1689,9 @@ a{
           font: $SSP-Bold;
           z-index: 10;
         }
+      }
+      &__menu{
+        margin-top: 0px;
       }
 
       &__item {
@@ -2504,6 +2513,9 @@ a{
       width: 50%;
       //width: 100%;
       margin: 0 15px 0 0px;
+      &:last-child{
+        margin: 0;
+      }
     }
 
     &-item {
@@ -2745,13 +2757,14 @@ a{
         position: absolute;
         color: #9b9ec0;
         //bottom: 5px;
-        bottom: calc(50% - 10px);
+        top: calc(50% - 10px);
         right: 5px;
         font-size: 12px;
         font-family: 'icomoon';
         z-index: 10;
         //box-shadow: -0.1px 2px 1px 0px #b1b1b1;
         cursor: pointer;
+        transform: rotate(180deg);
       }
 
       &-active:after {
@@ -2764,10 +2777,10 @@ a{
         content: "\e906";
         position: absolute;
         color: #9b9ec0;
-        top: calc(50% - 10px);
+
         //opacity: 0.5;
+        bottom: calc(50% - 10px);
         right: 5px;
-        transform: rotate(180deg);
         font-size: 12px;
         //box-shadow: -0.1px 2px 1px 0px #b1b1b1;
         font-family: 'icomoon';
@@ -2977,11 +2990,12 @@ a{
   }
 
   .create {
-    max-height: 672px;
+    //height: calc(100vh - 142px);
     overflow: hidden;
     overflow-y: scroll;
     width: 100%;
     background-color: #fff;
+    box-shadow: 0px 1px 3.8px 0.2px #b1b1b1;
 
     &-social {
       span {
@@ -3734,7 +3748,10 @@ a{
   .anketa {
     position: relative;
     width: 100%;
-
+    &-text{
+      font-size: 16px!important;
+      font: $SSP-Semibold;
+    }
     &-title {
       border-bottom: 1px solid $blue;
       position: relative;
@@ -3824,6 +3841,18 @@ a{
         margin-right: 30px;
       }
 
+    }
+    &-table{
+      thead tr :nth-child(2){
+        width: auto!important;
+      }
+      td{
+        position: relative;
+      }
+      .filter-up:after, .filter-down:after{
+        left: 0;
+        right: auto;
+      }
     }
   }
 
