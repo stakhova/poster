@@ -1,0 +1,39 @@
+include ../include/_header.html
+
+<div class="wrapper">
+    <div class="container">
+        <div class="main">
+
+            include ../include/_left_sidebar.html
+
+            <div class="poster">
+
+                include ../include/_top_navbar.html
+
+                <div class="poster-wrap">
+
+                    <!--include include/_poster_tabs.html-->
+                    <div data-toggle="modal" data-target="#enter">
+                      <p>Авторизация</p>
+                    </div>
+                    <div data-toggle="modal" data-target="#forgot_password">
+                      <p>Забыли пароль</p>
+                    </div>
+                    <div data-toggle="modal" data-target="#code">
+                      <p>Получения кода</p>
+                    </div>
+                    <div data-toggle="modal" data-target="#fill-all">
+                      <p>Кабинет вторая форма</p>
+                    </div>
+                    <div data-toggle="modal" data-target="#success">
+                      <p>Успешное выполнение</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+include ../include/_modal.html
+
+include ../include/_footer.html

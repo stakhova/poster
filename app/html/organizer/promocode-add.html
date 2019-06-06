@@ -1,16 +1,16 @@
-include include/_header.html
+include ../include/_header.html
 <div class="wrapper">
     <div class="container">
         <div class="main">
 
-            include include/_left_sidebar.html
+            include ../include/_left_sidebar.html
 
             <div class="poster">
 
-                include include/_top_navbar.html
+                include ../include/_top_navbar.html
 
                 <div class="poster-wrap">
-                    include include/_poster_tabs.html
+                    include ../include/_poster_tabs.html
                     <div class="poster-content">
                         <div class="poster-flex">
                             <div class="poster-center">
@@ -98,9 +98,13 @@ include include/_header.html
                                                             <div class="create-input">
                                                                 <div class="form-radio__big">
                                                                     <label for=radio16>
-                                                                        <input type="checkbox" name="radio-but" value="" class="form-radio__item" id ="radio16">
+                                                                        <input type="checkbox" name="check_calendar" value="" class="form-radio__item" id="radio16" onclick="checkCalendar();" >
                                                                         <div class="form-radio__label flex-between"> <span>Ограничить время начала действия промокода</span></div>
                                                                     </label>
+                                                                </div>
+                                                                <div class="create-input create-input__calendar" id="check_calen">
+                                                                    <input type="text" class="datepicker" placeholder="Промокод действует с:"/>
+                                                                    <p class="create-input__desc">Дата и время</p>
                                                                 </div>
                                                             </div>
                                                             <div class="create-button">
@@ -116,7 +120,7 @@ include include/_header.html
                                 </div>
                             </div>
 
-                            include include/_right_sidebar_organizer.html
+                            include ../include/_right_sidebar_organizer.html
                         </div>
                     </div>
                 </div>
@@ -125,6 +129,6 @@ include include/_header.html
     </div>
 </div>
 
-include include/_modal.html
+include ../include/_modal.html
 
-include include/_footer.html
+include ../include/_footer.html

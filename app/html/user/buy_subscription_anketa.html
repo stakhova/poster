@@ -1,12 +1,12 @@
-include include/_header.html
+include ../include/_header.html
 <div class="wrapper">
     <div class="container">
         <div class="main">
-            include include/_left_sidebar.html
+            include ../include/_left_sidebar.html
             <div class="poster">
-                include include/_top_navbar.html
+                include ../include/_top_navbar.html
                 <div class="poster-wrap">
-                    include include/_poster_tabs.html
+                    include ../include/_poster_tabs.html
                     <div class="poster-content">
                         <div class="poster-flex">
                             <div class="poster-center">
@@ -25,7 +25,7 @@ include include/_header.html
                                                             <p>Выберите билет:</p>
                                                         </div>
                                                         <div class="anketa-content">
-                                                            <div class="create-ticket">
+                                                            <div class="create-ticket last">
                                                                 <div class="create-input__item">
                                                                     <div class="create-input create-input__ticket">
                                                                         <span class="create-input__title">Билет:</span>
@@ -56,8 +56,8 @@ include include/_header.html
                                                                         <span class="create-input__title">Количество:</span>
                                                                         <input class="create-input__text" type="text">
                                                                     </div>
-                                                                    <div class="create-minus"></div>
-                                                                    <div class="create-plus"></div>
+                                                                    <div class="create-minus ticket"></div>
+                                                                    <div class="create-plus ticket"></div>
                                                                 </div>
                                                             </div>
 
@@ -88,14 +88,14 @@ include include/_header.html
                                                                             <input class="form-input" type="text" placeholder="Телефон">
                                                                         </div>
                                                                         <div class="create-button">
-                                                                            <button>Готово</button>
+                                                                            <button type="submit">Готово</button>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="anketa">
-                                                            <div class="anketa-title"><span>Анкета</span><span>Стандарт</span><div class="anketa-done"></div></div>
+                                                            <div class="anketa-title"><span>Анкета</span><span>Стандарт</span></div>
                                                             <div class="anketa-desc">
                                                                 <div class="flex-start">
                                                                     <div class="form-block">
@@ -177,15 +177,11 @@ include include/_header.html
                                                         </div>
                                                     </div>
                                                     <div class="subs-confirm">
-                                                        <div class="flex-start">
-                                                            <div class="form-block">
-                                                                <div class="subs-confirm__cancel">
-                                                                    <a href="#">Отмена</a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-block">
-                                                                <button class="subs-confirm__button">Пересчитать с промокодом</button>
-                                                            </div>
+                                                        <div class="subs-confirm__cancel">
+                                                            <a href="#">Отмена</a>
+                                                        </div>
+                                                        <div>
+                                                            <button class="subs-confirm__button">Пересчитать с промокодом</button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -194,7 +190,7 @@ include include/_header.html
                                     </div>
                                 </div>
                             </div>
-                            include include/_right_sidebar.html
+                            include ../include/_right_sidebar.html
                         </div>
                     </div>
                 </div>
@@ -203,6 +199,6 @@ include include/_header.html
     </div>
 </div>
 
-include include/_modal.html
+include ../include/_modal.html
 
-include include/_footer.html
+include ../include/_footer.html
