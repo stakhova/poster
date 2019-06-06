@@ -29,16 +29,6 @@ $(document).ready(function() {
         fade: false,
         slidesToShow: 3,
         slidesToScroll: 1,
-
-    });
-
-    $('.poster-recommended__wrap').slick({
-        prevArrow: '<div class="poster-slider__prev"></div>',
-        nextArrow: '<div class="poster-slider__next"></div>',
-        dots: true,
-        fade: false,
-        infinite: true,
-        slidesToScroll: 1,
     });
 
     $('.poster-adv__slider').slick({
@@ -219,6 +209,14 @@ $(document).ready(function() {
     $('.poster-slider').slick({
         prevArrow: '<div class="poster-slider__prev"></div>',
         nextArrow: '<div class="poster-slider__next"></div>',
+        dots: true,
+        fade: false,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+    });
+    $('.poster-recommended__slider').slick({
+        prevArrow: false,
+        nextArrow: false,
         dots: true,
         fade: false,
         slidesToShow: 3,
@@ -518,34 +516,15 @@ function showType3(){
     document.getElementById('showType1').style.display = 'none';
 }
 
-var ctx = document.getElementById('myChart');
-var myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ['Пн 22/03/2019', 'Вт 23/03/2019', 'Ср 24/03/2019', 'Чт 25/03/2019', 'Пт 26/03/2019', 'Сб 27/03/2019'],
-        datasets: [{
-            backgroundColor: "#3a4185",
-            data: [65, 59, 80, 81, 56, 55, 40]
-        }, {
-            backgroundColor: "#affadb",
-            data: [28, 48, 40, 19, 86, 27, 90]
-        }]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                }
-            }]
-        },
-        legend: {
-            display: false,
-        },
-        maintainAspectRatio: false,
-    }
-});
 
+function checkCalendar(){
+    if ( $('input[name="check_calendar"]').is(':checked') ) {
+        document.getElementById('check_calen').style.display ='block';
+    }
+    else {
+        document.getElementById('check_calen').style.display ='none';
+    }
+}
 
 
 // $(document).ready(function() {
