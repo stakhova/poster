@@ -61,22 +61,23 @@ include ../include/_header.html
                                                                 </div>
                                                                 <div class="create-input">
                                                                     <p class="create-input__title has-error">Форма проведения:</p>
+                                                                    <p class="text-error">Пожалуйста заполните поле</p>
                                                                     <div class="flex-between">
                                                                         <div class="form-radio__big">
                                                                             <label for="radio11">
-                                                                                <input type="radio" name="radio-but" value="" class="form-radio__item" id ="radio11">
+                                                                                <input type="checkbox" name="radio-but" value="" class="form-radio__item" id ="radio11">
                                                                                 <div class="form-radio__label flex-between"> <span>Онлайн</span></div>
                                                                             </label>
                                                                         </div>
                                                                         <div class="form-radio__big">
                                                                             <label for=radio12>
-                                                                                <input type="radio" name="radio-but" value="" class="form-radio__item" id ="radio12">
+                                                                                <input type="checkbox" name="radio-but" value="" class="form-radio__item" id ="radio12">
                                                                                 <div class="form-radio__label flex-between"> <span>Офлайн</span></div>
                                                                             </label>
                                                                         </div>
                                                                         <div class="form-radio__big">
                                                                             <label for=radio13>
-                                                                                <input type="radio" name="radio-but" value="" class="form-radio__item" id ="radio13">
+                                                                                <input type="checkbox" name="radio-but" value="" class="form-radio__item" id ="radio13">
                                                                                 <div class="form-radio__label flex-between"> <span>Запись</span></div>
                                                                             </label>
                                                                         </div>
@@ -119,7 +120,8 @@ include ../include/_header.html
                                                             <div class="create-list__content">
                                                                 <div class="flex-between create-input__calendars">
                                                                     <div class="create-input create-input__calendar">
-                                                                        <input type="text" class="datepicker" placeholder="Начало мероприятия:"/>
+                                                                        <input type="text" class="datepicker has-error" placeholder="Начало мероприятия:"/>
+                                                                        <span class="text-error">Неверно введено название мероприятия</span>
                                                                         <p class="create-input__desc">Дата и время проведения</p>
                                                                     </div>
                                                                     <div class="create-input create-input__calendar">
@@ -176,9 +178,9 @@ include ../include/_header.html
                                                                 </div>
                                                                 <div class="create-input">
                                                                     <p class="create-input__title">Изображение мероприятия:</p>
-                                                                    <div class="create-img__download">
-                                                                        <!--<input type="file" name="photo" multiple accept="image/*,image/jpeg">-->
-                                                                    </div>
+                                                                    <label for="org_image" class="create-img__download">
+                                                                        <input id="org_image" type="file" name="photo" multiple accept="image/*,image/jpeg" hidden>
+                                                                    </label>
                                                                     <div class="create-img">
                                                                         <img src="../img/imageRight.png" alt="">
                                                                         <span></span>
