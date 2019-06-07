@@ -347,6 +347,18 @@ $(document).ready(function(){
     $(".datepicker").datepicker();
 });
 
+/* Main Settings form show block */
+function showMainSettingsBlock(number) {
+    $('.create-list').find(`.item-content:eq(${number})`).fadeIn(300);
+    $('.create-list').find(`.item-title:eq(${number})`).addClass('active');
+}
+
+/* Main Settings form hide block */
+function hideMainSettingsBlock(number) {
+    $('.create-list').find(`.item-content:lt(${number})`).fadeOut(300);
+    $('.create-list').find(`.item-title:eq(${number})`).removeClass('active')
+}
+
 /* Hooks to close dropdowns */
 $(document).ready(function(){
     $('.open-history').click(function () {
@@ -369,7 +381,7 @@ $(document).ready(function(){
         myChart.canvas.parentNode.style.height = '305px';
     }
 
-    /* crete new lines in ticket from*/
+    /* crete new lines in ticket from buy_subscription_anketa.html */
     $('div.create-plus.ticket').on('click', function () {
         $('.create-ticket.last').clone(true, true).appendTo('.anketa-content');
         $(this).prop("onclick", null).off("click");
@@ -378,10 +390,35 @@ $(document).ready(function(){
         $(this).parent().find('.create-minus.ticket').css('display', 'block');
     });
 
-    /* crete new lines in ticket from*/
+    /* crete new lines in ticket from */
     $('div.create-minus.ticket').on('click', function () {
         $(this).parent().parent().remove();
     });
+
+    /* crete new lines in ticket from settings_tickets_add.html */
+    $('div.create-plus.ticket-settings-simple').on('click', function () {
+        $('.create-input__item.ticket-settings-simple:last').clone(true, true).appendTo('.create-append.ticket-settings-simple');
+        $(this).prop("onclick", null).off("click");
+        $(this).parent().parent().removeClass('last');
+        $(this).hide();
+        $(this).parent().find('.create-minus.ticket-settings-simple').css('display', 'block');
+    });
+
+    /* crete new lines in ticket from settings_tickets_add.html */
+    $('div.create-minus.ticket-settings-simple').on('click', function () {
+        $(this).parent().remove();
+    });
+
+
+
+
+
+
+    /* main settings form */
+    $('.create-list').find('.item-content').hide();
+
+    /* show first block. Numeration starts from 0 */
+    showMainSettingsBlock(0)
 
 });
 
