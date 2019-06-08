@@ -226,6 +226,14 @@ $(document).ready(function() {
         $(this).parents('.create-img').remove();
     });
 
+    $('.datetimepicker1').datetimepicker({
+        language: 'pt-BR'
+    });
+    // $('#datetimepicker').data("DateTimePicker").FUNCTION()
+    // $(function () {
+    //     $('#datetimepicker1').datetimepicker();
+    // });
+
     // $(".create-append").each(function() {
     //     $(this).find('.create-input__item').each(function(){
     //         $(this).find('.create-plus').click(function () {
@@ -341,11 +349,15 @@ $(document).ready(function(){
 
 });
 
-
 $(document).ready(function(){
     /* Init datapicker */
     $(".datepicker").datepicker();
 });
+
+// $(document).ready(function(){
+//     $('.datepicker').datetimepicker();
+// });
+
 
 /* Main Settings form show block */
 function showMainSettingsBlock(number) {
