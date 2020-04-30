@@ -40,7 +40,7 @@
     "fsevents": "^2.0.6",
     "gulp-include-html": "^1.0.14",
     "gulp-sourcemaps": "^2.6.5",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "natives": "^1.1.6",
     "node-sass": "^4.12.0"
   }
